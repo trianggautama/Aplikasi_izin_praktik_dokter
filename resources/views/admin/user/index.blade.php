@@ -31,18 +31,24 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>NIK</th>
                             <th>Nama</th>
-                            <th>Username</th>
+                            <th>Tempat, Tanggal Lahir</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Status User</th>
                             <th class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Nama</td>
-                            <td>username123</td>
+                            <td>1354763154675</td>
+                            <td>Pemohon 1</td>
+                            <td>Banjarbaru, 1 Januari 2021</td>
+                            <td>Laki - laki</td>
+                            <td>admin CS</td>
                             <td class="text-center">
-                                <a  href="{{Route('admin.user.edit', 'hcsdgkh')}}" class="btn btn-icons btn-rounded btn-warning"><i class="mdi mdi-pencil"></i></a>
+                                <a  href="{{Route('admin.pemohon.edit', 'hcsdgkh')}}" class="btn btn-icons btn-rounded btn-warning"><i class="mdi mdi-pencil"></i></a>
                                 <button type="button" class="btn btn-icons btn-rounded btn-danger"><i class="mdi mdi-delete"></i></button>
                             </td>
                         </tr>
