@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>uiCookies:Frame &mdash; Free Bootstrap Theme, Free HTML5 Template, Free Responsive Bootstrap Website Template</title>
+    <title>Aplikasi perizinan Praktik Dokter</title>
     <meta name="description" content="Free Bootstrap Theme by uicookies.com">
     <meta name="keywords" content="Free website templates, Free bootstrap themes, Free template, Free bootstrap, Free website template">
     
@@ -29,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html" title="uiCookies:Frame">Frame</a>
+          <a class="navbar-brand" href="/" title="uiCookies:Frame"><small>DPMPTSP Kab. Banjar</small></a>
         </div>
 
         <div id="navbar-collapse" class="navbar-collapse collapse">
@@ -41,11 +41,12 @@
       </div>
     </nav>
     
-    <section class="probootstrap-hero prohttp://localhost/probootstrap/frame/#featuresbootstrap-slant" style="background-image: url(img/image_1.jpg);" data-section="home" data-stellar-background-ratio="0.5">
+    <section class="probootstrap-hero" style="background-image: url(depan/img/image_1.jpg);" data-section="home" data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row intro-text">
+        <div class="row ">
           <div class="col-md-8 col-md-offset-2 text-center">
-            <h1 class="probootstrap-heading probootstrap-animate">uicookies.com Creates High Quality Bootstrap Template For <em>Free</em></h1>
+          <br>
+            <h1 class="probootstrap-heading probootstrap-animate " style="color:white !important;">Aplikasi Perizinan praktik Dokter DPMPTSP Kabupaten Banjar</h1>
             <div class="probootstrap-subheading center">
               <p class="probootstrap-animate"><a href="{{Route('auth.login')}}" target="_blank" role="button" class="btn btn-primary">Login</a></p>
             </div>
@@ -87,13 +88,6 @@
     <!-- END section -->
     <section class="probootstrap-section">
       <div class="container">
-         <div class="row text-center mb100">
-          <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
-            <h2 class="mb30 text-black probootstrap-heading">Try It Today</h2>
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-            <p><a href="#" class="btn btn-primary">Get It Now</a></p>
-          </div>
-        </div>
         <div class="row">
           <div class="col-md-12">
             <div class="row">

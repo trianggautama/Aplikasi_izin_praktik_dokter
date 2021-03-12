@@ -28,11 +28,15 @@
           <div class="row w-100">
             <div class="col-lg-4 mx-auto">
               <div class="auto-form-wrapper">
+              <div class="text-center">
+                <img src="{{asset('pemkab.png')}}" alt="" width="50px" >
+                <h4 class="mt-2">Login User</h4>
+              </div>
                 <form action="#">
                   <div class="form-group">
-                    <label class="label">Email</label>
+                    <label class="label">Username</label>
                     <div class="input-group">
-                      <input type="email" class="form-control" placeholder="Email">
+                      <input type="text" class="form-control" placeholder="Username">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>

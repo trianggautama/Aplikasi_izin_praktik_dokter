@@ -28,7 +28,12 @@
           <div class="row w-100">
             <div class="col-lg-6 mx-auto">
               <div class="auto-form-wrapper">
+              <div class="text-center">
+                <img src="{{asset('pemkab.png')}}" alt="" width="50px" >
+                <h4 class="mt-2">Register User</h4>
+              </div>
                 <form action="#">
+                <br>
                 <div class="form-group">
                     <label for="">NIK</label>
                     <div class="input-group">
@@ -96,7 +101,7 @@
                     </div>
                   <div class="form-group">
                         <label for="">Alamat</label>
-                            <textarea name="" id="" class="form-control"></textarea>
+                        <textarea name="" id="" class="form-control"></textarea>
                     </div>
                   <div class="form-group">
                     <label for="">Username</label>

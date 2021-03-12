@@ -27,10 +27,10 @@
     <div class="container-scroller">
       <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-          <a class="navbar-brand brand-logo" href="/index.html">
-            <img src="{{asset('admin/images/logo.svg')}}" alt="logo" /> </a>
-          <a class="navbar-brand brand-logo-mini" href="admin/index.html">
-            <img src="{{asset('admin/images/logo-mini.svg')}}" alt="logo" /> </a>
+          <a class="navbar-brand brand-logo" href="{{Route('admin.beranda')}}">
+            <img src="{{asset('logo.png')}}" alt="logo"/></a>
+          <a class="navbar-brand brand-logo-mini" href="{{Route('admin.beranda')}}">
+            <img src="{{asset('pemkab.png')}}" alt="logo" /> </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
           <!-- <ul class="navbar-nav">
@@ -88,7 +88,7 @@
                 </div>
               </a>
             </li>
-            <li class="nav-item nav-category">Main Menu</li>
+            <li class="nav-item nav-category">Menu Admin</li>
             <li class="nav-item">
               <a class="nav-link" href="{{Route('admin.beranda')}}">
                 <i class="menu-icon typcn typcn-document-text"></i>
@@ -121,7 +121,24 @@
               <div class="collapse" id="permohonan">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                    <a class="nav-link" href="{{Route('admin.user.index')}}">Pembuatan Baru</a>
+                    <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#admin_riwayat_permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Riwayat Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="admin_riwayat_permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Pembuatan Baru</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Perpanjangan Izin</a>
@@ -204,4 +221,4 @@
     <!-- endinject -->
     <!-- <script src="{{asset('admin/js/shared/jquery.cookie.js')}}"></script> -->
   </body>
-</html>s
+</html>

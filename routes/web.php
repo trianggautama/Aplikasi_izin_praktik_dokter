@@ -31,6 +31,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::put('/edit/{uuid}', [PemohonController::class, 'update'])->name('update'); 
         Route::get('/delete/{uuid}', [PemohonController::class, 'delete'])->name('delete'); 
     });
+
+    Route::prefix('permohonan')->name('permohonan.')->group(function () {
+        Route::get('/', [PermohonanController::class, 'admin_index'])->name('index'); 
+        Route::post('/', [PermohonanController::class, 'store'])->name('store'); 
+        Route::get('/detail/{uuid}', [PermohonanController::class, 'admin_detail'])->name('detail'); 
+        Route::get('/edit/{uuid}', [PermohonanController::class, 'edit'])->name('edit'); 
+        Route::put('/edit/{uuid}', [PermohonanController::class, 'update'])->name('update'); 
+        Route::get('/delete/{uuid}', [PermohonanController::class, 'delete'])->name('delete'); 
+    });
 });
 
 Route::prefix('pemohon')->name('pemohon.')->group(function () {

@@ -12,6 +12,12 @@ class PermohonanController extends Controller
         return view('pemohon.permohonan.index');
     }
 
+    public function admin_index()
+    {
+
+        return view('admin.permohonan.index');
+    }
+
     public function add()
     {
 
@@ -22,5 +28,11 @@ class PermohonanController extends Controller
     {
 
         return view('pemohon.permohonan.detail');
+    }
+
+    public function admin_detail()
+    {
+
+        return view('admin.permohonan.detail');
     }
 }
