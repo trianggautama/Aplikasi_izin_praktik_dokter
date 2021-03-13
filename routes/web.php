@@ -12,7 +12,7 @@ Route::prefix('auth')->name('auth.')->group(function () {
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [LoginController::class, 'login'])->name('loginPost');
     Route::get('/register', [AuthController::class, 'register'])->name('register');
-    Route::post('/register', [PemohonController::class, 'register_store'])->name('store');
+    Route::post('/register', [AuthController::class, 'store_register'])->name('store');
 });
 
 Route::prefix('admin')->name('admin.')->group(function () {

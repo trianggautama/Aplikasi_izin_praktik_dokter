@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-
 class MainController extends Controller
 {
     public function adminBeranda()
     {
-        dd(Auth::user());
+        // Auth::logout();
         return view('admin.index');
     }
 
