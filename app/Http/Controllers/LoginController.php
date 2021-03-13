@@ -43,7 +43,7 @@ class LoginController extends Controller
                     return redirect('/admin/beranda');
                     break;
                 case 2:
-                    return redirect('/kasi/beranda');
+                    return redirect('/petugas_proses/beranda');
                     break;
                 case 3:
                     return redirect('/kasi-pju/beranda');

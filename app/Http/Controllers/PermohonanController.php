@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Lampiran;
 use App\Models\Permohonan_SIP;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
 use Illuminate\Support\Facades\Auth;
 
 class PermohonanController extends Controller
@@ -20,6 +20,18 @@ class PermohonanController extends Controller
     {
         $data = Permohonan_SIP::latest()->get();
         return view('admin.permohonan.index', compact('data'));
+    }
+
+    public function petugas_index()
+    {
+        $data = Permohonan_SIP::where('status','>=','3')->latest()->get();
+        return view('kabid.permohonan.index', compact('data'));
+    }
+
+    public function kabid_index()
+    {
+        $data = Permohonan_SIP::where('status','>=','1')->latest()->get();
+        return view('kabid.permohonan.index', compact('data'));
     }
 
     public function add()

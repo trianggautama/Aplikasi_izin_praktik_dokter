@@ -67,7 +67,10 @@
                 <a class="dropdown-item">Messages<i class="dropdown-item-icon ti-comment-alt"></i></a>
                 <a class="dropdown-item">Activity<i class="dropdown-item-icon ti-location-arrow"></i></a>
                 <a class="dropdown-item">FAQ<i class="dropdown-item-icon ti-help-alt"></i></a>
-                <a class="dropdown-item">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
+                <a class="dropdown-item" href="{{ route('auth.logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-power-off m-r-5 m-l-5"></i>Logout</a>
+                <form id="logout-form" action="{{ route('auth.logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
               </div>
             </li>
           </ul>
@@ -153,18 +156,64 @@
             </li>
             @endif
             @if(Auth::user()->role == 2)
-              <li class="nav-item nav-category">Menu Kasi</li>
+              <li class="nav-item nav-category">Menu Petugas Proses</li>
+              <li class="nav-item">
+              <a class="nav-link" href="{{Route('petugas_proses.beranda')}}">
+                <i class="menu-icon typcn typcn-document-text"></i>
+                <span class="menu-title">Beranda</span>
+              </a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('petugas_proses.permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             @endif
             @if(Auth::user()->role == 3)
               <li class="nav-item nav-category">Menu Kasi PJU</li>
             @endif
             @if(Auth::user()->role == 4)
-              <li class="nav-item nav-category">Menu Kabid</li>
+              <li class="nav-item nav-category">Menu Petugas Proses</li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{Route('kabid.beranda')}}">
+                  <i class="menu-icon typcn typcn-document-text"></i>
+                  <span class="menu-title">Beranda</span>
+                </a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+                  <i class="menu-icon typcn typcn-coffee"></i>
+                  <span class="menu-title">Permohonan</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="permohonan">
+                  <ul class="nav flex-column sub-menu">
+                      <li class="nav-item">
+                      <a class="nav-link" href="{{Route('kabid.permohonan.index')}}">Pembuatan Baru</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Perpanjangan Izin</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
             @endif
-            @if(Auth::user()->role == 4)
+            @if(Auth::user()->role == 5)
               <li class="nav-item nav-category">Menu Sekretaris</li>
             @endif
-            @if(Auth::user()->role == 4)
+            @if(Auth::user()->role == 6)
               <li class="nav-item nav-category">Menu Kabid</li>
             @endif
             @if(Auth::user()->role == 7)

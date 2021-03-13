@@ -7,18 +7,18 @@
                 <h4 class="page-title">Beranda</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                 <ul class="quick-links ml-auto">
-                    <li><a href="#">Petugas</a></li>
+                    <li><a href="#">Kabid</a></li>
                     <li><a href="#">Beranda</a></li>
                 </ul>
                 </div>
             </div>
         </div>
         </div>
-        <div class="row"> 
+        <div class="row">
             <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                <h1>Selamat Datang Petugas</h1>  
+                <h1>Selamat Datang Kabid</h1>  
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci cupiditate inventore architecto. Repellat laudantium ea sunt ut quas ratione deleniti ullam nostrum unde magni voluptates vitae rem dolore, atque rerum.</p>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                                         @endswitch
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('petugas_proses.permohonan.detail', $d->id)}}"
+                                        <a href="{{Route('kabid.permohonan.detail', $d->id)}}"
                                             class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-file"></i></a>
                                     </td>
                                 </tr>
@@ -95,7 +95,6 @@
                     </div>
                 </div>
             </div>
-
             </div>
         </div>
     </div>

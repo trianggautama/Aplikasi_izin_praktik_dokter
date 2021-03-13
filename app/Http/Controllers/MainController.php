@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Permohonan_SIP;
+use Carbon\Carbon;
+
 class MainController extends Controller
 {
     public function adminBeranda()
@@ -27,7 +30,8 @@ class MainController extends Controller
 
     public function kabidBeranda()
     {
-        return view('kabid.index');
+        $data = Permohonan_SIP::where('status','1')->whereDate('created_at', Carbon::today())->get();
+        return view('kabid.index',compact('data'));
     }
 
     public function kasiPjuBeranda()
@@ -37,7 +41,8 @@ class MainController extends Controller
 
     public function PetugasProsesBeranda()
     {
-        return view('petugas.index');
+        $data = Permohonan_SIP::where('status','3')->whereDate('created_at', Carbon::today())->get();
+        return view('petugas.index',compact('data')); 
     }
 
 }

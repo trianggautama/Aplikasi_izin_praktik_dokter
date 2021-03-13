@@ -68,7 +68,9 @@
                         <div class="row">
                             <div class="col-md">Detail Permohonan</div>
                             <div class="col-md text-right">
-                                <a href="" class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a>
+                                @if($data->status == Auth::user()->role -1)
+                                    <a href="" class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -104,6 +106,41 @@
                                 <td width="20%">Tempat Ttd</td>
                                 <td width="2%">: {{$data->tempat_ttd}}</td>
                                 <td></td>
+                            </tr>
+                            <tr>
+                                <td width="20%">Status Verifikasi</td>
+                                <td width="2%">: 
+                                @switch($data->status)
+                                        @case(1)
+                                        <span class="badge badge-success">Proses Pemeriksaan Berkas - Kabid</span>
+                                        @break
+
+                                        @case(2)
+                                        <span class="badge badge-success">Proses Penerbitan SK - Kasi PJU</span>
+                                        @break
+
+                                        @case(3)
+                                        <span class="badge badge-success">Proses Cetak SK - Petugas Proses</span>
+                                        @break
+
+                                        @case(4)
+                                        <span class="badge badge-success">Proses Validasi SK - Sekretaris</span>
+                                        @break
+
+                                        @case(5)
+                                        <span class="badge badge-success">Proses Penandatanganan SK - Kepala
+                                            Dinas</span>
+                                        @break
+
+                                        @case(6)
+                                        <span class="badge badge-success">Proses Penandatanganan SK - Selesai</span>
+                                        @break
+
+                                        @default
+                                        <span class="badge badge-success">Proses Pemeriksaan Berkas - Admin CS</span>
+                                        @endswitch
+                                </td>
+                                <td></td> 
                             </tr>
                         </table>
                     </div>
