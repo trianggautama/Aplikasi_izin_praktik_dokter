@@ -52,7 +52,7 @@
               <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-toggle="dropdown">
                 <i class="mdi mdi-email-outline"></i>
                 <span class="count bg-success">3</span>
-              </a>
+              </a>  
             </li>
             <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -151,6 +151,21 @@
                 </ul>
               </div>
             </li>
+            @endif
+            @if(Auth::user()->role == 2)
+              <li class="nav-item nav-category">Menu Kasi</li>
+            @endif
+            @if(Auth::user()->role == 3)
+              <li class="nav-item nav-category">Menu Kasi PJU</li>
+            @endif
+            @if(Auth::user()->role == 4)
+              <li class="nav-item nav-category">Menu Kabid</li>
+            @endif
+            @if(Auth::user()->role == 4)
+              <li class="nav-item nav-category">Menu Sekretaris</li>
+            @endif
+            @if(Auth::user()->role == 4)
+              <li class="nav-item nav-category">Menu Kabid</li>
             @endif
             @if(Auth::user()->role == 7)
             <li class="nav-item nav-category">Menu User </li>

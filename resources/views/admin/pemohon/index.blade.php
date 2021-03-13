@@ -28,43 +28,45 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table id="example" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>NIK</th>
-                                <th>Nama</th>
-                                <th>Tempat, Tanggal Lahir</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Alamat</th>
-                                <th class="text-center">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($data as $d)
-                            <tr>
-                                <td>{{$loop->iteration}}</td>
-                                <td>{{$d->biodata_diri->NIP}}</td>
-                                <td>{{$d->nama}}</td>
-                                <td>
-                                    @if ($d->biodata_diri->jenis_kelamin == 1)
-                                    Laki-laki
-                                    @else
-                                    Perempuan
-                                    @endif
-                                </td>
-                                <td>{{$d->biodata_diri->tempat_lahir}}, {{$d->biodata_diri->tanggal_lahir}}</td>
-                                <td>{{$d->biodata_diri->alamat}}</td>
-                                <td class="text-center">
-                                    <a href="{{Route('admin.pemohon.edit', $d->id)}}"
-                                        class="btn btn-icons btn-rounded btn-warning"><i class="mdi mdi-pencil"></i></a>
-                                    <button type="button" class="btn btn-icons btn-rounded btn-danger"><i
-                                            class="mdi mdi-delete"></i></button>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>NIK</th>
+                                    <th>Nama</th>
+                                    <th>Tempat, Tanggal Lahir</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Alamat</th>
+                                    <th class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($data as $d)
+                                <tr>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$d->biodata_diri->NIP}}</td>
+                                    <td>{{$d->nama}}</td>
+                                    <td>
+                                        @if ($d->biodata_diri->jenis_kelamin == 1)
+                                        Laki-laki
+                                        @else
+                                        Perempuan
+                                        @endif
+                                    </td>
+                                    <td>{{$d->biodata_diri->tempat_lahir}}, {{$d->biodata_diri->tanggal_lahir}}</td>
+                                    <td>{{$d->biodata_diri->alamat}}</td>
+                                    <td class="text-center">
+                                        <a href="{{Route('admin.pemohon.edit', $d->id)}}"
+                                            class="btn btn-icons btn-rounded btn-warning"><i class="mdi mdi-pencil"></i></a>
+                                        <a href="{{Route('admin.pemohon.index',['id'=>$d->id])}}" class="btn btn-icons btn-rounded btn-danger"><i
+                                                class="mdi mdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
