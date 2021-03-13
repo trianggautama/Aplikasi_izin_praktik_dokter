@@ -19,7 +19,7 @@ class Kabid
     {
 
         if (!Auth::check()) {
-            return redirect()->route('login');
+            return redirect()->route('auth.login');
         }
         switch (Auth::user()->role) {
             case 1:
