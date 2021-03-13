@@ -57,6 +57,26 @@ Route::prefix('pemohon')->name('pemohon.')->group(function () {
     });
 });
 
+Route::prefix('kepala-dinas')->name('kadis.')->group(function () {
+    Route::get('/beranda', [MainController::class, 'kadisBeranda'])->name('beranda');
+});
+
+Route::prefix('sekretaris')->name('sekretaris.')->group(function () {
+    Route::get('/beranda', [MainController::class, 'sekretarisBeranda'])->name('beranda');
+});
+
+Route::prefix('kabid')->name('kabid.')->group(function () {
+    Route::get('/beranda', [MainController::class, 'kabidBeranda'])->name('beranda');
+});
+
+Route::prefix('kasi-pju')->name('kasi_pju.')->group(function () {
+    Route::get('/beranda', [MainController::class, 'kasiPjuBeranda'])->name('beranda');
+});
+
+Route::prefix('petugas_proses')->name('petugas_proses.')->group(function () {
+    Route::get('/beranda', [MainController::class, 'PetugasProsesBeranda'])->name('beranda');
+}); 
+
 Route::get('/', function () {
     return view('welcome');
 });

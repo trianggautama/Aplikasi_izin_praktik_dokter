@@ -14,4 +14,30 @@ class MainController extends Controller
     {
         return view('pemohon.index');
     }
+
+    public function kadisBeranda()
+    {
+        return view('kadis.index');
+    }
+
+    public function sekretarisBeranda()
+    {
+        return view('sekretaris.index');
+    }
+
+    public function kabidBeranda()
+    {
+        return view('kabid.index');
+    }
+
+    public function kasiPjuBeranda()
+    {
+        return view('kasi_pju.index');
+    }
+
+    public function PetugasProsesBeranda()
+    {
+        return view('petugas.index');
+    }
+
 }
