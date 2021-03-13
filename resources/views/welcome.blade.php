@@ -32,10 +32,10 @@
           <a class="navbar-brand" href="/" title="uiCookies:Frame"><small>DPMPTSP Kab. Banjar</small></a>
         </div>
 
-        <div id="navbar-collapse" class="navbar-collapse collapse">
+        <div id="navbar-collapse" class="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" data-nav-section="reviews">Reviews</a></li>
-            <li><a href="{{Route('auth.login')}}">Login</a></li>
+            <li><a href="/">Login</a></li>
           </ul>
         </div>
       </div>
@@ -142,47 +142,24 @@
     </section> -->
     <!-- END section -->
     <section class="probootstrap-section probootstrap-bg-light" data-section="contact">
-      <div class="container">
-        <div class="row">
+      <div class="container" style="margin-top:0px; margin-bottom:0px">
+        <div class="row" style="margin-top:0px; margin-bottom:0px">
           <div class="col-md-6">
-            <form action="" class="probootstrap-form">
-              <h2 class="text-black mt0">Get In Touch</h2>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Phone">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control"cols="30" rows="10" placeholder="Write a Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Sebd Message">
-              </div>
-            </form>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15931.008659639148!2d114.848807!3d-3.41049!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc3754939f5593486!2sDinas%20Penanaman%20Modal%20Dan%20Pelayanan%20Terpadu%20Satu%20Pintu!5e0!3m2!1sid!2sid!4v1615624028173!5m2!1sid!2sid" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <div class="col-md-3 col-md-push-1">
             <ul class="probootstrap-contact-details">
               <li>
-                <span class="text-uppercase">Email</span>
-                probootstrap@gmail.com
+                <span class="text-uppercase">Web</span>
+                <a href="http://dpmptsp.banjarkab.go.id/">dpmptsp.banjarkab.go.id</a>
               </li>
               <li>
-                <span class="text-uppercase">Phone</span>
-                +30 976 1382 9921
+                <span class="text-uppercase">No Telepon</span>
+                +625114721000
               </li>
               <li>
-                <span class="text-uppercase">Fax</span>
-                +30 976 1382 9922
-              </li>
-              <li>
-                <span class="text-uppercase">Address</span>
-                San Francisco, CA <br>
-                4th Floor8 Lower  <br>
-                San Francisco street, M1 50F
+                <span class="text-uppercase">Alamat</span>
+                  Jl. Jend. Ahmad Yani KM.40 No.6A, Cindai Alus, Kec. Martapura, Banjar, Kalimantan Selatan 70611
               </li>
             </ul>
           </div>
@@ -195,12 +172,7 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-md-12">
-            <p class="probootstrap-social"><a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-facebook2"></i></a> <a href="#"><i class="icon-instagram2"></i></a><a href="#"><i class="icon-linkedin"></i></a></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            &copy; 2017 <a href="https://uicookies.com/">uiCookies:Frame</a>. All Rights Reserved. <br> Designed &amp; Developed by <a href="https://uicookies.com">uicookies.com</a> <br> Demo Images by <a href="https://unsplash.com">Unsplash</a>
+            &copy; 2017 <a href="https://uicookies.com/">uiCookies:Frame</a>. All Rights Reserved. </a>
           </div>
         </div>
       </div>
