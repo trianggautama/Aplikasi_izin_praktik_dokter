@@ -39,7 +39,7 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav>\
     
     <section class="probootstrap-hero" style="background-image: url(depan/img/image_1.jpg);" data-section="home" data-stellar-background-ratio="0.5">
       <div class="container">
