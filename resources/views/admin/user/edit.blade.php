@@ -23,25 +23,25 @@
                     @csrf
                     <div class="form-group">
                         <label for="">NIP</label>
-                        <input type="text" name="NIP" value="{{$data->biodata_diri->NIP}}" class="form-control">
+                        <input type="text" name="NIP" value="{{$data->biodata_diri->NIP}}" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Nama</label>
-                        <input type="text" name="nama" value="{{$data->nama}}" class="form-control">
+                        <input type="text" name="nama" value="{{$data->nama}}" class="form-control" required>
                     </div>
                     <div class="row">
                         <div class="col-md">
                             <div class="form-group">
                                 <label for="">Tempat Lahir</label>
                                 <input type="text" name="tempat_lahir" value="{{$data->biodata_diri->tempat_lahir}}"
-                                    class="form-control">
+                                    class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="form-group">
                                 <label for="">Tenggal Lahir</label>
                                 <input type="date" name="tanggal_lahir" value="{{$data->biodata_diri->tanggal_lahir}}"
-                                    class="form-control">
+                                    class="form-control" required>
                             </div>
                         </div>
                     </div>
@@ -50,9 +50,9 @@
                         <div class="col-md">
                             <div class="form-radio">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="jenis_kelamin"
+                                    <input type="radio" class="form-check-input" name="jenis_kelamin" required
                                         id="membershipRadios1" value="1"
-                                        {{$data->biodata_diri->jenis_kelamin == 1 ? 'checked' : ''}}> Laki - laki
+                                        {{$data->biodata_diri->jenis_kelamin == 1 ? 'checked' : ''}}> Laki - laki 
                                 </label>
                             </div>
                         </div>
@@ -68,11 +68,11 @@
                     </div>
                     <div class="form-group">
                         <label for="">Alamat</label>
-                        <textarea name="alamat" id="" class="form-control">{{$data->biodata_diri->alamat}}</textarea>
+                        <textarea name="alamat" id="" class="form-control" required>{{$data->biodata_diri->alamat}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="">User Role</label>
-                        <select name="role" id="" class="form-control">
+                        <select name="role" id="" class="form-control" required>
                             <option value="1" {{$data->role == 1 ? 'selected' : ''}}>Admin CS</option>
                             <option value="2" {{$data->role == 2 ? 'selected' : ''}}>Kasi </option>
                             <option value="3" {{$data->role == 3 ? 'selected' : ''}}>Kasi PJU</option>

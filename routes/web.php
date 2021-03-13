@@ -21,7 +21,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/', [UserController::class, 'store'])->name('store');
         Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
         Route::put('/edit/{id}', [UserController::class, 'update'])->name('update');
-        Route::get('/delete/{id}', [UserController::class, 'delete'])->name('delete');
+        Route::get('/delete/{id}', [UserController::class, 'destroy'])->name('delete');
     });
 
     Route::prefix('pemohon')->name('pemohon.')->group(function () {
@@ -44,7 +44,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 Route::prefix('pemohon')->name('pemohon.')->group(function () {
     Route::get('/beranda', [MainController::class, 'pemohonBeranda'])->name('beranda');
-
     Route::prefix('permohonan')->name('permohonan.')->group(function () {
         Route::get('/', [PermohonanController::class, 'pemohon_index'])->name('index');
         Route::get('/add', [PermohonanController::class, 'add'])->name('add');

@@ -48,6 +48,6 @@ class UserController extends Controller
     {
         $data = User::findOrFail($id)->delete();
 
-        return back()->withSuccess('Data berhasil disimpan');
+        return back()->withSuccess('Data berhasil dihapus');
     }
 }

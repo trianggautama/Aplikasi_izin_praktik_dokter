@@ -66,14 +66,13 @@
                                     @elseif ($d->role == 5)
                                     Sekretaris
                                     @else
-                                    Kepala Dinas
+                                    Kepala Dinas 
                                     @endif
                                 </td>
                                 <td class="text-center">
                                     <a href="{{Route('admin.user.edit', $d->id)}}"
                                         class="btn btn-icons btn-rounded btn-warning"><i class="mdi mdi-pencil"></i></a>
-                                    <button type="button" class="btn btn-icons btn-rounded btn-danger"><i
-                                            class="mdi mdi-delete"></i></button>
+                                    <a href="{{Route('admin.user.delete',['id'=>$d->id])}}" class="btn btn-icons btn-rounded btn-danger delete"><i class="mdi mdi-delete"></i></a>
                                 </td>
                             </tr>
                             @endforeach
@@ -169,4 +168,14 @@
         </div>
     </div>
 </div>
+@include('layouts.modal_hapus')            
+@endsection
+@section('script')
+    <script>
+        $(".delete").click(function(){
+            let data = $(this).data("id");
+            $('.btn-del').attr("href", data);
+            $('#delForm').modal('show');
+        });
+    </script>
 @endsection

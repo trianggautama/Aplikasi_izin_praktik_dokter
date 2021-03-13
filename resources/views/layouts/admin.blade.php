@@ -22,6 +22,10 @@
     
     <!-- datatable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+
+    <script src="{{asset('iziToast/iziToast.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('iziToast/iziToast.css')}}" /> 
+    <link rel="stylesheet" href="{{asset('iziToast/iziToast.min.css')}}"/> 
   </head>
   <body>
     <div class="container-scroller">
@@ -88,6 +92,7 @@
                 </div>
               </a>
             </li>
+            @if(Auth::user()->role == 1)
             <li class="nav-item nav-category">Menu Admin</li>
             <li class="nav-item">
               <a class="nav-link" href="{{Route('admin.beranda')}}">
@@ -146,6 +151,8 @@
                 </ul>
               </div>
             </li>
+            @endif
+            @if(Auth::user()->role == 7)
             <li class="nav-item nav-category">Menu User </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{Route('admin.beranda')}}">
@@ -187,6 +194,7 @@
                 </ul>
               </div>
             </li>
+            @endif
           </ul>
         </nav>
         <!-- partial -->
@@ -218,7 +226,7 @@
             $('.datatable').DataTable();
         } );
     </script>
-    <!-- endinject -->
-    <!-- <script src="{{asset('admin/js/shared/jquery.cookie.js')}}"></script> -->
+    @include('layouts.alert')            
+    @yield('script')
   </body>
 </html>

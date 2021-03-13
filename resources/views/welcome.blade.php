@@ -55,7 +55,7 @@
       </div>
     </section>
 
-    <section class="probootstrap-section">
+    <!-- <section class="probootstrap-section">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -84,7 +84,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- END section -->
     <section class="probootstrap-section">
       <div class="container">
