@@ -36,10 +36,11 @@
               <form action="{{Route('auth.store')}}" method="POST">
                 @csrf
                 <br>
+                <input type="hidden" name="role" value="7" id="">
                 <div class="form-group">
                   <label for="">NIP/NIK</label>
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="NIP">
+                    <input type="text" name="NIP" class="form-control" placeholder="NIP">
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -91,26 +92,26 @@
                   <div class="col-md">
                     <div class="form-radio">
                       <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1"
+                        <input type="radio" class="form-check-input" name="jenis_kelamin" id="membershipRadios1"
                           value="1" checked> Laki - laki </label>
                     </div>
                   </div>
                   <div class="col-md">
                     <div class="form-radio">
                       <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2"
+                        <input type="radio" class="form-check-input" name="jenis_kelamin" id="membershipRadios2"
                           value="2"> Perempuan </label>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="">Alamat</label>
-                  <textarea name="" id="" class="form-control"></textarea>
+                  <textarea name="alamat" id="" class="form-control"></textarea>
                 </div>
                 <div class="form-group">
                   <label for="">Username</label>
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Username">
+                    <input type="text" name="username" class="form-control" placeholder="Username">
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -121,7 +122,7 @@
                 <div class="form-group">
                   <label for="">Password</label>
                   <div class="input-group">
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
