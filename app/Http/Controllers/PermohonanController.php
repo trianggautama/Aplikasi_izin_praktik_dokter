@@ -127,9 +127,9 @@ class PermohonanController extends Controller
         return view('pemohon.permohonan.detail', compact('data'));
     }
 
-    public function admin_detail()
+    public function admin_detail($id)
     {
-
-        return view('admin.permohonan.detail');
+        $data = Permohonan_SIP::findOrFail($id);
+        return view('admin.permohonan.detail',compact('data'));
     }
 }

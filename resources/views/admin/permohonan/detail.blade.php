@@ -29,28 +29,34 @@
                         <table class="table table-striped">
                             <tr>
                                 <td width="20%">NIP</td>
-                                <td width="2%">:</td>
-                                <td></td>
+                                <td width="2%">:</td> 
+                                <td>{{$data->biodata_diri->NIP}}</td>
                             </tr>
                             <tr>
                                 <td width="20%">Nama</td>
                                 <td width="2%">:</td>
-                                <td></td>
+                                <td>{{$data->biodata_diri->user->nama}}</td>
                             </tr>
                             <tr>
                                 <td width="20%">Tempat, Tanggal Lahir</td>
                                 <td width="2%">:</td>
-                                <td></td>
+                                <td>{{$data->biodata_diri->tempat_lahir}}, {{Carbon\carbon::parse($data->biodata_diri->tanggal_lahir)->translatedFormat('d F Y')}}</td>
                             </tr>
                             <tr>
                                 <td width="20%">Jenis Kelamin</td>
                                 <td width="2%">:</td>
-                                <td></td>
+                                <td>
+                                    @if($data->biodata_diri->jenis_kelamin == 1)
+                                        <p>Laki - laki</p>
+                                    @else
+                                        <p>Perempuan</p>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <td width="20%">Alamat</td>
                                 <td width="2%">:</td>
-                                <td></td>
+                                <td>{{$data->biodata_diri->alamat}}</td>
                             </tr>
                         </table>
                     </div>
@@ -70,37 +76,33 @@
                         <table class="table table-striped">
                             <tr>
                                 <td width="20%">Tahun Kelulusan</td>
-                                <td width="2%">:</td>
+                                <td width="2%">: {{carbon\carbon::parse($data->tahun_kelulusan)->translatedFormat('Y')}}
+                                </td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td width="20%">Nomor Str</td>
-                                <td width="2%">:</td>
+                                <td width="2%">: {{$data->nomor_str}}</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td width="20%">Nomor Rekomendasi</td>
-                                <td width="2%">:</td>
+                                <td width="2%">: {{$data->nomor_rekomendasi}}</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td width="20%">Tempat Praktik</td>
-                                <td width="2%">:</td>
+                                <td width="2%">: {{$data->tempat_praktik}}</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td width="20%">Alamat Tujuan</td>
-                                <td width="2%">:</td>
+                                <td width="2%">: {{$data->alamat_tujuan}}</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td width="20%">Tempat Ttd</td>
-                                <td width="2%">:</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td width="20%">Status</td>
-                                <td width="2%">:</td>
+                                <td width="2%">: {{$data->tempat_ttd}}</td>
                                 <td></td>
                             </tr>
                         </table>
@@ -129,52 +131,52 @@
                                 <tr>
                                     <td>1</td>
                                     <td>Surat Rekomendasi Dinkes</td>
-                                    <td class="text-center"><button type="button" class="btn btn-icons btn-rounded btn-primary"><i class="mdi mdi-cloud-download"></i></button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->surat_rekomendasi_dinkes)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Surat Rekomendasi Organisasi</td>
-                                    <td class="text-center"><button type="button" class="btn btn-icons btn-rounded btn-primary"><i class="mdi mdi-cloud-download"></i></button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->surat_rekomendasi_organisasi)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Surat Persetujuan Pimpinan</td>
-                                    <td class="text-center"><button type="button" class="btn btn-icons btn-rounded btn-primary"><i class="mdi mdi-cloud-download"></i></button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->surat_persetujuan_pimpinan)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Izin Oprasional</td>
-                                    <td class="text-center"><button type="button" class="btn btn-icons btn-rounded btn-primary"><i class="mdi mdi-cloud-download"></i></button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->izin_oprasional)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>NIB</td>
-                                    <td class="text-center"><button type="button" class="btn btn-icons btn-rounded btn-primary"><i class="mdi mdi-cloud-download"></i></button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->NIB)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>Ijazah</td>
-                                    <td class="text-center"><button type="button" class="btn btn-icons btn-rounded btn-primary"><i class="mdi mdi-cloud-download"></i></button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->ijazah)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>7</td>
                                     <td>Str</td>
-                                    <td class="text-center">belum di input</button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->str)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>8</td>
                                     <td>KTP</td>
-                                    <td class="text-center"><button type="button" class="btn btn-icons btn-rounded btn-primary"><i class="mdi mdi-cloud-download"></i></button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->ktp)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>9</td>
                                     <td>NPWP</td>
-                                    <td class="text-center"><button type="button" class="btn btn-icons btn-rounded btn-primary"><i class="mdi mdi-cloud-download"></i></button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->npwp)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>10</td>
                                     <td>Foto</td>
-                                    <td class="text-center"><button type="button" class="btn btn-icons btn-rounded btn-primary"><i class="mdi mdi-cloud-download"></i></button></td>
+                                    <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->foto)}}" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i class="mdi mdi-cloud-download"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>
