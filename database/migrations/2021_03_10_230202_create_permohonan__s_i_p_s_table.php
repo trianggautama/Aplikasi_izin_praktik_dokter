@@ -22,6 +22,7 @@ class CreatePermohonanSIPSTable extends Migration
             $table->string('tempat_praktik', 100);
             $table->text('alamat_tujuan');
             $table->string('tempat_ttd', 100);
+            $table->tinyInteger('status')->default(0);
             $table->foreign('biodata_diri_id')->references('id')->on('biodata_diris')->onDelete('cascade');
             $table->timestamps();
         });

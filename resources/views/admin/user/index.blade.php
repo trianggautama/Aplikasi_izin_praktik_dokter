@@ -58,7 +58,7 @@
                                     @if ($d->role == 1)
                                     Admin CS
                                     @elseif ($d->role == 2)
-                                    Kasi
+                                    Petugas Proses
                                     @elseif ($d->role == 3)
                                     Kasi PJU
                                     @elseif ($d->role == 4)
@@ -66,13 +66,15 @@
                                     @elseif ($d->role == 5)
                                     Sekretaris
                                     @else
-                                    Kepala Dinas 
+                                    Kepala Dinas
                                     @endif
                                 </td>
                                 <td class="text-center">
                                     <a href="{{Route('admin.user.edit', $d->id)}}"
                                         class="btn btn-icons btn-rounded btn-warning"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="{{Route('admin.user.delete',['id'=>$d->id])}}" class="btn btn-icons btn-rounded btn-danger delete"><i class="mdi mdi-delete"></i></a>
+                                    <a href="{{Route('admin.user.delete',['id'=>$d->id])}}"
+                                        class="btn btn-icons btn-rounded btn-danger delete"><i
+                                            class="mdi mdi-delete"></i></a>
                                 </td>
                             </tr>
                             @endforeach
@@ -168,14 +170,14 @@
         </div>
     </div>
 </div>
-@include('layouts.modal_hapus')            
+@include('layouts.modal_hapus')
 @endsection
 @section('script')
-    <script>
-        $(".delete").click(function(){
+<script>
+    $(".delete").click(function(){
             let data = $(this).data("id");
             $('.btn-del').attr("href", data);
             $('#delForm').modal('show');
         });
-    </script>
+</script>
 @endsection
