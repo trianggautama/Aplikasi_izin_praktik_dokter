@@ -29,6 +29,14 @@ class AuthController extends Controller
         Auth::login($data);
 
         return redirect()->route('pemohon.beranda')->withSuccess('Data berhasil disimpan');
+    }
 
+    public function logout(Request $req)
+    {
+        Auth::logout();
+        $req->session()->invalidate();
+        $req->session()->regenerateToken();
+
+        return redirect()->route('auth.login')->with('success','Anda berhasil logout');
     }
 }
