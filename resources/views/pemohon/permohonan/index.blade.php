@@ -17,10 +17,10 @@
     </div>
     <div class="row">
         <div class="col-12 grid-margin">
-            <div class="card">
+            <div class="card"> 
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Data User</div>
+                        <div class="col-md">Data Permohonan</div>
                         <div class="col-md text-right">
                             <a href="{{Route('pemohon.permohonan.add')}}" class="btn btn-primary">+ tambah data</a>
                         </div>

@@ -4,14 +4,12 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">User</h4>
-                <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+                <h4 class="page-title">Admin CS</h4>
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#">user</a></li>
+                        <li><a href="#">Admin CS</a></li>
+                        <li><a href="#">Riwayat Permohonan</a></li>
                         <li><a href="#">data</a></li>
                     </ul>
-                </div>
             </div>
         </div>
     </div>
@@ -20,9 +18,9 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Data User</div>
+                        <div class="col-md">Data Permohonan</div>
                         <div class="col-md text-right">
-                            <a href="{{Route('admin.permohonan.filter')}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i>Cetak Data</a>
+                            <a href="{{Route('report.riwayat_permohonan')}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i>Cetak Data</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +82,7 @@
                                         @endswitch
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('admin.permohonan.detail', $d->id)}}"
+                                        <a href="{{Route('kadis.permohonan.detail', $d->id)}}"
                                             class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-file"></i></a>
                                     </td>
                                 </tr>

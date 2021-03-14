@@ -6,6 +6,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\PemohonController;
 use App\Http\Controllers\PermohonanController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->name('auth.')->group(function () {
@@ -39,6 +40,7 @@ Route::middleware(['adminCS'])->group(function () {
 
         Route::prefix('permohonan')->name('permohonan.')->group(function () {
             Route::get('/', [PermohonanController::class, 'admin_index'])->name('index');
+            Route::get('/filter', [PermohonanController::class, 'filter'])->name('filter');
             Route::post('/', [PermohonanController::class, 'store'])->name('store');
             Route::get('/detail/{id}', [PermohonanController::class, 'admin_detail'])->name('detail');
             Route::get('/edit/{id}', [PermohonanController::class, 'edit'])->name('edit');
@@ -157,6 +159,12 @@ Route::middleware(['kasi'])->group(function () {
         });
     });
 
+});
+
+Route::prefix('report')->name('report.')->group(function () {
+    Route::get('/', [ReportController::class, 'riwayat_permohonan'])->name('riwayat_permohonan');
+    Route::get('/', [ReportController::class, 'pemohon'])->name('pemohon');
+    Route::post('/', [ReportController::class, 'permohonan'])->name('permohonan');
 });
 
 Route::get('/', function () {

@@ -16,6 +16,11 @@ class PermohonanController extends Controller
         return view('pemohon.permohonan.index', compact('data'));
     }
 
+    public function filter()
+    {
+        return view('admin.permohonan.filter');
+    }
+
     public function admin_index()
     {
         switch (Auth::user()->role) {

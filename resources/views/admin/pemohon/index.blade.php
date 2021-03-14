@@ -22,6 +22,7 @@
                     <div class="row">
                         <div class="col-md">Data Pemohon</div>
                         <div class="col-md text-right">
+                        <a href="{{Route('report.pemohon')}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i>Cetak Data</a>
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModal">+ tambah data</button>
                         </div>
