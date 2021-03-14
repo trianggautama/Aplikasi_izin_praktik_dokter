@@ -60,7 +60,7 @@
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
                   <img class="img-md rounded-circle" src="{{asset('admin/images/faces/face8.jpg')}}" alt="Profile image">
-                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
+                  <p class="mb-1 mt-3 font-weight-semibold">{{Auth::user()->nama}}</p>
                   <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
                 </div>
                 <a class="dropdown-item">My Profile <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
@@ -90,8 +90,35 @@
                   <div class="dot-indicator bg-success"></div>
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">Allen Moreno</p>
-                  <p class="designation">Premium user</p>
+                  <p class="profile-name">{{Auth::user()->nama}}</p>
+                  @switch(Auth::user()->role)
+                    @case(1)
+                    <p class="designation">Admin CS</p> 
+                    @break
+
+                    @case(2)
+                    <p class="designation">Petugas Proses</p> 
+                    @break
+
+                    @case(3)
+                    <p class="designation">Kasi PJU</p> 
+                    @break
+
+                    @case(4)
+                    <p class="designation">Kepala Bidang</p> 
+                    @break
+
+                    @case(5)
+                    <p class="designation">Sekretaris</p> 
+                    @break
+
+                    @case(6)
+                    <p class="designation">Kepala Dinas</p> 
+                    @break
+
+                    @default
+                    <p class="designation">user Pemohon</p> 
+                  @endswitch
                 </div>
               </a>
             </li>
