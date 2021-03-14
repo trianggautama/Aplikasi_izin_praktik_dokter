@@ -404,10 +404,10 @@
               <div class="collapse" id="riwayat_permohonan_pemohon">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="{{Route('admin.user.index')}}">Pembuatan Baru</a>
+                    <a class="nav-link" href="{{Route('pemohon.riwayat_permohonan.index')}}">Pembuatan Baru</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Perpanjangan Izin</a>
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
                   </li>
                 </ul>
               </div>

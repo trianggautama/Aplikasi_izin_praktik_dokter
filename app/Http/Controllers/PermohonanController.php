@@ -11,7 +11,7 @@ class PermohonanController extends Controller
 {
     public function pemohon_index()
     {
-        $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->latest()->get();
+        $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status','!=',6)->latest()->get();
 
         return view('pemohon.permohonan.index', compact('data'));
     }
@@ -44,7 +44,8 @@ class PermohonanController extends Controller
                 return view('kadis.permohonan.index',compact('data'));
                 break;
             case 7:
-                return view('pemohon.permohonan.detail', compact('data'));
+                $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status','!=',6)->latest()->get();
+                return view('pemohon.permohonan.index', compact('data'));
                 break;
         }
     }
@@ -73,7 +74,8 @@ class PermohonanController extends Controller
                 return view('kadis.permohonan.riwayat',compact('data'));
                 break;
             case 7:
-                return view('pemohon.permohonan.riwayat', compact('data'));
+                $riwayat = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status',6)->latest()->get();
+                return view('pemohon.permohonan.riwayat', compact('riwayat'));
                 break;
         }
     }

@@ -8,7 +8,7 @@
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
                         <li><a href="#">Pemohon</a></li>
-                        <li><a href="#">Permohonan</a></li>
+                        <li><a href="#">Riwayat Permohonan</a></li>
                         <li><a href="#">Data</a></li>
                     </ul>
                 </div>
@@ -20,10 +20,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Data User</div>
-                        <div class="col-md text-right">
-                            <a href="{{Route('pemohon.permohonan.add')}}" class="btn btn-primary">+ tambah data</a>
-                        </div>
+                        <div class="col-md">Data Riwayat Permohonan</div>
                     </div>
                 </div>
                 <div class="card-body">
@@ -41,7 +38,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($data as $d)
+                                @foreach($riwayat as $d)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{carbon\carbon::parse($d->tahun_kelulusan)->translatedFormat('Y')}}</td>

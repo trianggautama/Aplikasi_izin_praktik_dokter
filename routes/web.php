@@ -65,6 +65,10 @@ Route::middleware(['pemohon'])->group(function () {
             Route::put('/edit/{id}', [PermohonanController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanController::class, 'delete'])->name('delete');
         });
+
+        Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
+            Route::get('/', [PermohonanController::class, 'riwayat'])->name('index');
+        });
     });
 
 });
