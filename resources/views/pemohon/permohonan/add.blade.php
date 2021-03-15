@@ -99,7 +99,7 @@
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
-                                    <label for="">Ijazah</label>
+                                    <label for="">Ijazah (Legalisir)</label>
                                     <input type="file" name="ijazah" class="form-control">
                                 </div>
                             </div>

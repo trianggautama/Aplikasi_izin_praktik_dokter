@@ -74,8 +74,7 @@
                             <a href="{{Route('admin.permohonan.verifikasi',$data->id)}}" class="btn btn-primary"><i
                                     class="mdi mdi-check"></i> Verifikasi Permohonan</a>
                             @endif
-                            <a href="" class="btn btn-primary"><i class="mdi mdi-printer"></i> Surat Izin Praktik
-                                (SIP)</a>
+                            <a href="{{Route('report.sip',['id'=>$data->id])}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a>
                         </div>
                     </div>
                 </div>
@@ -150,72 +149,13 @@
                     </table>
                 </div>
             </div>
-        </div>
-        <div class="col-12 grid-margin">
-            <div class="card">
-                <div class="card-header">
-                    <div class="row">
-                        <div class="col-md">Lampiran</div>
-                        <div class="col-md text-right">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <table class="table table-striped table-bordered datatable" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Lampiran</th>
-                                <th class="text-center">file</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Surat Rekomendasi Dinkes</td>
-                                <td class="text-center"><a
-                                        href="{{asset('lampiran/'.$data->lampiran->surat_rekomendasi_dinkes)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Surat Rekomendasi Organisasi</td>
-                                <td class="text-center"><a
-                                        href="{{asset('lampiran/'.$data->lampiran->surat_rekomendasi_organisasi)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Surat Persetujuan Pimpinan</td>
-                                <td class="text-center"><a
-                                        href="{{asset('lampiran/'.$data->lampiran->surat_persetujuan_pimpinan)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Izin Oprasional</td>
-                                <td class="text-center"><a
-                                        href="{{asset('lampiran/'.$data->lampiran->izin_oprasional)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
+        </div>    
             <div class="col-12 grid-margin">
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md">Detail Permohonan</div>
                             <div class="col-md text-right">
-                                @if($data->status == Auth::user()->role -1)
-                                    <a href="" class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a>
-                                @endif
-                                    <a href="{{Route('report.sip',['id'=>$data->id])}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a>
                             </div>
                         </div>
                     </div>

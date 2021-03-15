@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Middleware\Pemohon;
+use App\Models\Pemohonan_surat_rekomendasi;
 use App\Models\Permohonan_SIP;
+use App\Models\Surat_kuasa;
 use App\Models\User;
 use PDF;
 use Illuminate\Http\Request;
@@ -48,5 +50,21 @@ class ReportController extends Controller
         $pdf =PDF::loadView('report.sip', ['data'=>$data]);
         $pdf->setPaper('a4', 'potrait');
         return $pdf->stream('Laporan Surat Izin Praktik.pdf');
+    }
+
+    public function surat_rekomendasi($id)
+    {
+        $data = Pemohonan_surat_rekomendasi::findOrFail($id);
+        $pdf =PDF::loadView('report.surat_rekomendasi', ['data'=>$data]);
+        $pdf->setPaper('a4', 'potrait');
+        return $pdf->stream('Laporan Surat Rekomendasi.pdf');
+    }
+
+    public function tanda_terima($id)
+    {
+        $data   = Permohonan_SIP::findOrFail($id);
+        $pdf    = PDF::loadView('report.tanda_terima', ['data'=>$data]);
+        $pdf->setPaper('a4', 'potrait');
+        return $pdf->stream('Laporan Tanda Terima.pdf');
     }
 }

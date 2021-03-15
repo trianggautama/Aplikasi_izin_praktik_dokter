@@ -15,7 +15,7 @@ class Pemohonan_surat_rekomendasi extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function permohonan_sip(): BelongsTo
+    public function permohonan_SIP(): BelongsTo
     {
         return $this->belongsTo(Permohonan_SIP::class);
     }
