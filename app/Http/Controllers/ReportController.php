@@ -40,4 +40,13 @@ class ReportController extends Controller
         $pdf->setPaper('a4', 'landscape');
         return $pdf->stream('Laporan permohonan.pdf');
     }
+
+    public function sip($id)
+    {
+        $data = Permohonan_SIP::findOrFail($id);
+
+        $pdf =PDF::loadView('report.sip', ['data'=>$data]);
+        $pdf->setPaper('a4', 'potrait');
+        return $pdf->stream('Laporan Surat Izin Praktik.pdf');
+    }
 }

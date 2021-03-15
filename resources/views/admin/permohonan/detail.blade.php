@@ -202,6 +202,25 @@
                                         class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
                                             class="mdi mdi-cloud-download"></i></a></td>
                             </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 grid-margin">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md">Detail Permohonan</div>
+                            <div class="col-md text-right">
+                                @if($data->status == Auth::user()->role -1)
+                                    <a href="" class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a>
+                                @endif
+                                    <a href="{{Route('report.sip',['id'=>$data->id])}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
                             <tr>
                                 <td>5</td>
                                 <td>NIB</td>
