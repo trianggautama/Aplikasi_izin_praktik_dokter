@@ -236,7 +236,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            {{-- <tr>
                                 <td>1</td>
                                 <td>Surat Kuasa</td>
                                 <td class="text-center">
@@ -245,7 +245,7 @@
                                     <button type="button" class="btn btn-icons btn-rounded btn-primary"><i
                                             class="mdi mdi-cloud-download"></i></button>
                                 </td>
-                            </tr>
+                            </tr> --}}
                             <tr>
                                 <td>2</td>
                                 <td>Surat Rekomendasi</td>
@@ -264,7 +264,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="surat_kuasa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+{{-- <div class="modal fade" id="surat_kuasa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -275,30 +275,30 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{Route('pemohon.surat-kuasa.store')}}" method="post">
-                    @csrf
-                    <input type="hidden" value="{{$data->id}}" name="permohonan__s_i_p_id">
-                    <div class="form-group">
-                        <label for="">Tempat Praktik</label>
-                        <input type="text" name="tempat_praktek" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Jadwal Praktik</label>
-                        <input type="text" name="jadwal_praktek" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Alamat Praktik</label>
-                        <input type="text" name="alamat" class="form-control" required>
-                    </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-        </div>
-    </div>
+                <form action="{{Route('pemohon.surat_kuasa.store')}}" method="post">
+@csrf
+<input type="hidden" value="{{$data->id}}" name="permohonan__s_i_p_id">
+<div class="form-group">
+    <label for="">Tempat Praktik</label>
+    <input type="text" name="tempat_praktek" class="form-control" required>
 </div>
+<div class="form-group">
+    <label for="">Jadwal Praktik</label>
+    <input type="text" name="jadwal_praktek" class="form-control" required>
+</div>
+<div class="form-group">
+    <label for="">Alamat Praktik</label>
+    <input type="text" name="alamat" class="form-control" required>
+</div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+    <button type="submit" class="btn btn-primary">Simpan</button>
+</div>
+</form>
+</div>
+</div>
+</div> --}}
 
 <div class="modal fade" id="surat_rekomendasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
