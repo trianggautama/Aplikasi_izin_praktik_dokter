@@ -43,7 +43,7 @@ class Permohonan_SIP extends Model
         return $this->hasOne(Surat_kuasa::class);
     }
 
-    public function pemohonan_surat_rekomendasi(): HasMany
+    public function pemohonan_surat_rekomendasi(): HasOne
     {
         return $this->hasOne(Pemohonan_surat_rekomendasi::class);
     }
