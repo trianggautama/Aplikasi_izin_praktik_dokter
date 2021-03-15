@@ -11,7 +11,7 @@ class UserController extends Controller
     {
         $data = User::whereNotIn('role', [7])->get();
 
-        return view('admin.user.index');
+        return view('admin.user.index',compact('data'));
     }
 
     public function store(Request $req)

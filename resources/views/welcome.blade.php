@@ -48,7 +48,7 @@
           <br>
             <h1 class="probootstrap-heading probootstrap-animate " style="color:white !important;">Aplikasi Perizinan praktik Dokter DPMPTSP Kabupaten Banjar</h1>
             <div class="probootstrap-subheading center">
-              <p class="probootstrap-animate"><a href="{{Route('auth.login')}}" target="_blank" role="button" class="btn btn-primary">Login</a></p>
+              <p class="probootstrap-animate"><a href="{{Route('auth.login')}}" role="button" class="btn btn-primary">Login</a></p>
             </div>
           </div>
         </div>

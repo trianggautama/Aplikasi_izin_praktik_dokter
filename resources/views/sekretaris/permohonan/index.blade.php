@@ -1,34 +1,32 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="content-wrapper">
-        <div class="row page-title-header">
-            <div class="col-12">
+<div class="content-wrapper">
+    <div class="row page-title-header">
+        <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Beranda</h4>
+                <h4 class="page-title">Sekretaris</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
-                <ul class="quick-links ml-auto">
-                    <li><a href="#">Kadis</a></li>
-                    <li><a href="#">Beranda</a></li>
-                </ul>
+                    <ul class="quick-links ml-auto">
+                        <li><a href="#">Sekretaris</a></li>
+                        <li><a href="#">Permohonan</a></li>
+                        <li><a href="#">data</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        </div>
-        <div class="row">
-            <div class="col-12 grid-margin">
-                <div class="card">
-                    <div class="card-body">
-                    <h1>Selamat Datang Kadis</h1>  
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci cupiditate inventore architecto. Repellat laudantium ea sunt ut quas ratione deleniti ullam nostrum unde magni voluptates vitae rem dolore, atque rerum.</p>
+    </div>
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md">Data Permohonan</div>
+                        <div class="col-md text-right">
+                        </div>
                     </div>
                 </div>
-                <br>
-                <div class="card">
-                <div class="card-header">
-                    Permohonan Izin Baru {{Carbon\carbon::now()->format('d F Y')}}
-                </div>
                 <div class="card-body">
-                <div class="table-responsive">
+                    <div class="table-responsive">
                         <table id="example" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                                 <tr>
@@ -85,7 +83,7 @@
                                         @endswitch
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('kadis.permohonan.detail', $d->id)}}"
+                                        <a href="{{Route('sekretaris.permohonan.detail', $d->id)}}"
                                             class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-file"></i></a>
                                     </td>
                                 </tr>
@@ -95,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            </div>
         </div>
     </div>
+</div>
 @endsection

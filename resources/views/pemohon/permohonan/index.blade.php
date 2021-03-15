@@ -4,12 +4,12 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">User</h4>
+                <h4 class="page-title">Pemohon</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#">user</a></li>
-                        <li><a href="#">data</a></li>
+                        <li><a href="#">Pemohon</a></li>
+                        <li><a href="#">Permohonan</a></li>
+                        <li><a href="#">Data</a></li>
                     </ul>
                 </div>
             </div>
@@ -17,10 +17,10 @@
     </div>
     <div class="row">
         <div class="col-12 grid-margin">
-            <div class="card">
+            <div class="card"> 
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Data User</div>
+                        <div class="col-md">Data Permohonan</div>
                         <div class="col-md text-right">
                             <a href="{{Route('pemohon.permohonan.add')}}" class="btn btn-primary">+ tambah data</a>
                         </div>

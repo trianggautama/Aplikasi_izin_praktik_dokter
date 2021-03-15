@@ -60,7 +60,7 @@
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
                   <img class="img-md rounded-circle" src="{{asset('admin/images/faces/face8.jpg')}}" alt="Profile image">
-                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
+                  <p class="mb-1 mt-3 font-weight-semibold">{{Auth::user()->nama}}</p>
                   <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
                 </div>
                 <a class="dropdown-item">My Profile <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
@@ -90,8 +90,35 @@
                   <div class="dot-indicator bg-success"></div>
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">Allen Moreno</p>
-                  <p class="designation">Premium user</p>
+                  <p class="profile-name">{{Auth::user()->nama}}</p>
+                  @switch(Auth::user()->role)
+                    @case(1)
+                    <p class="designation">Admin CS</p> 
+                    @break
+
+                    @case(2)
+                    <p class="designation">Petugas Proses</p> 
+                    @break
+
+                    @case(3)
+                    <p class="designation">Kasi PJU</p> 
+                    @break
+
+                    @case(4)
+                    <p class="designation">Kepala Bidang</p> 
+                    @break
+
+                    @case(5)
+                    <p class="designation">Sekretaris</p> 
+                    @break
+
+                    @case(6)
+                    <p class="designation">Kepala Dinas</p> 
+                    @break
+
+                    @default
+                    <p class="designation">user Pemohon</p> 
+                  @endswitch
                 </div>
               </a>
             </li>
@@ -146,10 +173,10 @@
               <div class="collapse" id="admin_riwayat_permohonan">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                    <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Pembuatan Baru</a>
+                    <a class="nav-link" href="{{Route('admin.riwayat_permohonan.index')}}">Pembuatan Baru</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Perpanjangan Izin</a>
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
                   </li>
                 </ul>
               </div>
@@ -180,12 +207,69 @@
                 </ul>
               </div>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#petugas_riwayat_permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Riwayat Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="petugas_riwayat_permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('petugas_proses.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             @endif
             @if(Auth::user()->role == 3)
               <li class="nav-item nav-category">Menu Kasi PJU</li>
+              <li class="nav-item">
+              <a class="nav-link" href="{{Route('kasi_pju.beranda')}}">
+                <i class="menu-icon typcn typcn-document-text"></i>
+                <span class="menu-title">Beranda</span>
+              </a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('kasi_pju.permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#kasi_pju_riwayat_permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Riwayat Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="kasi_pju_riwayat_permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('kasi_pju.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             @endif
             @if(Auth::user()->role == 4)
-              <li class="nav-item nav-category">Menu Petugas Proses</li>
+              <li class="nav-item nav-category">Menu Kabid</li>
                 <li class="nav-item">
                 <a class="nav-link" href="{{Route('kabid.beranda')}}">
                   <i class="menu-icon typcn typcn-document-text"></i>
@@ -193,12 +277,12 @@
                 </a>
               </li>
                 <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <a class="nav-link" data-toggle="collapse" href="#kabid_permohonan" aria-expanded="false" aria-controls="ui-basic">
                   <i class="menu-icon typcn typcn-coffee"></i>
                   <span class="menu-title">Permohonan</span>
                   <i class="menu-arrow"></i>
                 </a>
-                <div class="collapse" id="permohonan">
+                <div class="collapse" id="kabid_permohonan">
                   <ul class="nav flex-column sub-menu">
                       <li class="nav-item">
                       <a class="nav-link" href="{{Route('kabid.permohonan.index')}}">Pembuatan Baru</a>
@@ -209,12 +293,109 @@
                   </ul>
                 </div>
               </li>
+              <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#kabid_riwayat_permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Riwayat Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="kabid_riwayat_permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('kabid.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             @endif
             @if(Auth::user()->role == 5)
               <li class="nav-item nav-category">Menu Sekretaris</li>
+              <li class="nav-item">
+              <a class="nav-link" href="{{Route('sekretaris.beranda')}}">
+                <i class="menu-icon typcn typcn-document-text"></i>
+                <span class="menu-title">Beranda</span>
+              </a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('sekretaris.permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#kadis_riwayat_permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Riwayat Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="kadis_riwayat_permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('sekretaris.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             @endif
             @if(Auth::user()->role == 6)
-              <li class="nav-item nav-category">Menu Kabid</li>
+              <li class="nav-item nav-category">Menu Kepala Dinas</li>
+              <li class="nav-item">
+              <a class="nav-link" href="{{Route('kadis.beranda')}}">
+                <i class="menu-icon typcn typcn-document-text"></i>
+                <span class="menu-title">Beranda</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('kadis.permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#kadis_riwayat_permohonan" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Riwayat Permohonan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="kadis_riwayat_permohonan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{Route('kadis.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             @endif
             @if(Auth::user()->role == 7)
             <li class="nav-item nav-category">Menu User </li>
@@ -250,10 +431,10 @@
               <div class="collapse" id="riwayat_permohonan_pemohon">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="{{Route('admin.user.index')}}">Pembuatan Baru</a>
+                    <a class="nav-link" href="{{Route('pemohon.riwayat_permohonan.index')}}">Pembuatan Baru</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Perpanjangan Izin</a>
+                    <a class="nav-link" href="#">Perpanjangan Izin</a>
                   </li>
                 </ul>
               </div>

@@ -11,27 +11,78 @@ class PermohonanController extends Controller
 {
     public function pemohon_index()
     {
-        $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->latest()->get();
+        $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status','!=',6)->latest()->get();
 
         return view('pemohon.permohonan.index', compact('data'));
     }
 
+    public function filter()
+    {
+        return view('admin.permohonan.filter');
+    }
+
     public function admin_index()
     {
-        $data = Permohonan_SIP::latest()->get();
-        return view('admin.permohonan.index', compact('data'));
+        switch (Auth::user()->role) {
+            case 1:
+                $data = Permohonan_SIP::where('status','!=',6)->latest()->get();
+                return view('admin.permohonan.index', compact('data'));
+                break;
+            case 2:
+                $data = Permohonan_SIP::where('status','>=','3')->where('status','!=',6)->latest()->get();
+                return view('petugas.permohonan.index', compact('data'));
+                break;
+            case 3: 
+                $data = Permohonan_SIP::where('status','>=','2')->where('status','!=',6)->latest()->get();
+                return view('kasi_pju.permohonan.index',compact('data'));
+                break;
+            case 4:
+                $data = Permohonan_SIP::where('status','>=','1')->where('status','!=',6)->latest()->get();
+                return view('kabid.permohonan.index', compact('data'));
+                break;
+            case 5:
+                $data = Permohonan_SIP::where('status','>=','4')->where('status','!=',6)->latest()->get();
+                return view('sekretaris.permohonan.index',compact('data'));
+                break;
+            case 6:
+                $data = Permohonan_SIP::where('status','>=','5')->where('status','!=',6)->latest()->get();
+                return view('kadis.permohonan.index',compact('data'));
+                break;
+            case 7:
+                $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status','!=',6)->latest()->get();
+                return view('pemohon.permohonan.index', compact('data'));
+                break;
+        }
     }
 
-    public function petugas_index()
+    public function riwayat()
     {
-        $data = Permohonan_SIP::where('status','>=','3')->latest()->get();
-        return view('kabid.permohonan.index', compact('data'));
-    }
+        $data = Permohonan_SIP::where('status',6)->latest()->get();
 
-    public function kabid_index()
-    {
-        $data = Permohonan_SIP::where('status','>=','1')->latest()->get();
-        return view('kabid.permohonan.index', compact('data'));
+        switch (Auth::user()->role) {
+            case 1:
+                return view('admin.permohonan.riwayat', compact('data'));
+                break;
+            case 2:
+                return view('petugas.permohonan.riwayat', compact('data'));
+                break;
+            case 3: 
+                return view('kasi_pju.permohonan.riwayat',compact('data'));
+                break;
+            case 4:
+                return view('kabid.permohonan.riwayat', compact('data'));
+                break;
+            case 5:
+                return view('sekretaris.permohonan.riwayat',compact('data'));
+                break;
+            case 6:
+                return view('kadis.permohonan.riwayat',compact('data'));
+                break;
+            case 7:
+                $riwayat = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status',6)->latest()->get();
+                return view('pemohon.permohonan.riwayat', compact('riwayat'));
+                break;
+        }
     }
 
     public function add()
@@ -136,12 +187,29 @@ class PermohonanController extends Controller
     public function detail($id)
     {
         $data = Permohonan_SIP::findOrFail($id);
-        return view('pemohon.permohonan.detail', compact('data'));
+        switch (Auth::user()->role) {
+            case 1:
+                return view('admin.permohonan.detail',compact('data'));
+                break;
+            case 2:
+                return view('petugas.permohonan.detail',compact('data'));
+                break;
+            case 3:
+                return view('kasi_pju.permohonan.detail',compact('data'));
+                break;
+            case 4:
+                return view('kabid.permohonan.detail',compact('data'));
+                break;
+            case 5:
+                return view('sekretaris.permohonan.detail',compact('data'));
+                break;
+            case 6:
+                return view('kadis.permohonan.detail',compact('data'));
+                break;
+            case 7:
+                return view('pemohon.permohonan.detail', compact('data'));
+                break;
+        }
     }
 
-    public function admin_detail($id)
-    {
-        $data = Permohonan_SIP::findOrFail($id);
-        return view('admin.permohonan.detail',compact('data'));
-    }
 }
