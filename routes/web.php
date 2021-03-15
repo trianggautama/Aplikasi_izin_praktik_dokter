@@ -45,6 +45,7 @@ Route::middleware(['adminCS'])->group(function () {
             Route::get('/filter', [PermohonanController::class, 'filter'])->name('filter');
             Route::post('/', [PermohonanController::class, 'store'])->name('store');
             Route::get('/detail/{id}', [PermohonanController::class, 'detail'])->name('detail');
+            Route::get('/verifikasi/{id}', [PermohonanController::class, 'verifikasi'])->name('verifikasi');
             Route::get('/edit/{id}', [PermohonanController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanController::class, 'delete'])->name('delete');
@@ -103,6 +104,7 @@ Route::middleware(['kepala-dinas'])->group(function () {
         Route::prefix('permohonan')->name('permohonan.')->group(function () {
             Route::get('/', [PermohonanController::class, 'admin_index'])->name('index');
             Route::get('/detail/{id}', [PermohonanController::class, 'detail'])->name('detail');
+            Route::get('/verifikasi/{id}', [PermohonanController::class, 'verifikasi'])->name('verifikasi');
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
@@ -119,6 +121,7 @@ Route::middleware(['sekretaris'])->group(function () {
         Route::prefix('permohonan')->name('permohonan.')->group(function () {
             Route::get('/', [PermohonanController::class, 'admin_index'])->name('index');
             Route::get('/detail/{id}', [PermohonanController::class, 'detail'])->name('detail');
+            Route::get('/verifikasi/{id}', [PermohonanController::class, 'verifikasi'])->name('verifikasi');
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
@@ -128,11 +131,11 @@ Route::middleware(['sekretaris'])->group(function () {
 
 });
 
-Route::middleware(['pemohon'])->group(function () {
-    Route::prefix('kabid')->name('kabid.')->group(function () {
-        Route::get('/beranda', [MainController::class, 'kabidBeranda'])->name('beranda');
-    });
-});
+// Route::middleware(['pemohon'])->group(function () {
+//     Route::prefix('kabid')->name('kabid.')->group(function () {
+//         Route::get('/beranda', [MainController::class, 'kabidBeranda'])->name('beranda');
+//     });
+// });
 
 Route::middleware(['kabid'])->group(function () {
 
@@ -142,6 +145,7 @@ Route::middleware(['kabid'])->group(function () {
         Route::prefix('permohonan')->name('permohonan.')->group(function () {
             Route::get('/', [PermohonanController::class, 'admin_index'])->name('index');
             Route::get('/detail/{id}', [PermohonanController::class, 'detail'])->name('detail');
+            Route::get('/verifikasi/{id}', [PermohonanController::class, 'verifikasi'])->name('verifikasi');
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
@@ -157,6 +161,7 @@ Route::middleware(['kasi-pju'])->group(function () {
         Route::prefix('permohonan')->name('permohonan.')->group(function () {
             Route::get('/', [PermohonanController::class, 'admin_index'])->name('index');
             Route::get('/detail/{id}', [PermohonanController::class, 'detail'])->name('detail');
+            Route::get('/verifikasi/{id}', [PermohonanController::class, 'verifikasi'])->name('verifikasi');
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
@@ -172,6 +177,7 @@ Route::middleware(['kasi'])->group(function () {
         Route::prefix('permohonan')->name('permohonan.')->group(function () {
             Route::get('/', [PermohonanController::class, 'admin_index'])->name('index');
             Route::get('/detail/{id}', [PermohonanController::class, 'detail'])->name('detail');
+            Route::get('/verifikasi/{id}', [PermohonanController::class, 'verifikasi'])->name('verifikasi');
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {

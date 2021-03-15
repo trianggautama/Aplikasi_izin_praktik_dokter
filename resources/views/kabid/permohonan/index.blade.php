@@ -83,7 +83,7 @@
                                         @endswitch
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('petugas_proses.permohonan.detail', $d->id)}}"
+                                        <a href="{{Route('kabid.permohonan.detail', $d->id)}}"
                                             class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-file"></i></a>
                                     </td>
                                 </tr>

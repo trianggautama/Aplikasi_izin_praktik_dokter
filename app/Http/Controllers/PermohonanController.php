@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Lampiran;
 use App\Models\Permohonan_SIP;
-use Illuminate\Http\Request; 
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PermohonanController extends Controller
 {
     public function pemohon_index()
     {
-        $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status','!=',6)->latest()->get();
+        $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status', '!=', 6)->latest()->get();
 
         return view('pemohon.permohonan.index', compact('data'));
     }
@@ -25,31 +26,31 @@ class PermohonanController extends Controller
     {
         switch (Auth::user()->role) {
             case 1:
-                $data = Permohonan_SIP::where('status','!=',6)->latest()->get();
+                $data = Permohonan_SIP::where('status', '!=', 6)->latest()->get();
                 return view('admin.permohonan.index', compact('data'));
                 break;
             case 2:
-                $data = Permohonan_SIP::where('status','>=','3')->where('status','!=',6)->latest()->get();
+                $data = Permohonan_SIP::where('status', '>=', '3')->where('status', '!=', 6)->latest()->get();
                 return view('petugas.permohonan.index', compact('data'));
                 break;
-            case 3: 
-                $data = Permohonan_SIP::where('status','>=','2')->where('status','!=',6)->latest()->get();
-                return view('kasi_pju.permohonan.index',compact('data'));
+            case 3:
+                $data = Permohonan_SIP::where('status', '>=', '2')->where('status', '!=', 6)->latest()->get();
+                return view('kasi_pju.permohonan.index', compact('data'));
                 break;
             case 4:
-                $data = Permohonan_SIP::where('status','>=','1')->where('status','!=',6)->latest()->get();
+                $data = Permohonan_SIP::where('status', '>=', '1')->where('status', '!=', 6)->latest()->get();
                 return view('kabid.permohonan.index', compact('data'));
                 break;
             case 5:
-                $data = Permohonan_SIP::where('status','>=','4')->where('status','!=',6)->latest()->get();
-                return view('sekretaris.permohonan.index',compact('data'));
+                $data = Permohonan_SIP::where('status', '>=', '4')->where('status', '!=', 6)->latest()->get();
+                return view('sekretaris.permohonan.index', compact('data'));
                 break;
             case 6:
-                $data = Permohonan_SIP::where('status','>=','5')->where('status','!=',6)->latest()->get();
-                return view('kadis.permohonan.index',compact('data'));
+                $data = Permohonan_SIP::where('status', '>=', '5')->where('status', '!=', 6)->latest()->get();
+                return view('kadis.permohonan.index', compact('data'));
                 break;
             case 7:
-                $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status','!=',6)->latest()->get();
+                $data = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status', '!=', 6)->latest()->get();
                 return view('pemohon.permohonan.index', compact('data'));
                 break;
         }
@@ -57,7 +58,7 @@ class PermohonanController extends Controller
 
     public function riwayat()
     {
-        $data = Permohonan_SIP::where('status',6)->latest()->get();
+        $data = Permohonan_SIP::where('status', 6)->latest()->get();
 
         switch (Auth::user()->role) {
             case 1:
@@ -66,20 +67,20 @@ class PermohonanController extends Controller
             case 2:
                 return view('petugas.permohonan.riwayat', compact('data'));
                 break;
-            case 3: 
-                return view('kasi_pju.permohonan.riwayat',compact('data'));
+            case 3:
+                return view('kasi_pju.permohonan.riwayat', compact('data'));
                 break;
             case 4:
                 return view('kabid.permohonan.riwayat', compact('data'));
                 break;
             case 5:
-                return view('sekretaris.permohonan.riwayat',compact('data'));
+                return view('sekretaris.permohonan.riwayat', compact('data'));
                 break;
             case 6:
-                return view('kadis.permohonan.riwayat',compact('data'));
+                return view('kadis.permohonan.riwayat', compact('data'));
                 break;
             case 7:
-                $riwayat = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status',6)->latest()->get();
+                $riwayat = Permohonan_SIP::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status', 6)->latest()->get();
                 return view('pemohon.permohonan.riwayat', compact('riwayat'));
                 break;
         }
@@ -189,27 +190,66 @@ class PermohonanController extends Controller
         $data = Permohonan_SIP::findOrFail($id);
         switch (Auth::user()->role) {
             case 1:
-                return view('admin.permohonan.detail',compact('data'));
+                return view('admin.permohonan.detail', compact('data'));
                 break;
             case 2:
-                return view('petugas.permohonan.detail',compact('data'));
+                return view('petugas.permohonan.detail', compact('data'));
                 break;
             case 3:
-                return view('kasi_pju.permohonan.detail',compact('data'));
+                return view('kasi_pju.permohonan.detail', compact('data'));
                 break;
             case 4:
-                return view('kabid.permohonan.detail',compact('data'));
+                return view('kabid.permohonan.detail', compact('data'));
                 break;
             case 5:
-                return view('sekretaris.permohonan.detail',compact('data'));
+                return view('sekretaris.permohonan.detail', compact('data'));
                 break;
             case 6:
-                return view('kadis.permohonan.detail',compact('data'));
+                return view('kadis.permohonan.detail', compact('data'));
                 break;
             case 7:
                 return view('pemohon.permohonan.detail', compact('data'));
                 break;
         }
+    }
+
+    public function verifikasi($id)
+    {
+        $data = Permohonan_SIP::findOrFail($id);
+
+        $now = Carbon::now();
+
+        switch (Auth::user()->role) {
+            case 1:
+                $data->status = 1;
+                $data->verif_admin = $now;
+                break;
+            case 2:
+                $data->status = 4;
+                $data->verif_petugas_proses = $now;
+                break;
+            case 3:
+                $data->status = 3;
+                $data->verif_kasi = $now;
+                break;
+            case 4:
+                $data->status = 2;
+                $data->verif_kabid = $now;
+                break;
+            case 5:
+                $data->status = 5;
+                $data->verif_sekretaris = $now;
+                break;
+            case 6:
+                $data->status = 6;
+                $data->verif_kepala_dinas = $now;
+                break;
+        }
+
+        $data->update();
+
+        return back()->withSuccess('Permohonan berhasil diverifikasi');
+
     }
 
 }

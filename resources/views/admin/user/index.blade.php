@@ -146,7 +146,7 @@
                         <label for="">User Role</label>
                         <select name="role" id="" class="form-control">
                             <option value="1">Admin CS</option>
-                            <option value="2">Kasi </option>
+                            <option value="2">Petugas Proses </option>
                             <option value="3">Kasi PJU</option>
                             <option value="4">Kabid</option>
                             <option value="5">Sekertaris</option>
