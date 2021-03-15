@@ -185,6 +185,7 @@ Route::prefix('report')->name('report.')->group(function () {
     Route::get('/', [ReportController::class, 'riwayat_permohonan'])->name('riwayat_permohonan');
     Route::get('/', [ReportController::class, 'pemohon'])->name('pemohon');
     Route::post('/', [ReportController::class, 'permohonan'])->name('permohonan');
+    Route::get('/sip/{id}', [ReportController::class, 'sip'])->name('sip'); 
 });
 
 Route::get('/', function () {
