@@ -71,6 +71,7 @@
                                 @if($data->status == Auth::user()->role -1)
                                     <a href="" class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a>
                                 @endif
+                                    <a href="" class="btn btn-primary"><i class="mdi mdi-printer"></i> Surat Izin Praktik (SIP)</a>
                             </div>
                         </div>
                     </div>

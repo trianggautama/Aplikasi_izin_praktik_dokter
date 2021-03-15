@@ -44,7 +44,7 @@ Route::middleware(['adminCS'])->group(function () {
             Route::get('/', [PermohonanController::class, 'admin_index'])->name('index');
             Route::get('/filter', [PermohonanController::class, 'filter'])->name('filter');
             Route::post('/', [PermohonanController::class, 'store'])->name('store');
-            Route::get('/detail/{id}', [PermohonanController::class, 'admin_detail'])->name('detail');
+            Route::get('/detail/{id}', [PermohonanController::class, 'detail'])->name('detail');
             Route::get('/edit/{id}', [PermohonanController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanController::class, 'delete'])->name('delete');
