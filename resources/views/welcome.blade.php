@@ -34,7 +34,7 @@
 
         <div id="navbar-collapse" class="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" data-nav-section="reviews">Reviews</a></li>
+            <li><a href="#" data-nav-section="reviews">Review</a></li>
             <li><a href="/">Login</a></li>
           </ul>
         </div>
