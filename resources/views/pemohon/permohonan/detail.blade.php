@@ -85,7 +85,7 @@
                                 <td>1</td>
                                 <td>Surat Rekomendasi Dinkes</td>
                                 <td class="text-center">
-                                    @if($data->lampiran->surat_rekomendasi_dinkes)<a
+                                    @if($data->lampiran->surat_rekomendasi_dinkes)<a target="_blank"
                                         href="{{asset('lampiran/'.$data->lampiran->surat_rekomendasi_dinkes)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
                                             class="mdi mdi-cloud-download"></i></a>
@@ -97,65 +97,119 @@
                             <tr>
                                 <td>2</td>
                                 <td>Surat Rekomendasi Organisasi</td>
-                                <td class="text-center"><button type="button"
+                                <td class="text-center">
+                                    @if($data->lampiran->surat_rekomendasi_organisasi)<a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran->surat_rekomendasi_organisasi)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button></td>
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    <span class="badge badge-danger">Berkas belum diupload</span>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Surat Persetujuan Pimpinan</td>
-                                <td class="text-center"><button type="button"
+                                <td class="text-center">
+                                    @if($data->lampiran->surat_persetujuan_pimpinan)<a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran->surat_persetujuan_pimpinan)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button></td>
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    <span class="badge badge-danger">Berkas belum diupload</span>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>Izin Oprasional</td>
-                                <td class="text-center"><button type="button"
+                                <td class="text-center">
+                                    @if($data->lampiran->izin_operasional)<a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran->izin_operasional)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button></td>
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    <span class="badge badge-danger">Berkas belum diupload</span>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>NIB</td>
-                                <td class="text-center"><button type="button"
+                                <td class="text-center">
+                                    @if($data->lampiran->NIB)<a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran->NIB)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button></td>
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    <span class="badge badge-danger">Berkas belum diupload</span>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <td>6</td>
                                 <td>Ijazah</td>
-                                <td class="text-center"><button type="button"
+                                <td class="text-center">
+                                    @if($data->lampiran->ijazah)<a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran->ijazah)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button></td>
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    <span class="badge badge-danger">Berkas belum diupload</span>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <td>7</td>
                                 <td>Str</td>
-                                <td class="text-center"><button type="button"
+                                <td class="text-center">
+                                    @if($data->lampiran->str)<a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran->str)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button></td>
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    <span class="badge badge-danger">Berkas belum diupload</span>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <td>8</td>
                                 <td>KTP</td>
-                                <td class="text-center"><button type="button"
+                                <td class="text-center">
+                                    @if($data->lampiran->ktp)<a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran->ktp)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button></td>
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    <span class="badge badge-danger">Berkas belum diupload</span>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <td>9</td>
                                 <td>NPWP</td>
-                                <td class="text-center"><button type="button"
+                                <td class="text-center">
+                                    @if($data->lampiran->npwp)<a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran->npwp)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button></td>
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    <span class="badge badge-danger">Berkas belum diupload</span>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <td>10</td>
                                 <td>Foto</td>
-                                <td class="text-center"><button type="button"
+                                <td class="text-center">
+                                    @if($data->lampiran->foto)<a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran->foto)}}"
                                         class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button></td>
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    <span class="badge badge-danger">Berkas belum diupload</span>
+                                    @endif
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -221,19 +275,20 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" method="post">
+                <form action="{{Route('pemohon.surat-kuasa.store')}}" method="post">
                     @csrf
+                    <input type="hidden" value="{{$data->id}}" name="permohonan__s_i_p_id">
                     <div class="form-group">
                         <label for="">Tempat Praktik</label>
-                        <input type="text" name="nip" class="form-control">
+                        <input type="text" name="tempat_praktek" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Jadwal Praktik</label>
-                        <input type="text" name="nama" class="form-control">
+                        <input type="text" name="jadwal_praktek" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Alamat</label>
-                        <input type="text" name="username" class="form-control">
+                        <label for="">Alamat Praktik</label>
+                        <input type="text" name="alamat" class="form-control" required>
                     </div>
             </div>
             <div class="modal-footer">
@@ -256,15 +311,16 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" method="post">
+                <form action="{{Route('pemohon.surat-rekomendasi.store')}}" method="post">
                     @csrf
+                    <input type="hidden" value="{{$data->id}}" name="permohonan__s_i_p_id">
                     <div class="form-group">
                         <label for="">Nomor Telepons</label>
-                        <input type="text" name="nip" class="form-control">
+                        <input type="text" name="nomor_telepon" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Jam praktik</label>
-                        <input type="text" name="nama" class="form-control">
+                        <input type="text" name="jam_praktik" class="form-control" required>
                     </div>
             </div>
             <div class="modal-footer">

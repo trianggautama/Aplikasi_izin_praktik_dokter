@@ -5,6 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PemohonController;
 use App\Http\Controllers\PermohonanController;
+use App\Http\Controllers\SuratKuasaController;
+use App\Http\Controllers\SuratRekomendasiController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -60,6 +62,24 @@ Route::middleware(['pemohon'])->group(function () {
             Route::get('/edit/{id}', [PermohonanController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanController::class, 'delete'])->name('delete');
+        });
+
+        Route::prefix('pemohon')->name('surat-kuasa.')->group(function () {
+            Route::get('/', [SuratKuasaController::class, 'index'])->name('index');
+            Route::post('/store', [SuratKuasaController::class, 'store'])->name('store');
+            Route::get('/detail/{id}', [SuratKuasaController::class, 'detail'])->name('detail');
+            Route::get('/edit/{id}', [SuratKuasaController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [SuratKuasaController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [SuratKuasaController::class, 'delete'])->name('delete');
+        });
+
+        Route::prefix('pemohon')->name('surat-rekomendasi.')->group(function () {
+            Route::get('/', [SuratRekomendasiController::class, 'index'])->name('index');
+            Route::post('/store', [SuratRekomendasiController::class, 'store'])->name('store');
+            Route::get('/detail/{id}', [SuratRekomendasiController::class, 'detail'])->name('detail');
+            Route::get('/edit/{id}', [SuratRekomendasiController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [SuratRekomendasiController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [SuratRekomendasiController::class, 'delete'])->name('delete');
         });
     });
 
