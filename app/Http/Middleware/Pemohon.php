@@ -28,7 +28,7 @@ class Pemohon
                 return redirect()->route('kasi.beranda');
                 break;
             case 3:
-                return redirect()->route('kasi-pju.beranda');
+                return redirect()->route('kasi_pju.beranda');
                 break;
             case 4:
                 return redirect()->route('kabid.beranda');
