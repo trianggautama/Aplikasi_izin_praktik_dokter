@@ -107,7 +107,7 @@
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
-                                    <label for="">Str</label>
+                                    <label for="">Str (Legalisir)</label>
                                     <input type="file" name="str" class="form-control" required>
                                 </div>
                             </div>
