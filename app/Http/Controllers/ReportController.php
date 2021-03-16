@@ -82,4 +82,15 @@ class ReportController extends Controller
         $pdf->setPaper('a4', 'landscape');
         return $pdf->stream('Laporan Riwayat Dokumen.pdf');
     }
+
+    public function surat_izin($id)
+    {
+        $data           = Permohonan_SIP::findOrFail($id);
+        $kadis          = User::whereRole(6)->first();
+
+
+        $pdf    = PDF::loadView('report.surat_izin', ['data'=>$data,'kadis'=>$kadis]);
+        $pdf->setPaper('a4', 'portrait');
+        return $pdf->stream('Laporan Surat Izin.pdf');
+    }
 }
