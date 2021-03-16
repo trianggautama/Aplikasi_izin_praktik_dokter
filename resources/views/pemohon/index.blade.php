@@ -18,8 +18,8 @@
             <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                <h1>Selamat Datang (Nama Pemohon)</h1>  
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci cupiditate inventore architecto. Repellat laudantium ea sunt ut quas ratione deleniti ullam nostrum unde magni voluptates vitae rem dolore, atque rerum.</p>
+                <h1>Selamat Datang {{Auth::user()->nama}}</h1>  
+                <p>Selamat datang di aplikasi perizinan praktik dokter umum  DPMPTSP Kabupaten Banjar</p>
                 </div>
             </div>
             </div>

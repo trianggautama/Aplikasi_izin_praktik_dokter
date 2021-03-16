@@ -77,10 +77,10 @@
                   <a href="{{Route('auth.register')}}" class="text-small forgot-password text-black">Belum punya akun ?
                     register</a>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <button type="submit" class="btn btn-block g-login">
                     <img class="mr-3" src="../../../assets/images/file-icons/icon-google.svg" alt="">Login</button>
-                </div>
+                </div> -->
               </form>
             </div>
           </div>

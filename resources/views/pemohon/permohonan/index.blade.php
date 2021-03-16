@@ -81,13 +81,13 @@
                                     </td>
                                     <td class="text-center">
                                         <a href="{{Route('pemohon.permohonan.detail', $d->id)}}"
-                                            class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-file"></i></a>
+                                            class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-information-outline"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                    </div>
+                    </div>\
                 </div>
             </div>
         </div>

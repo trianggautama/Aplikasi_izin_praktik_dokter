@@ -114,7 +114,7 @@
                     <td><p>:{{$data->alamat_tujuan}}</p></td>
                 </tr>
                 <tr>
-                    <td>Permohonan</td>
+                    <td><p>Permohonan</p></td>
                     <td><p>: Izin Paraktik Dokter Umum</p></td>
                 </tr> 
                 <tr>
@@ -145,20 +145,29 @@
             <p>CATATAN :</p>
             <table>
                 <tr>
-                    <td style="height:10px !important; padding:0px; margin:0px;"><p>1.</p></td>
-                    <td><p>Buku tanda terima ini BUKAN merupakan tanda bukti izin</p></td>
-                </tr>
-                <tr>
-                    <td style="height:10px !important; padding:0px; margin:0px;"><p>2.</p></td>
-                    <td><p>Keterlambatan Pengambilan SK dan Pembayaran Pajak/Retribusi dikenakan sanksi berupa bunga 2% setiap Bulan dari Pajak/Retribusi Terhutang</p></td>
-                </tr>
-                <tr>
-                    <td style="height:10px !important; padding:0px; margin:0px;"> <p>3.</p></td>
-                    <td><p>Informasi Posisi Berkas dan Informasi Lainnya dapat menghubungi Call Center/Costumer Service (0511) 4721000  dan SMS Gateway : 0811 500 6666</p></td>
-                </tr>
-                <tr>
-                    <td style="height:10px !important; padding:0px; margin:0px;"><p>4.</p></td>
-                    <td><p>Apabila keterlambatan pelayanan proses perizinan disebabkan oleh kelalaian DPMPTSP Kab.Banjar berkas akan kami antar ke tempat Anda</p></td>
+                    <td>
+                    <table>
+                        <tr>
+                            <td style="height:10px !important; padding:0px; margin:0px;"><p>1.</p></td>
+                            <td style="height:10px !important; padding:0px; margin:0px;"><p style="text-align: justify;">Buku tanda terima ini BUKAN merupakan tanda bukti izin</p></td>
+                        </tr>
+                        <tr>
+                            <td style="height:10px !important; padding:0px; margin:0px;"><p>2.</p></td>
+                            <td><p style="text-align: justify;">Keterlambatan Pengambilan SK dan Pembayaran Pajak/Retribusi dikenakan sanksi berupa bunga 2% setiap Bulan dari Pajak/Retribusi Terhutang</p></td>
+                        </tr>
+                        <tr>
+                            <td style="height:10px !important; padding:0px; margin:0px;"> <p>3.</p></td>
+                            <td><p style="text-align: justify;">Informasi Posisi Berkas dan Informasi Lainnya dapat menghubungi Call Center/Costumer Service (0511) 4721000  dan SMS Gateway : 0811 500 6666</p></td>
+                        </tr>
+                        <tr>
+                            <td style="height:10px !important; padding:0px; margin:0px;"><p>4.</p></td>
+                            <td><p style="text-align: justify;">Apabila keterlambatan pelayanan proses perizinan disebabkan oleh kelalaian DPMPTSP Kab.Banjar berkas akan kami antar ke tempat Anda</p></td>
+                        </tr>
+                    </table>
+                    </td>
+                    <td style="width: 200px;">
+                    
+                    </td>
                 </tr>
             </table>
             </div>

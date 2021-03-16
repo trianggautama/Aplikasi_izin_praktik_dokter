@@ -21,7 +21,7 @@
         </tr>
         <tr>
             <td style="vertical-align: top;"></td>
-            <td >: <b style="text-align: justify;"></td>
+            <td > <b style="text-align: justify;"></td>
             <td colspan="2">Di - 
             <br>
                 <b>Martapura</b>
@@ -71,7 +71,7 @@
         <tr>
             <td style="height:30px !important;">Nama Sarana</td>
             <td>:</td>
-            <td>{{$data->permohonan_sip->tempat_ttd}}</td>
+            <td>{{$data->permohonan_sip->tempat_praktik}}</td>
         </tr>
         <tr>
             <td style="height:30px !important;">Alamat Sarana</td>
@@ -98,7 +98,7 @@
         <tr>
             <td style="width:450px">&nbsp;</td>
             <td style="text-align: center;">
-                <p>Martapura , {{Carbon\carbon::parse($data->created_at)->translatedFormat('d F Y')}}</p>
+                <p>{{$data->permohonan_sip->tempat_ttd}} , {{Carbon\carbon::parse($data->created_at)->translatedFormat('d F Y')}}</p>
                 <p>Hormat Saya,</p>
                 <br>
                 <br>

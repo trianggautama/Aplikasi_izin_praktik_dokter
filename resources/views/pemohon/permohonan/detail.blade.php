@@ -23,7 +23,7 @@
                         <div class="col-md">Detail Pelatihan</div>
                         <div class="col-md text-right">
                             @if($data->status == 6)
-                            <a href="{{Route('report.tanda_terima',['id'=>$data->id])}}"  class="btn btn-primary"><i
+                            <a href="{{Route('report.tanda_terima',['id'=>$data->id])}}"  class="btn btn-primary" target="_blank"><i
                                             class="mdi mdi-printer"></i>Cetak Tanda Terima</a>
                             @endif
                         </div>
@@ -252,10 +252,10 @@
                             </tr> --}}
                             <tr>
                                 <td>1</td>
-                                <td>Surat Rekomendasi</td>
+                                <td>Surat Permohonan Rekomendasi</td>
                                 <td class="text-center">
                                     @if($data->pemohonan_surat_rekomendasi) 
-                                    <a href="{{Route('report.surat_rekomendasi',['id'=>$data->pemohonan_surat_rekomendasi->id])}}"  class="btn btn-icons btn-rounded btn-primary"><i
+                                    <a href="{{Route('report.surat_rekomendasi',['id'=>$data->pemohonan_surat_rekomendasi->id])}}"  class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
                                             class="mdi mdi-cloud-download"></i></a>
                                     @else
                                     <button type="button" class="btn btn-success" data-toggle="modal"  data-target="#surat_rekomendasi">+ tambah data</button>

@@ -31,33 +31,33 @@
                         @csrf
                         <div class="form-group">
                             <label for="">Tahun Kelulusan</label>
-                            <input type="date" name="tahun_kelulusan" class="form-control">
+                            <input type="date" name="tahun_kelulusan" class="form-control" required>
                         </div>
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Nomor Str</label>
-                                    <input type="text" name="nomor_str" class="form-control">
+                                    <input type="text" name="nomor_str" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Nomor Rekomendasi</label>
-                                    <input type="text" name="nomor_rekomendasi" class="form-control">
+                                    <input type="text" name="nomor_rekomendasi" class="form-control" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Tempat Praktik</label>
-                            <input type="text" name="tempat_praktik" class="form-control">
+                            <input type="text" name="tempat_praktik" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="">Alamat Praktik</label>
-                            <textarea name="alamat_tujuan" id="" class="form-control"></textarea>
+                            <textarea name="alamat_tujuan" id="" class="form-control" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="">Tempat Ttd</label>
-                            <input type="text" name="tempat_ttd" class="form-control">
+                            <input type="text" name="tempat_ttd" class="form-control" required>
                         </div>
                         <br>
                         <h5>lampiran</h5>
@@ -66,13 +66,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Rekomendasi Dinkes</label>
-                                    <input type="file" name="surat_rekomendasi_dinkes" class="form-control">
+                                    <input type="file" name="surat_rekomendasi_dinkes" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Rekomendasi Organisasi</label>
-                                    <input type="file" name="surat_rekomendasi_organisasi" class="form-control">
+                                    <input type="file" name="surat_rekomendasi_organisasi" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -80,13 +80,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Persetujuan Pimpinan</label>
-                                    <input type="file" name="surat_persetujuan_pimpinan" class="form-control">
+                                    <input type="file" name="surat_persetujuan_pimpinan" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Izin Oprasional</label>
-                                    <input type="file" name="izin_operasional" class="form-control">
+                                    <input type="file" name="izin_operasional" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -94,13 +94,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">NIB</label>
-                                    <input type="file" name="NIB" class="form-control">
+                                    <input type="file" name="NIB" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Ijazah (Legalisir)</label>
-                                    <input type="file" name="ijazah" class="form-control">
+                                    <input type="file" name="ijazah" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -108,13 +108,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Str</label>
-                                    <input type="file" name="str" class="form-control">
+                                    <input type="file" name="str" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">KTP</label>
-                                    <input type="file" name="ktp" class="form-control">
+                                    <input type="file" name="ktp" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -122,13 +122,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">NPWP</label>
-                                    <input type="file" name="npwp" class="form-control">
+                                    <input type="file" name="npwp" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Foto</label>
-                                    <input type="file" name="foto" class="form-control">
+                                    <input type="file" name="foto" class="form-control" required>
                                 </div>
                             </div>
                         </div>

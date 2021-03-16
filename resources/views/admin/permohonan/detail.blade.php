@@ -74,6 +74,10 @@
                             <a href="{{Route('admin.permohonan.verifikasi',$data->id)}}" class="btn btn-primary"><i
                                     class="mdi mdi-check"></i> Verifikasi Permohonan</a>
                             @endif
+                            @if($data->status == 6)
+                            <a href="{{Route('report.riwayat_dokumen',$data->id)}}" class="btn btn-primary"><i
+                                    class="mdi mdi-printer"></i> Riwayat Dokumen</a>
+                            @endif
                             <a href="{{Route('report.sip',['id'=>$data->id])}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a>
                         </div>
                     </div>
@@ -154,7 +158,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-md">Detail Permohonan</div>
+                            <div class="col-md">Lampiran</div>
                             <div class="col-md text-right">
                             </div>
                         </div>
@@ -230,19 +234,13 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Surat Kuasa</td>
-                                <td class="text-center">
-                                    <button type="button" class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Surat Rekomendasi</td>
-                                <td class="text-center">
-                                    <button type="button" class="btn btn-icons btn-rounded btn-primary"><i
-                                            class="mdi mdi-cloud-download"></i></button>
-                                </td>
+                                <td>Surat Permohonan Rekomendasi</td>
+                                <td>@if($data->pemohonan_surat_rekomendasi) 
+                                <a href="{{Route('report.surat_rekomendasi',['id'=>$data->pemohonan_surat_rekomendasi->id])}}"  class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                        class="mdi mdi-cloud-download"></i></a>
+                                @else
+                                Belum di upload
+                            @endif</td>
                             </tr>
                         </tbody>
                     </table>

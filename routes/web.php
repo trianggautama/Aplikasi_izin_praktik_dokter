@@ -194,6 +194,8 @@ Route::prefix('report')->name('report.')->group(function () {
     Route::get('/sip/{id}', [ReportController::class, 'sip'])->name('sip'); 
     Route::get('/surat_rekomendasi/{id}', [ReportController::class, 'surat_rekomendasi'])->name('surat_rekomendasi'); 
     Route::get('/tanda_terima/{id}', [ReportController::class, 'tanda_terima'])->name('tanda_terima'); 
+    Route::get('/riwayat_dokumen/{id}', [ReportController::class, 'riwayat_dokumen'])->name('riwayat_dokumen'); 
+
 });
 
 Route::get('/', function () {

@@ -67,4 +67,19 @@ class ReportController extends Controller
         $pdf->setPaper('a4', 'potrait');
         return $pdf->stream('Laporan Tanda Terima.pdf');
     }
+
+    public function riwayat_dokumen($id)
+    {
+        $data           = Permohonan_SIP::findOrFail($id);
+        $kabid          = User::whereRole(4)->first();
+        $kasi           = User::whereRole(3)->first();
+        $petugas        = User::whereRole(2)->first();
+        $sekretaris     = User::whereRole(5)->first();
+        $kadis          = User::whereRole(6)->first();
+
+
+        $pdf    = PDF::loadView('report.riwayat_dokumen', ['data'=>$data,'kabid'=>$kabid,'kasi'=>$kasi,'petugas'=>$petugas,'sekretaris'=>$sekretaris,'kadis'=>$kadis]);
+        $pdf->setPaper('a4', 'landscape');
+        return $pdf->stream('Laporan Riwayat Dokumen.pdf');
+    }
 }

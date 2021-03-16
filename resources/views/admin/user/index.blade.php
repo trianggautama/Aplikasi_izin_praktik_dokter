@@ -101,23 +101,23 @@
                     @csrf
                     <div class="form-group">
                         <label for="">NIP/NIK</label>
-                        <input type="text" name="NIP" class="form-control">
+                        <input type="text" name="NIP" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Nama</label>
-                        <input type="text" name="nama" class="form-control">
+                        <input type="text" name="nama" class="form-control" required>
                     </div>
                     <div class="row">
                         <div class="col-md">
                             <div class="form-group">
                                 <label for="">Tempat Lahir</label>
-                                <input type="text" name="tempat_lahir" class="form-control">
+                                <input type="text" name="tempat_lahir" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="form-group">
                                 <label for="">Tenggal Lahir</label>
-                                <input type="date" name="tanggal_lahir" class="form-control">
+                                <input type="date" name="tanggal_lahir" class="form-control" required>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                             <div class="form-radio">
                                 <label class="form-check-label">
                                     <input type="radio" class="form-check-input" name="jenis_kelamin"
-                                        id="membershipRadios1" value="1" checked> Laki - laki </label>
+                                        id="membershipRadios1" value="1" required> Laki - laki </label>
                             </div>
                         </div>
                         <div class="col-md">
@@ -140,7 +140,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Alamat</label>
-                        <textarea name="alamat" id="" class="form-control"></textarea>
+                        <textarea name="alamat" id="" class="form-control" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="">User Role</label>
@@ -155,11 +155,11 @@
                     </div>
                     <div class="form-group">
                         <label for="">Username</label>
-                        <input type="text" name="username" class="form-control">
+                        <input type="text" name="username" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Password</label>
-                        <input type="password" name="password" class="form-control">
+                        <input type="password" name="password" class="form-control" required>
                     </div>
             </div>
             <div class="modal-footer">

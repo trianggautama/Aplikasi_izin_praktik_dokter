@@ -85,7 +85,7 @@
                                     </td>
                                     <td class="text-center">
                                         <a href="{{Route('admin.permohonan.detail', $d->id)}}"
-                                            class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-file"></i></a>
+                                            class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-information-outline"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
