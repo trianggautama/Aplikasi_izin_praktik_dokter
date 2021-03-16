@@ -170,6 +170,15 @@ class PermohonanController extends Controller
             $lampiran->npwp = $file_name;
         }
 
+        if (isset($req->ktp)) {
+            $file = $req->file('ktp');
+
+            $file_name = time() . "_" . $file->getClientOriginalName();
+
+            $file->move('lampiran', $file_name);
+            $lampiran->ktp = $file_name;
+        }
+
         if (isset($req->foto)) {
             $file = $req->file('foto');
 
