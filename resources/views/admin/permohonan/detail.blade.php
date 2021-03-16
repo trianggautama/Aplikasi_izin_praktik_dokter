@@ -7,9 +7,9 @@
                 <h4 class="page-title">Permohonan</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Pemohoan</a></li>
+                        <li><a href="#">Admin CS</a></li>
                         <li><a href="#">Permohonan</a></li>
-                        <li><a href="#">detail</a></li>
+                        <li><a href="#">Detail</a></li>
                     </ul>
                 </div>
             </div>
@@ -75,12 +75,13 @@
                                     class="mdi mdi-check"></i> Verifikasi Permohonan</a>
                             @endif
                             @if($data->status == 6)
-                            <a href="{{Route('report.surat_izin',$data->id)}}" class="btn btn-primary" target="_blank"><i
-                                    class="mdi mdi-printer"></i> Cetak Surat Izin Praktek</a>
-                            <a href="{{Route('report.riwayat_dokumen',$data->id)}}" class="btn btn-primary" target="_blank"><i
-                                    class="mdi mdi-printer"></i> Riwayat Dokumen</a>
+                            <a href="{{Route('report.surat_izin',$data->id)}}" class="btn btn-primary"
+                                target="_blank"><i class="mdi mdi-printer"></i> Cetak Surat Izin Praktek</a>
+                            <a href="{{Route('report.riwayat_dokumen',$data->id)}}" class="btn btn-primary"
+                                target="_blank"><i class="mdi mdi-printer"></i> Riwayat Dokumen</a>
                             @endif
-                            <a href="{{Route('report.sip',['id'=>$data->id])}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a>
+                            <a href="{{Route('report.sip',['id'=>$data->id])}}" class="btn btn-primary"
+                                target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a>
                         </div>
                     </div>
                 </div>
@@ -155,60 +156,60 @@
                     </table>
                 </div>
             </div>
-        </div>    
-            <div class="col-12 grid-margin">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="row">
-                            <div class="col-md">Lampiran</div>
-                            <div class="col-md text-right">
-                            </div>
+        </div>
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md">Lampiran</div>
+                        <div class="col-md text-right">
                         </div>
                     </div>
-                    <div class="card-body">
-                        <table class="table table-striped">
-                            <tr>
-                                <td>5</td>
-                                <td>NIB</td>
-                                <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->NIB)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Ijazah</td>
-                                <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->ijazah)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Str</td>
-                                <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->str)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>KTP</td>
-                                <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->ktp)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>NPWP</td>
-                                <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->npwp)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>Foto</td>
-                                <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->foto)}}"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                            class="mdi mdi-cloud-download"></i></a></td>
-                            </tr>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <td>5</td>
+                            <td>NIB</td>
+                            <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->NIB)}}"
+                                    class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                        class="mdi mdi-cloud-download"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Ijazah</td>
+                            <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->ijazah)}}"
+                                    class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                        class="mdi mdi-cloud-download"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Str</td>
+                            <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->str)}}"
+                                    class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                        class="mdi mdi-cloud-download"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>KTP</td>
+                            <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->ktp)}}"
+                                    class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                        class="mdi mdi-cloud-download"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>NPWP</td>
+                            <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->npwp)}}"
+                                    class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                        class="mdi mdi-cloud-download"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Foto</td>
+                            <td class="text-center"><a href="{{asset('lampiran/'.$data->lampiran->foto)}}"
+                                    class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                        class="mdi mdi-cloud-download"></i></a></td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -237,12 +238,13 @@
                             <tr>
                                 <td>1</td>
                                 <td>Surat Permohonan Rekomendasi</td>
-                                <td>@if($data->pemohonan_surat_rekomendasi) 
-                                <a href="{{Route('report.surat_rekomendasi',['id'=>$data->pemohonan_surat_rekomendasi->id])}}"  class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                        class="mdi mdi-cloud-download"></i></a>
-                                @else
-                                Belum di upload
-                            @endif</td>
+                                <td>@if($data->pemohonan_surat_rekomendasi)
+                                    <a href="{{Route('report.surat_rekomendasi',['id'=>$data->pemohonan_surat_rekomendasi->id])}}"
+                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    Belum di upload
+                                    @endif</td>
                             </tr>
                         </tbody>
                     </table>

@@ -9,7 +9,7 @@
                     <ul class="quick-links ml-auto">
                         <li><a href="#">Kepala Dinas</a></li>
                         <li><a href="#">Permohonan</a></li>
-                        <li><a href="#">detail</a></li>
+                        <li><a href="#">Detail</a></li>
                     </ul>
                 </div>
             </div>
@@ -271,12 +271,13 @@
                             <tr>
                                 <td>1</td>
                                 <td>Surat Permohonan Rekomendasi</td>
-                                <td>@if($data->pemohonan_surat_rekomendasi) 
-                                <a href="{{Route('report.surat_rekomendasi',['id'=>$data->pemohonan_surat_rekomendasi->id])}}"  class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
-                                        class="mdi mdi-cloud-download"></i></a>
-                                @else
-                                Belum di upload
-                            @endif</td>
+                                <td>@if($data->pemohonan_surat_rekomendasi)
+                                    <a href="{{Route('report.surat_rekomendasi',['id'=>$data->pemohonan_surat_rekomendasi->id])}}"
+                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                            class="mdi mdi-cloud-download"></i></a>
+                                    @else
+                                    Belum di upload
+                                    @endif</td>
                             </tr>
                         </tbody>
                     </table>
