@@ -10,6 +10,7 @@ use App\Http\Controllers\SuratKuasaController;
 use App\Http\Controllers\SuratRekomendasiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermohonanApotekerController;
+use App\Http\Controllers\PermohonanFarmasiController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->name('auth.')->group(function () {
@@ -100,6 +101,7 @@ Route::middleware(['pemohon'])->group(function () {
             Route::get('/edit/{id}', [PermohonanFarmasiController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanFarmasiController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanFarmasiController::class, 'delete'])->name('delete');
+            Route::get('/riwayat', [PermohonanFarmasiController::class, 'riwayat'])->name('riwayat');
         });
 
         Route::prefix('permohonan_apoteker')->name('permohonan_apoteker.')->group(function () {
@@ -110,6 +112,7 @@ Route::middleware(['pemohon'])->group(function () {
             Route::get('/edit/{id}', [PermohonanApotekerController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanApotekerController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanApotekerController::class, 'delete'])->name('delete');
+            Route::get('/riwayat', [PermohonanApotekerController::class, 'riwayat'])->name('riwayat'); 
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
@@ -201,6 +204,28 @@ Route::middleware(['kasi'])->group(function () {
             Route::get('/', [PermohonanController::class, 'admin_index'])->name('index');
             Route::get('/detail/{id}', [PermohonanController::class, 'detail'])->name('detail');
             Route::get('/verifikasi/{id}', [PermohonanController::class, 'verifikasi'])->name('verifikasi');
+        });
+
+        Route::prefix('permohonan_farmasi')->name('permohonan_farmasi.')->group(function () {
+            Route::get('/', [PermohonanFarmasiController::class, 'admin_index'])->name('index');
+            Route::get('/add', [PermohonanFarmasiController::class, 'add'])->name('add');
+            Route::post('/add', [PermohonanFarmasiController::class, 'store'])->name('store');
+            Route::get('/detail/{id}', [PermohonanFarmasiController::class, 'detail'])->name('detail');
+            Route::get('/edit/{id}', [PermohonanFarmasiController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [PermohonanFarmasiController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [PermohonanFarmasiController::class, 'delete'])->name('delete');
+            Route::get('/riwayat', [PermohonanFarmasiController::class, 'riwayat'])->name('riwayat');
+        });
+
+        Route::prefix('permohonan_apoteker')->name('permohonan_apoteker.')->group(function () {
+            Route::get('/', [PermohonanApotekerController::class, 'admin_index'])->name('index');
+            Route::get('/add', [PermohonanApotekerController::class, 'add'])->name('add');
+            Route::post('/add', [PermohonanApotekerController::class, 'store'])->name('store');
+            Route::get('/detail/{id}', [PermohonanApotekerController::class, 'detail'])->name('detail');
+            Route::get('/edit/{id}', [PermohonanApotekerController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [PermohonanApotekerController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [PermohonanApotekerController::class, 'delete'])->name('delete');
+            Route::get('/riwayat', [PermohonanApotekerController::class, 'riwayat'])->name('riwayat'); 
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {

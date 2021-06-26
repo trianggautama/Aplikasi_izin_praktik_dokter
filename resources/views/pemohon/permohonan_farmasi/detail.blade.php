@@ -4,11 +4,11 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Permohonan</h4>
+                <h4 class="page-title">Permohonan Farmasi</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
                         <li><a href="#">Pemohon</a></li>
-                        <li><a href="#">Permohonan</a></li>
+                        <li><a href="#">Permohonan Farmasi</a></li>
                         <li><a href="#">Detail</a></li>
                     </ul>
                 </div>
@@ -35,7 +35,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td width="20%">Nomor STRA</td>
+                            <td width="20%">Nomor STRTTK</td>
                             <td width="2%">: -</td>
                             <td></td>
                         </tr>
@@ -84,98 +84,91 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Surat Rekomendasi Dinkes</td>
+                                <td>Surat Rekomendasi (Dinkes)</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Surat Keterangan Bekerja (SK)</td>
-                                <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Surat Pernyataan Mengikuti Peraturan Perundang-undangan (APJ)</td>
-                                <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Surat Penytanaan Pelaporan Psikotropika dan Narkotika & Pertisipasi (APJ)</td>
-                                <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Kartu Anggota Apoteker indonesia</td>
-                                <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Surat Tanda Registrasi Apoteker (STRA)</td>
-                                <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>NIB</td>
-                                <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>Izin Oprasional Komersial</td>
-                                <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
                                 <td>Surat Keterangan Kesehatan</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
+                                <td>3</td>
+                                <td>Surat Rekomendasi (PAFI)</td>
+                                <td class="text-center">
+                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ijazah (legalisir)</td>
+                                <td class="text-center">
+                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Surat Tanda Registrasi Tenaga Teknis Kefarmasian (STRTTK)</td>
+                                <td class="text-center">
+                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Surat Pernyataan Permohonan</td>
+                                <td class="text-center">
+                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Surat izin tempat kerja</td>
+                                <td class="text-center">
+                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Surat Pernyataan Mengikuti Peraturan Perundang undangan (TTK)</td>
+                                <td class="text-center">
+                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Izin Oprasional Komersial</td>
+                                <td class="text-center">
+                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>10</td>
-                                <td>Ijazah (Legalisir)</td>
+                                <td>NIB</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>11</td>
-                                <td>STRA (Legalisir)</td>
+                                <td>KTP</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>12</td>
-                                <td>KTP</td>
+                                <td>NPWP</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr> 
                             <tr>
                                 <td>13</td>
-                                <td>NPWP</td>
-                                <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>14</td>
-                                <td>Pas Foto</td>
+                                <td>Foto</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>

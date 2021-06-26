@@ -4,11 +4,11 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Pemohon</h4>
+                <h4 class="page-title">Pemohon Apoteker</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
                         <li><a href="#">Pemohon</a></li>
-                        <li><a href="#">Permohonan</a></li>
+                        <li><a href="#">Permohonan Apoteker</a></li>
                         <li><a href="#">Data</a></li>
                     </ul>
                 </div>

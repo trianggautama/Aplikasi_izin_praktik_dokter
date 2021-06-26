@@ -221,9 +221,12 @@
           <li class="nav-item">
             <a class="nav-link" href="{{Route('petugas_proses.permohonan.index')}}">Pembuatan Baru</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('petugas_proses.permohonan_farmasi.index')}}">Praktik Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('petugas_proses.permohonan_apoteker.index')}}">Praktik Apoteker</a>
+         </li> 
         </ul>
       </div>
     </li>
@@ -239,9 +242,12 @@
           <li class="nav-item">
             <a class="nav-link" href="{{Route('petugas_proses.riwayat_permohonan.index')}}">Pembuatan Baru</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('petugas_proses.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('petugas_proses.permohonan_apoteker.riwayat')}}">Praktik Apoteker</a>
+         </li> 
         </ul>
       </div>
     </li>
@@ -465,14 +471,11 @@
           <a class="nav-link" href="{{Route('pemohon.riwayat_permohonan.index')}}">Praktik Dokter</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.permohonan.index')}}">Praktik Farmasi</a>
+          <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Praktik Apoteker</a>
+          <a class="nav-link" href="{{Route('pemohon.permohonan_apoteker.riwayat')}}">Praktik Apoteker</a>
         </li> 
-        {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
       </ul>
     </div>
   </li>

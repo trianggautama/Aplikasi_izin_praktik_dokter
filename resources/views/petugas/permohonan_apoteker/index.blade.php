@@ -4,11 +4,11 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title"> Riwayat Pemohon Apoteker</h4>
+                <h4 class="page-title">petugas Apoteker</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Pemohon</a></li>
-                        <li><a href="#">Riwayat Apoteker</a></li>
+                        <li><a href="#">petugas</a></li>
+                        <li><a href="#">Permohonan Apoteker</a></li>
                         <li><a href="#">Data</a></li>
                     </ul>
                 </div>
@@ -31,6 +31,8 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Nama</th>
+                                    <th>NIK</th>
                                     <th>Tahun Lulus</th>
                                     <th>Nomor STRA</th>
                                     <th>Nomor Rekomendasi</th>
@@ -46,11 +48,13 @@
                                     <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
                                     <td>
                                       -
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('pemohon.permohonan_apoteker.detail', '1')}}"
+                                        <a href="{{Route('petugas.permohonan_apoteker.detail', '1')}}"
                                             class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-information-outline"></i></a>
                                     </td>
                                 </tr>
