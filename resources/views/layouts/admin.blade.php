@@ -163,7 +163,13 @@
             <div class="collapse" id="permohonan">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Pembuatan Baru</a>
+                  <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik Dokter</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik farmasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik Apoteker</a>
                 </li>
                 {{-- <li class="nav-item">
                   <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Perpanjangan Izin</a>
@@ -181,7 +187,13 @@
       <div class="collapse" id="admin_riwayat_permohonan">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('admin.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('admin.riwayat_permohonan.index')}}">Praktik Dokter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik Apoteker</a>
           </li>
           {{-- <li class="nav-item">
             <a class="nav-link" href="#">Perpanjangan Izin</a>
@@ -429,11 +441,14 @@
       <div class="collapse" id="permohonan_pemohon">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('pemohon.permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('pemohon.permohonan.index')}}">Praktik Dokter</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Perpanjangan Izin</a>
-    </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.index')}}">Praktik Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan_apoteker.index')}}">Praktik Apoteker</a>
+         </li> 
     </ul>
   </div>
   </li>
@@ -447,8 +462,14 @@
     <div class="collapse" id="riwayat_permohonan_pemohon">
       <ul class="nav flex-column sub-menu">
         <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+          <a class="nav-link" href="{{Route('pemohon.riwayat_permohonan.index')}}">Praktik Dokter</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{Route('pemohon.permohonan.index')}}">Praktik Farmasi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Praktik Apoteker</a>
+        </li> 
         {{-- <li class="nav-item">
             <a class="nav-link" href="#">Perpanjangan Izin</a>
           </li> --}}
