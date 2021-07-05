@@ -219,14 +219,17 @@
       <div class="collapse" id="permohonan">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('petugas_proses.permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('petugas_proses.permohonan.index')}}">praktik Dokter</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{Route('petugas_proses.permohonan_farmasi.index')}}">Praktik Farmasi</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{Route('petugas_proses.permohonan_bidan.index')}}">Praktik Bidan</a>
+          </li>
+          <!-- <li class="nav-item">
             <a class="nav-link" href="{{Route('petugas_proses.permohonan_apoteker.index')}}">Praktik Apoteker</a>
-         </li> 
+         </li>  -->
         </ul>
       </div>
     </li>
@@ -240,14 +243,17 @@
       <div class="collapse" id="petugas_riwayat_permohonan">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('petugas_proses.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('petugas_proses.riwayat_permohonan.index')}}">praktik Dokter</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{Route('petugas_proses.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{Route('petugas_proses.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
+          </li>
+          <!-- <li class="nav-item">
             <a class="nav-link" href="{{Route('petugas_proses.permohonan_apoteker.riwayat')}}">Praktik Apoteker</a>
-         </li> 
+         </li>  -->
         </ul>
       </div>
     </li>
@@ -314,11 +320,14 @@
       <div class="collapse" id="kabid_permohonan">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kabid.permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('kabid.permohonan.index')}}">Praktik Dokter</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kabid.permohonan_farmasi.index')}}">Praktik Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kabid.permohonan_bidan.index')}}">Praktik Bidan</a>
+          </li>
         </ul>
       </div>
     </li>
@@ -332,11 +341,14 @@
       <div class="collapse" id="kabid_riwayat_permohonan">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kabid.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('kabid.riwayat_permohonan.index')}}">Praktik Dokter</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kabid.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kabid.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
+          </li>
         </ul>
       </div>
     </li>

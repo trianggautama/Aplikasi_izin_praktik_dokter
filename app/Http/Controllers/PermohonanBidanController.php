@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PermohonanBidanController extends Controller
 {
@@ -19,12 +20,23 @@ class PermohonanBidanController extends Controller
 
     public function admin_index()
     {
-        return view('petugas.permohonan_bidan.index');
+        if(Auth::user()->role == 4){
+            return view('kabid.permohonan_bidan.index');
+        }elseif(Auth::user()->role == 2){
+            return view('petugas.permohonan_bidan.index');
+        }
+
     }
 
     public function riwayat()
     {
-        return view('pemohon.permohonan_bidan.riwayat');
+        if(Auth::user()->role == '7'){
+            return view('pemohon.permohonan_bidan.riwayat');
+        }elseif(Auth::user()->role == '2'){
+            return view('petugas.permohonan_bidan.riwayat');
+        }elseif(Auth::user()->role == '4'){
+            return view('kabid.permohonan_bidan.riwayat');
+        }
     }
 
     public function add()
@@ -46,7 +58,13 @@ class PermohonanBidanController extends Controller
 
     public function detail($id)
     {
-        return view('pemohon.permohonan_bidan.detail');
+        if(Auth::user()->role == '7'){
+            return view('pemohon.permohonan_bidan.detail');
+        }elseif(Auth::user()->role == '2'){
+            return view('petugas.permohonan_bidan.detail');
+        }elseif(Auth::user()->role == '4'){
+            return view('kabid.permohonan_bidan.detail');
+        }
     }
 
     public function verifikasi($id)

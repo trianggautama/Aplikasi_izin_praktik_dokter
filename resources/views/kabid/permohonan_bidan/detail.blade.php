@@ -7,8 +7,8 @@
                 <h4 class="page-title">Permohonan Farmasi</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Petugas</a></li>
-                        <li><a href="#">Permohonan Farmasi</a></li>
+                        <li><a href="#">petugas</a></li>
+                        <li><a href="#">Permohonan Bidan</a></li>
                         <li><a href="#">Detail</a></li>
                     </ul>
                 </div>
@@ -20,9 +20,9 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Detail Pelatihan</div>
+                        <div class="col-md">Detail Data</div>
                         <div class="col-md text-right">
-                            <a href="{{Route('petugas_proses.permohonan.verifikasi',1)}}"
+                            <a href="{{Route('kabid.permohonan_bidan.verifikasi',1)}}"
                                 class="btn btn-primary"><i class="mdi mdi-check"></i>
                                 Verifikasi Permohonan</a>
                         </div>
@@ -37,7 +37,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td width="20%">Nomor STRTTK</td>
+                            <td width="20%">Nomor STRB</td>
                             <td width="2%">: -</td>
                             <td></td>
                         </tr>
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped table-bordered datatable" style="width:100%">
+                <table class="table table-striped table-bordered datatable" style="width:100%">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -91,70 +91,70 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Surat Rekomendasi (Dinkes)</td>
+                                <td>Surat Rekomendasi Dinkes</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Surat Keterangan Kesehatan</td>
+                                <td>Surat Keterangan Bekerja (SK)</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Surat Rekomendasi (PAFI)</td>
+                                <td>Surat Pernyataan Mengikuti Peraturan Perundang-undangan (APJ)</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Ijazah (legalisir)</td>
+                                <td>Surat Keterangan Kesehatan Badan</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>Surat Tanda Registrasi Tenaga Teknis Kefarmasian (STRTTK)</td>
+                                <td>Surat Rekomendasi Ikatan Bidan Indonesia</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>6</td>
-                                <td>Surat Pernyataan Permohonan</td>
+                                <td>Kartu Anggota Ikatan Bidan Indonesia</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>7</td>
-                                <td>Surat izin tempat kerja</td>
+                                <td>Surat Tanda Registrasi Bidan (STRB)</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>8</td>
-                                <td>Surat Pernyataan Mengikuti Peraturan Perundang undangan (TTK)</td>
+                                <td>Surat Pernyataan Permohonan</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>9</td>
-                                <td>Izin Oprasional Komersial</td>
+                                <td>Surat Izin Atasan Langsung</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>10</td>
-                                <td>NIB</td>
+                                <td>Ijazah (Legalisir)</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
@@ -179,7 +179,7 @@
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
-                            </tr>
+                            </tr>   
                         </tbody>
                     </table>
                 </div>

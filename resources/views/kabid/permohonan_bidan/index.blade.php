@@ -4,10 +4,10 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Petugas Bidan</h4>
+                <h4 class="page-title">Permohonan  Bidan</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Petugas</a></li>
+                        <li><a href="#">Kabid</a></li>
                         <li><a href="#">Permohonan Bidan</a></li>
                         <li><a href="#">Data</a></li>
                     </ul>
@@ -54,7 +54,7 @@
                                       -
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('petugas_proses.permohonan_bidan.detail', '1')}}"
+                                        <a href="{{Route('kabid.permohonan_bidan.detail', '1')}}"
                                             class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-information-outline"></i></a>
                                     </td>
                                 </tr>

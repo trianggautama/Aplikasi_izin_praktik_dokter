@@ -54,7 +54,7 @@
                                       -
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('petugas.permohonan_farmasi.detail', '1')}}"
+                                        <a href="{{Route('petugas_proses.permohonan_farmasi.detail', '1')}}"
                                             class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-information-outline"></i></a>
                                     </td>
                                 </tr>

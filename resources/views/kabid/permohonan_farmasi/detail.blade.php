@@ -7,7 +7,7 @@
                 <h4 class="page-title">Permohonan Farmasi</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Petugas</a></li>
+                        <li><a href="#">Kabid</a></li>
                         <li><a href="#">Permohonan Farmasi</a></li>
                         <li><a href="#">Detail</a></li>
                     </ul>
@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col-md">Detail Pelatihan</div>
                         <div class="col-md text-right">
-                            <a href="{{Route('petugas_proses.permohonan.verifikasi',1)}}"
+                            <a href="{{Route('kabid.permohonan_farmasi.verifikasi',1)}}"
                                 class="btn btn-primary"><i class="mdi mdi-check"></i>
                                 Verifikasi Permohonan</a>
                         </div>

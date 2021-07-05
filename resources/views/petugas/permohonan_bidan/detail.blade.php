@@ -7,7 +7,7 @@
                 <h4 class="page-title">Permohonan Farmasi</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Pemohon</a></li>
+                        <li><a href="#">petugas</a></li>
                         <li><a href="#">Permohonan Farmasi</a></li>
                         <li><a href="#">Detail</a></li>
                     </ul>
@@ -20,9 +20,11 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Detail Pelatihan</div>
+                        <div class="col-md">Detail Data</div>
                         <div class="col-md text-right">
-                    
+                            <a href="{{Route('petugas_proses.permohonan.verifikasi',1)}}"
+                                class="btn btn-primary"><i class="mdi mdi-check"></i>
+                                Verifikasi Permohonan</a>
                         </div>
                     </div>
                 </div>
@@ -56,6 +58,11 @@
                         </tr>
                         <tr>
                             <td width="20%">Tempat Ttd</td>
+                            <td width="2%">: </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Status Verifikasi</td>
                             <td width="2%">: </td>
                             <td></td>
                         </tr>
