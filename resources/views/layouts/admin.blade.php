@@ -453,8 +453,11 @@
             <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.index')}}">Praktik Farmasi</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan_bidan.index')}}">Praktik Bidan</a>
+          </li>
+          <!-- <li class="nav-item">
             <a class="nav-link" href="{{Route('pemohon.permohonan_apoteker.index')}}">Praktik Apoteker</a>
-         </li> 
+         </li>  -->
     </ul>
   </div>
   </li>
@@ -474,8 +477,11 @@
           <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="{{Route('pemohon.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
+        </li>
+        <!-- <li class="nav-item">
           <a class="nav-link" href="{{Route('pemohon.permohonan_apoteker.riwayat')}}">Praktik Apoteker</a>
-        </li> 
+        </li>  -->
       </ul>
     </div>
   </li>

@@ -11,6 +11,7 @@ use App\Http\Controllers\SuratRekomendasiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermohonanApotekerController;
 use App\Http\Controllers\PermohonanFarmasiController;
+use App\Http\Controllers\PermohonanBidanController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->name('auth.')->group(function () {
@@ -107,12 +108,23 @@ Route::middleware(['pemohon'])->group(function () {
         Route::prefix('permohonan_apoteker')->name('permohonan_apoteker.')->group(function () {
             Route::get('/', [PermohonanApotekerController::class, 'pemohon_index'])->name('index');
             Route::get('/add', [PermohonanApotekerController::class, 'add'])->name('add');
-            Route::post('/add', [PermohonanApotekerController::class, 'store'])->name('store');
+            Route::post('/add', [PermohonanApotekerController::class, 'store'])->name('store'); 
             Route::get('/detail/{id}', [PermohonanApotekerController::class, 'detail'])->name('detail');
             Route::get('/edit/{id}', [PermohonanApotekerController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanApotekerController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanApotekerController::class, 'delete'])->name('delete');
             Route::get('/riwayat', [PermohonanApotekerController::class, 'riwayat'])->name('riwayat'); 
+        });
+
+        Route::prefix('permohonan_bidan')->name('permohonan_bidan.')->group(function () {
+            Route::get('/', [PermohonanBidanController::class, 'pemohon_index'])->name('index');
+            Route::get('/add', [PermohonanBidanController::class, 'add'])->name('add');
+            Route::post('/add', [PermohonanBidanController::class, 'store'])->name('store');
+            Route::get('/detail/{id}', [PermohonanBidanController::class, 'detail'])->name('detail');
+            Route::get('/edit/{id}', [PermohonanBidanController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [PermohonanBidanController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [PermohonanBidanController::class, 'delete'])->name('delete');
+            Route::get('/riwayat', [PermohonanBidanController::class, 'riwayat'])->name('riwayat'); 
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
