@@ -191,11 +191,11 @@ Route::prefix('report')->name('report.')->group(function () {
     Route::get('/riwayat', [ReportController::class, 'riwayat_permohonan'])->name('riwayat_permohonan');
     Route::get('/', [ReportController::class, 'pemohon'])->name('pemohon');
     Route::post('/', [ReportController::class, 'permohonan'])->name('permohonan');
-    Route::get('/sip/{id}', [ReportController::class, 'sip'])->name('sip'); 
-    Route::get('/surat_rekomendasi/{id}', [ReportController::class, 'surat_rekomendasi'])->name('surat_rekomendasi'); 
-    Route::get('/tanda_terima/{id}', [ReportController::class, 'tanda_terima'])->name('tanda_terima'); 
-    Route::get('/riwayat_dokumen/{id}', [ReportController::class, 'riwayat_dokumen'])->name('riwayat_dokumen'); 
-    Route::get('/surat_izin/{id}', [ReportController::class, 'surat_izin'])->name('surat_izin'); 
+    Route::get('/sip/{id}', [ReportController::class, 'sip'])->name('sip');
+    Route::get('/surat_rekomendasi/{id}', [ReportController::class, 'surat_rekomendasi'])->name('surat_rekomendasi');
+    Route::get('/tanda_terima/{id}', [ReportController::class, 'tanda_terima'])->name('tanda_terima');
+    Route::get('/riwayat_dokumen/{id}', [ReportController::class, 'riwayat_dokumen'])->name('riwayat_dokumen');
+    Route::get('/surat_izin/{id}', [ReportController::class, 'surat_izin'])->name('surat_izin');
 });
 
 Route::get('/', function () {
