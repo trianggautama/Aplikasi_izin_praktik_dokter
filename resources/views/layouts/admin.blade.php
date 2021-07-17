@@ -169,7 +169,7 @@
                   <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik farmasi</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik Apoteker</a>
+                  <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik Apoteker1</a>
                 </li>
                 {{-- <li class="nav-item">
                   <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Perpanjangan Izin</a>
@@ -470,52 +470,52 @@
           <!-- <li class="nav-item">
             <a class="nav-link" href="{{Route('pemohon.permohonan_apoteker.index')}}">Praktik Apoteker</a>
          </li>  -->
-    </ul>
-  </div>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#riwayat_permohonan_pemohon" aria-expanded="false"
-      aria-controls="ui-basic">
-      <i class="menu-icon typcn typcn-coffee"></i>
-      <span class="menu-title">Riwayat Permohonan</span>
-      <i class="menu-arrow"></i>
-    </a>
-    <div class="collapse" id="riwayat_permohonan_pemohon">
-      <ul class="nav flex-column sub-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.riwayat_permohonan.index')}}">Praktik Dokter</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
-        </li>
-        <!-- <li class="nav-item">
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#riwayat_permohonan_pemohon" aria-expanded="false"
+        aria-controls="ui-basic">
+        <i class="menu-icon typcn typcn-coffee"></i>
+        <span class="menu-title">Riwayat Permohonan</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="riwayat_permohonan_pemohon">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.riwayat_permohonan.index')}}">Praktik Dokter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
+          </li>
+          <!-- <li class="nav-item">
           <a class="nav-link" href="{{Route('pemohon.permohonan_apoteker.riwayat')}}">Praktik Apoteker</a>
         </li>  -->
-      </ul>
-    </div>
-  </li>
-  @endif
-  </ul>
-  </nav>
-  <!-- partial -->
-  <div class="main-panel">
-    @yield('content')
-    <!-- content-wrapper ends -->
-    <footer class="footer">
-      <div class="container-fluid clearfix">
-        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com
-          2020</span>
-        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a
-            href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin
-            templates</a> from Bootstrapdash.com</span>
+        </ul>
       </div>
-    </footer>
+    </li>
+    @endif
+    </ul>
+    </nav>
     <!-- partial -->
-  </div>
-  <!-- main-panel ends -->
+    <div class="main-panel">
+      @yield('content')
+      <!-- content-wrapper ends -->
+      <footer class="footer">
+        <div class="container-fluid clearfix">
+          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com
+            2020</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a
+              href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin
+              templates</a> from Bootstrapdash.com</span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
   </div>
   <!-- page-body-wrapper ends -->
   </div>
