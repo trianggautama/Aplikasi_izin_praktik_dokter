@@ -38,7 +38,7 @@
                 @csrf
                 <div class="form-group">
                   <label class="label">Username</label>
-                  <div class="input-group">
+                  <div class="input-group" id="">
                     <input type="text" name="username" class="form-control @error('username') is-invalid @enderror"
                       placeholder="Username" value="{{ old('username') }}" required>
                     <div class="input-group-append">
