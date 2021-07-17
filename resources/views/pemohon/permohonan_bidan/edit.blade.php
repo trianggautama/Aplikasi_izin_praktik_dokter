@@ -138,7 +138,7 @@
                                     <label for="">Surat Izin Atasan Langsung</label>
                                     <input type="file" name="-" class="form-control" required>
                                 </div>
-                            </div>
+                            </div>   
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Ijazah (Legalisir)</label>
@@ -149,7 +149,7 @@
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
-                                    <label for="">KTP</label>
+                                    <label for="">KTP</label> 
                                     <input type="file" name="ktp" class="form-control" required>
                                 </div>
                             </div>
