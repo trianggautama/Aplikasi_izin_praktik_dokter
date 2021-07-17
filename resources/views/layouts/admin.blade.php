@@ -340,14 +340,14 @@
       </a>
       <div class="collapse" id="kabid_riwayat_permohonan">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
+          <li class="nav-item"> 
             <a class="nav-link" href="{{Route('kabid.riwayat_permohonan.index')}}">Praktik Dokter</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{Route('kabid.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kabid.permohonan_bidan.riwayat')}}">Praktik Bidan2</a>  
+            <a class="nav-link" href="{{Route('kabid.permohonan_bidan.riwayat')}}">Praktik Bidan</a>  
           </li>
         </ul>
       </div>
