@@ -347,7 +347,7 @@
             <a class="nav-link" href="{{Route('kabid.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kabid.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
+            <a class="nav-link" href="{{Route('kabid.permohonan_bidan.riwayat')}}">Praktik Bidan2</a>  
           </li>
         </ul>
       </div>
