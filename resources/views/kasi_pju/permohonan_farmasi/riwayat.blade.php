@@ -4,14 +4,12 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Petugas Farmasi</h4>
-                <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+                <h4 class="page-title">Admin CS</h4>
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Petugas</a></li>
-                        <li><a href="#">Permohonan Farmasi</a></li>
-                        <li><a href="#">Data</a></li>
+                        <li><a href="#">Admin CS</a></li>
+                        <li><a href="#">Riwayat Permohonan</a></li>
+                        <li><a href="#">data</a></li>
                     </ul>
-                </div>
             </div>
         </div>
     </div>
@@ -22,6 +20,7 @@
                     <div class="row">
                         <div class="col-md">Data Permohonan</div>
                         <div class="col-md text-right">
+                            <a href="{{Route('report.riwayat_permohonan')}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i>Cetak Data</a>
                         </div>
                     </div>
                 </div>
@@ -31,25 +30,25 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>tanggal Permohonan</th>
+                                    <th>NIP/NIK</th>
                                     <th>Nama</th>
-                                    <th>NIK</th>
-                                    <th>Tahun Lulus</th>
-                                    <th>Nomor STRTTK</th>
+                                    <th>Nomor Str</th>
                                     <th>Nomor Rekomendasi</th>
                                     <th>Tempat Praktik</th>
-                                    <th>Status Permohonan</th>
+                                    <th>Progress Permohonan</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($data as $d)
+                                @foreach($data as $d)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
-                                    <td>{{$d->biodata_diri->user->nama}}</td>
+                                    <td>{{$d->created_at}}</td>
                                     <td>{{$d->biodata_diri->NIP}}</td>
-                                    <td>{{$d->tahun_kelulusan}}</td>
-                                    <td>{{$d->no_str}}</td>
-                                    <td>{{$d->no_rekomendasi}}</td>
+                                    <td>{{$d->biodata_diri->user->nama}}</td>
+                                    <td>{{$d->nomor_str}}</td>
+                                    <td>{{$d->nomor_rekomendasi}}</td>
                                     <td>{{$d->tempat_praktik}}</td>
                                     <td>
                                         @switch($d->status)
@@ -83,12 +82,10 @@
                                         @endswitch
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('petugas_proses.permohonan_farmasi.detail', $d->id)}}"
-                                            class="btn btn-icons btn-rounded btn-info"><i
-                                                class="mdi mdi-information-outline"></i></a>
+                                        <a href="{{Route('admin.permohonan.detail', $d->id)}}"
+                                            class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-file"></i></a>
                                     </td>
                                 </tr>
-
                                 @endforeach
                             </tbody>
                         </table>

@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col-md">Detail Pelatihan</div>
                         <div class="col-md text-right">
-                    
+
                         </div>
                     </div>
                 </div>
@@ -30,28 +30,28 @@
                     <table class="table table-striped">
                         <tr>
                             <td width="20%">Tahun Kelulusan</td>
-                            <td width="2%">: -
+                            <td width="2%">: {{carbon\carbon::parse($data->tahun_kelulusan)->format('Y')}}
                             </td>
                             <td></td>
                         </tr>
                         <tr>
                             <td width="20%">Nomor STRTTK</td>
-                            <td width="2%">: -</td>
+                            <td width="2%">: {{$data->no_str}}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td width="20%">Nomor Rekomendasi</td>
-                            <td width="2%">: -</td>
+                            <td width="2%">: {{$data->no_rekomendasi}}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td width="20%">Tempat Praktik</td>
-                            <td width="2%">: </td>
+                            <td width="2%">: {{$data->tempat_praktik}}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td width="20%">Alamat Tujuan</td>
-                            <td width="2%">: </td>
+                            <td width="2%">: {{$data->alamat_praktik}}</td>
                             <td></td>
                         </tr>
                         <tr>
@@ -86,91 +86,123 @@
                                 <td>1</td>
                                 <td>Surat Rekomendasi (Dinkes)</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_farmasi->surat_rekomendasi_dinkes)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Surat Keterangan Kesehatan</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_farmasi->surat_keterangan_sehat)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Surat Rekomendasi (PAFI)</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_farmasi->surat_rekomendasi_pafi)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>Ijazah (legalisir)</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_farmasi->ijazah)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>Surat Tanda Registrasi Tenaga Teknis Kefarmasian (STRTTK)</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_farmasi->str)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>6</td>
                                 <td>Surat Pernyataan Permohonan</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_farmasi->surat_pernyataan_permohonan)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>7</td>
                                 <td>Surat izin tempat kerja</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_farmasi->surat_izin_tempat_kerja)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>8</td>
                                 <td>Surat Pernyataan Mengikuti Peraturan Perundang undangan (TTK)</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_farmasi->surat_pernyataan_mengikuti_uud)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>9</td>
                                 <td>Izin Oprasional Komersial</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/',$data->izin_operasional)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>10</td>
                                 <td>NIB</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_farmasi->nib)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>11</td>
                                 <td>KTP</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_farmasi->ktp)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>12</td>
                                 <td>NPWP</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_farmasi->npwp)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
-                            </tr> 
+                            </tr>
                             <tr>
                                 <td>13</td>
                                 <td>Foto</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_farmasi->foto)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -202,7 +234,7 @@
                                 <td>1</td>
                                 <td>Surat Permohonan Rekomendasi</td>
                                 <td class="text-center">
-                                    <a href="#"
+                                    <a href="{{asset('lampiran/'.$data->lampiran_farmasi->surat_rekomendasi_dinkes)}}"
                                         class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
                                             class="mdi mdi-cloud-download"></i></a>
                                 </td>

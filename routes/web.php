@@ -4,14 +4,14 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PemohonController;
+use App\Http\Controllers\PermohonanApotekerController;
+use App\Http\Controllers\PermohonanBidanController;
 use App\Http\Controllers\PermohonanController;
+use App\Http\Controllers\PermohonanFarmasiController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SuratKuasaController;
 use App\Http\Controllers\SuratRekomendasiController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\PermohonanApotekerController;
-use App\Http\Controllers\PermohonanFarmasiController;
-use App\Http\Controllers\PermohonanBidanController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->name('auth.')->group(function () {
@@ -57,6 +57,19 @@ Route::middleware(['adminCS'])->group(function () {
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
             Route::get('/', [PermohonanController::class, 'riwayat'])->name('index');
         });
+
+        Route::prefix('permohonan_farmasi')->name('permohonan_farmasi.')->group(function () {
+            Route::get('/', [PermohonanFarmasiController::class, 'admin_index'])->name('index');
+            Route::get('/add', [PermohonanFarmasiController::class, 'add'])->name('add');
+            Route::post('/add', [PermohonanFarmasiController::class, 'store'])->name('store');
+            Route::get('/verifikasi/{id}', [PermohonanFarmasiController::class, 'verifikasi'])->name('verifikasi');
+            Route::get('/detail/{id}', [PermohonanFarmasiController::class, 'detail'])->name('detail');
+            Route::get('/edit/{id}', [PermohonanFarmasiController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [PermohonanFarmasiController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [PermohonanFarmasiController::class, 'delete'])->name('delete');
+            Route::get('/riwayat', [PermohonanFarmasiController::class, 'riwayat'])->name('riwayat');
+        });
+
     });
 });
 
@@ -108,12 +121,12 @@ Route::middleware(['pemohon'])->group(function () {
         Route::prefix('permohonan_apoteker')->name('permohonan_apoteker.')->group(function () {
             Route::get('/', [PermohonanApotekerController::class, 'pemohon_index'])->name('index');
             Route::get('/add', [PermohonanApotekerController::class, 'add'])->name('add');
-            Route::post('/add', [PermohonanApotekerController::class, 'store'])->name('store'); 
+            Route::post('/add', [PermohonanApotekerController::class, 'store'])->name('store');
             Route::get('/detail/{id}', [PermohonanApotekerController::class, 'detail'])->name('detail');
             Route::get('/edit/{id}', [PermohonanApotekerController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanApotekerController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanApotekerController::class, 'delete'])->name('delete');
-            Route::get('/riwayat', [PermohonanApotekerController::class, 'riwayat'])->name('riwayat'); 
+            Route::get('/riwayat', [PermohonanApotekerController::class, 'riwayat'])->name('riwayat');
         });
 
         Route::prefix('permohonan_bidan')->name('permohonan_bidan.')->group(function () {
@@ -124,7 +137,7 @@ Route::middleware(['pemohon'])->group(function () {
             Route::get('/edit/{id}', [PermohonanBidanController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanBidanController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanBidanController::class, 'delete'])->name('delete');
-            Route::get('/riwayat', [PermohonanBidanController::class, 'riwayat'])->name('riwayat'); 
+            Route::get('/riwayat', [PermohonanBidanController::class, 'riwayat'])->name('riwayat');
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
@@ -148,6 +161,19 @@ Route::middleware(['kepala-dinas'])->group(function () {
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
             Route::get('/', [PermohonanController::class, 'riwayat'])->name('index');
         });
+
+        Route::prefix('permohonan_farmasi')->name('permohonan_farmasi.')->group(function () {
+            Route::get('/', [PermohonanFarmasiController::class, 'admin_index'])->name('index');
+            Route::get('/add', [PermohonanFarmasiController::class, 'add'])->name('add');
+            Route::post('/add', [PermohonanFarmasiController::class, 'store'])->name('store');
+            Route::get('/verifikasi/{id}', [PermohonanFarmasiController::class, 'verifikasi'])->name('verifikasi');
+            Route::get('/detail/{id}', [PermohonanFarmasiController::class, 'detail'])->name('detail');
+            Route::get('/edit/{id}', [PermohonanFarmasiController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [PermohonanFarmasiController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [PermohonanFarmasiController::class, 'delete'])->name('delete');
+            Route::get('/riwayat', [PermohonanFarmasiController::class, 'riwayat'])->name('riwayat');
+        });
+
     });
 });
 
@@ -165,6 +191,19 @@ Route::middleware(['sekretaris'])->group(function () {
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
             Route::get('/', [PermohonanController::class, 'riwayat'])->name('index');
         });
+
+        Route::prefix('permohonan_farmasi')->name('permohonan_farmasi.')->group(function () {
+            Route::get('/', [PermohonanFarmasiController::class, 'admin_index'])->name('index');
+            Route::get('/add', [PermohonanFarmasiController::class, 'add'])->name('add');
+            Route::post('/add', [PermohonanFarmasiController::class, 'store'])->name('store');
+            Route::get('/verifikasi/{id}', [PermohonanFarmasiController::class, 'verifikasi'])->name('verifikasi');
+            Route::get('/detail/{id}', [PermohonanFarmasiController::class, 'detail'])->name('detail');
+            Route::get('/edit/{id}', [PermohonanFarmasiController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [PermohonanFarmasiController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [PermohonanFarmasiController::class, 'delete'])->name('delete');
+            Route::get('/riwayat', [PermohonanFarmasiController::class, 'riwayat'])->name('riwayat');
+        });
+
     });
 
 });
@@ -195,7 +234,8 @@ Route::middleware(['kabid'])->group(function () {
             Route::put('/edit/{id}', [PermohonanFarmasiController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanFarmasiController::class, 'delete'])->name('delete');
             Route::get('/riwayat', [PermohonanFarmasiController::class, 'riwayat'])->name('riwayat');
-            Route::put('/verifikasi/{id}', [PermohonanFarmasiController::class, 'verifikasi'])->name('verifikasi');
+            Route::get('/verifikasi/{id}', [PermohonanFarmasiController::class, 'verifikasi'])->name('verifikasi');
+
         });
 
         Route::prefix('permohonan_bidan')->name('permohonan_bidan.')->group(function () {
@@ -206,7 +246,7 @@ Route::middleware(['kabid'])->group(function () {
             Route::get('/edit/{id}', [PermohonanBidanController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanBidanController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanBidanController::class, 'delete'])->name('delete');
-            Route::get('/riwayat', [PermohonanBidanController::class, 'riwayat'])->name('riwayat'); 
+            Route::get('/riwayat', [PermohonanBidanController::class, 'riwayat'])->name('riwayat');
             Route::get('/verifikasi/{id}', [PermohonanBidanController::class, 'verifikasi'])->name('verifikasi');
         });
 
@@ -224,6 +264,18 @@ Route::middleware(['kasi-pju'])->group(function () {
             Route::get('/', [PermohonanController::class, 'admin_index'])->name('index');
             Route::get('/detail/{id}', [PermohonanController::class, 'detail'])->name('detail');
             Route::get('/verifikasi/{id}', [PermohonanController::class, 'verifikasi'])->name('verifikasi');
+        });
+
+        Route::prefix('permohonan_farmasi')->name('permohonan_farmasi.')->group(function () {
+            Route::get('/', [PermohonanFarmasiController::class, 'admin_index'])->name('index');
+            Route::get('/add', [PermohonanFarmasiController::class, 'add'])->name('add');
+            Route::post('/add', [PermohonanFarmasiController::class, 'store'])->name('store');
+            Route::get('/verifikasi/{id}', [PermohonanFarmasiController::class, 'verifikasi'])->name('verifikasi');
+            Route::get('/detail/{id}', [PermohonanFarmasiController::class, 'detail'])->name('detail');
+            Route::get('/edit/{id}', [PermohonanFarmasiController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [PermohonanFarmasiController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [PermohonanFarmasiController::class, 'delete'])->name('delete');
+            Route::get('/riwayat', [PermohonanFarmasiController::class, 'riwayat'])->name('riwayat');
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {
@@ -247,6 +299,8 @@ Route::middleware(['kasi'])->group(function () {
             Route::get('/add', [PermohonanFarmasiController::class, 'add'])->name('add');
             Route::post('/add', [PermohonanFarmasiController::class, 'store'])->name('store');
             Route::get('/detail/{id}', [PermohonanFarmasiController::class, 'detail'])->name('detail');
+            Route::get('/verifikasi/{id}', [PermohonanFarmasiController::class, 'verifikasi'])->name('verifikasi');
+
             Route::get('/edit/{id}', [PermohonanFarmasiController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanFarmasiController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanFarmasiController::class, 'delete'])->name('delete');
@@ -261,7 +315,7 @@ Route::middleware(['kasi'])->group(function () {
             Route::get('/edit/{id}', [PermohonanApotekerController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanApotekerController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanApotekerController::class, 'delete'])->name('delete');
-            Route::get('/riwayat', [PermohonanApotekerController::class, 'riwayat'])->name('riwayat'); 
+            Route::get('/riwayat', [PermohonanApotekerController::class, 'riwayat'])->name('riwayat');
         });
 
         Route::prefix('permohonan_bidan')->name('permohonan_bidan.')->group(function () {
@@ -272,7 +326,7 @@ Route::middleware(['kasi'])->group(function () {
             Route::get('/edit/{id}', [PermohonanBidanController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [PermohonanBidanController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [PermohonanBidanController::class, 'delete'])->name('delete');
-            Route::get('/riwayat', [PermohonanBidanController::class, 'riwayat'])->name('riwayat'); 
+            Route::get('/riwayat', [PermohonanBidanController::class, 'riwayat'])->name('riwayat');
         });
 
         Route::prefix('riwayat-permohonan')->name('riwayat_permohonan.')->group(function () {

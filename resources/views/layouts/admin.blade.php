@@ -166,7 +166,7 @@
                   <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik Dokter</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik farmasi</a>
+                  <a class="nav-link" href="{{Route('admin.permohonan_farmasi.index')}}">Praktik farmasi</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik Apoteker1</a>
@@ -284,6 +284,23 @@
       </div>
     </li>
     <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+        <i class="menu-icon typcn typcn-coffee"></i>
+        <span class="menu-title">Permohonan Izin Farmasi</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="permohonan">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kasi_pju.permohonan_farmasi.index')}}">Pembuatan Baru</a>
+          </li>
+          {{-- <li class="nav-item">
+            <a class="nav-link" href="#">Perpanjangan Izin</a>
+          </li> --}}
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#kasi_pju_riwayat_permohonan" aria-expanded="false"
         aria-controls="ui-basic">
         <i class="menu-icon typcn typcn-coffee"></i>
@@ -340,14 +357,14 @@
       </a>
       <div class="collapse" id="kabid_riwayat_permohonan">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> 
+          <li class="nav-item">
             <a class="nav-link" href="{{Route('kabid.riwayat_permohonan.index')}}">Praktik Dokter</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{Route('kabid.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kabid.permohonan_bidan.riwayat')}}">Praktik Bidan</a>  
+            <a class="nav-link" href="{{Route('kabid.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
           </li>
         </ul>
       </div>
@@ -375,6 +392,23 @@
           {{-- <li class="nav-item">
             <a class="nav-link" href="#">Perpanjangan Izin</a>
           </li> --}}
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+        <i class="menu-icon typcn typcn-coffee"></i>
+        <span class="menu-title">Permohonan Izin Farmasi</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="permohonan">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('sekretaris.permohonan_farmasi.index')}}">Pembuatan Baru</a>
+          </li>
+          {{-- <li class="nav-item">
+                <a class="nav-link" href="#">Perpanjangan Izin</a>
+              </li> --}}
         </ul>
       </div>
     </li>
@@ -419,6 +453,23 @@
           {{-- <li class="nav-item">
             <a class="nav-link" href="#">Perpanjangan Izin</a>
           </li> --}}
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+        <i class="menu-icon typcn typcn-coffee"></i>
+        <span class="menu-title">Permohonan Izin Farmasi</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="permohonan">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kadis.permohonan_farmasi.index')}}">Pembuatan Baru</a>
+          </li>
+          {{-- <li class="nav-item">
+                <a class="nav-link" href="#">Perpanjangan Izin</a>
+              </li> --}}
         </ul>
       </div>
     </li>

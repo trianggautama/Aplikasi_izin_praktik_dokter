@@ -4,11 +4,11 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Permohonan Farmasi</h4>
+                <h4 class="page-title">Permohonan</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Kabid</a></li>
-                        <li><a href="#">Permohonan Farmasi</a></li>
+                        <li><a href="#">Admin CS</a></li>
+                        <li><a href="#">Permohonan</a></li>
                         <li><a href="#">Detail</a></li>
                     </ul>
                 </div>
@@ -70,8 +70,8 @@
                     <div class="row">
                         <div class="col-md">Detail Permohonan</div>
                         <div class="col-md text-right">
-                            @if($data->status == 1)
-                            <a href="{{Route('kabid.permohonan_farmasi.verifikasi',$data->id)}}"
+                            @if($data->status == 4)
+                            <a href="{{Route('sekretaris.permohonan_farmasi.verifikasi',$data->id)}}"
                                 class="btn btn-primary"><i class="mdi mdi-check"></i>
                                 Verifikasi Permohonan</a>
                             @endif
@@ -297,38 +297,6 @@
                     </table>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="surat_rekomendasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Rekomendasi</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="{{Route('pemohon.surat-rekomendasi.store')}}" method="post">
-                    @csrf
-                    <input type="hidden" value="" name="permohonan__s_i_p_id">
-                    <div class="form-group">
-                        <label for="">Nomor Telepon</label>
-                        <input type="text" name="nomor_telepon" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Jam praktik</label>
-                        <input type="text" name="jam_praktik" class="form-control" required>
-                    </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
         </div>
     </div>
 </div>

@@ -4,12 +4,12 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Petugas Farmasi</h4>
+                <h4 class="page-title">User</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Petugas</a></li>
-                        <li><a href="#">Permohonan Farmasi</a></li>
-                        <li><a href="#">Data</a></li>
+                        <li><a href="#">Admin</a></li>
+                        <li><a href="#">user</a></li>
+                        <li><a href="#">data</a></li>
                     </ul>
                 </div>
             </div>
@@ -20,8 +20,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Data Permohonan</div>
+                        <div class="col-md">Data User</div>
                         <div class="col-md text-right">
+                            <a href="{{Route('admin.permohonan.filter')}}" class="btn btn-primary" target="_blank"><i
+                                    class="mdi mdi-printer"></i>Cetak Data</a>
                         </div>
                     </div>
                 </div>
@@ -83,7 +85,7 @@
                                         @endswitch
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('petugas_proses.permohonan_farmasi.detail', $d->id)}}"
+                                        <a href="{{Route('admin.permohonan_farmasi.detail', $d->id)}}"
                                             class="btn btn-icons btn-rounded btn-info"><i
                                                 class="mdi mdi-information-outline"></i></a>
                                     </td>
