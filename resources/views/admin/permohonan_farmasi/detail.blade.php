@@ -70,9 +70,9 @@
                     <div class="row">
                         <div class="col-md-2">Detail Permohonan</div>
                         <div class="col-md text-right">
-                        @if($data->status == 0)
-                            <a href="{{Route('admin.permohonan.verifikasi',$data->id)}}" class="btn btn-primary"><i
-                                    class="mdi mdi-check"></i> Verifikasi Permohonan</a>
+                            @if($data->status == 0)
+                            <a href="{{Route('admin.permohonan_farmasi.verifikasi',$data->id)}}"
+                                class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a>
                             @endif
                             <a href="{{Route('report.surat_izin_farmasi',$data->id)}}" class="btn btn-primary"
                                 target="_blank"><i class="mdi mdi-printer"></i> Cetak Surat Izin Praktek</a>
@@ -89,6 +89,7 @@
                             </td>
                             <td></td>
                         </tr>
+
                         <tr>
                             <td width="20%">Nomor STRTTK</td>
                             <td width="2%">: {{$data->no_str}}</td>
