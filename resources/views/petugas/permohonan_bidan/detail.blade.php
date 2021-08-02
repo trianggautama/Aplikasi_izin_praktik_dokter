@@ -4,11 +4,11 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Permohonan Farmasi</h4>
+                <h4 class="page-title">Permohonan Bidan</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">petugas</a></li>
-                        <li><a href="#">Permohonan Farmasi</a></li>
+                        <li><a href="#">Kabid</a></li>
+                        <li><a href="#">Permohonan Bidan</a></li>
                         <li><a href="#">Detail</a></li>
                     </ul>
                 </div>
@@ -16,15 +16,57 @@
         </div>
     </div>
     <div class="row">
+    <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md">Data Diri</div>
+                        <div class="col-md text-right">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped" id="">
+                        <tr>
+                            <td width="20%">NIP</td>
+                            <td width="2%">:</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Nama</td>
+                            <td width="2%">:</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Tempat, Tanggal Lahir</td>
+                            <td width="2%">:</td>
+                            <td>-
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Jenis Kelamin</td>
+                            <td width="2%">:</td>
+                            <td>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Alamat</td>
+                            <td width="2%">:</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Detail Data</div>
+                        <div class="col-md-4">Detail Permohonan</div>
                         <div class="col-md text-right">
-                            <a href="{{Route('petugas_proses.permohonan.verifikasi',1)}}"
-                                class="btn btn-primary"><i class="mdi mdi-check"></i>
-                                Verifikasi Permohonan</a>
+                            <a href="{{Route('admin.permohonan.verifikasi',1)}}" class="btn btn-primary"><i
+                                    class="mdi mdi-check"></i> Verifikasi Permohonan</a>
                         </div>
                     </div>
                 </div>
@@ -61,11 +103,6 @@
                             <td width="2%">: </td>
                             <td></td>
                         </tr>
-                        <tr>
-                            <td width="20%">Status Verifikasi</td>
-                            <td width="2%">: </td>
-                            <td></td>
-                        </tr>
                     </table>
                 </div>
             </div>
@@ -80,7 +117,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                <table class="table table-striped table-bordered datatable" style="width:100%">
+                    <table class="table table-striped table-bordered datatable" style="width:100%">
                         <thead>
                             <tr>
                                 <th>No</th>

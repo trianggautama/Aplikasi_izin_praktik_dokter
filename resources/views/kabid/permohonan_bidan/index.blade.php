@@ -4,7 +4,7 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Permohonan  Bidan</h4>
+                <h4 class="page-title">Pemohon Bidan</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
                         <li><a href="#">Kabid</a></li>
@@ -22,6 +22,7 @@
                     <div class="row">
                         <div class="col-md">Data Permohonan</div>
                         <div class="col-md text-right">
+                        <a href="{{Route('admin.permohonan_bidan.filter')}}" class="btn btn-primary"><i class="mdi mdi-printer"></i>Cetak Data</a>
                         </div>
                     </div>
                 </div>
@@ -31,8 +32,6 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama</th>
-                                    <th>NIK</th>
                                     <th>Tahun Lulus</th>
                                     <th>Nomor STRB</th>
                                     <th>Nomor Rekomendasi</th>
@@ -44,8 +43,6 @@
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>-</td>
-                                    <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
                                     <td>-</td>

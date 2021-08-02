@@ -4,10 +4,10 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Petugas Bidan</h4>
+                <h4 class="page-title">Pemohon Bidan</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Petugas</a></li>
+                        <li><a href="#">petugas</a></li>
                         <li><a href="#">Permohonan Bidan</a></li>
                         <li><a href="#">Data</a></li>
                     </ul>
@@ -21,8 +21,6 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md">Data Permohonan</div>
-                        <div class="col-md text-right">
-                        </div>
                     </div>
                 </div>
                 <div class="card-body">
@@ -31,8 +29,6 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama</th>
-                                    <th>NIK</th>
                                     <th>Tahun Lulus</th>
                                     <th>Nomor STRB</th>
                                     <th>Nomor Rekomendasi</th>
@@ -44,8 +40,6 @@
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>-</td>
-                                    <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
                                     <td>-</td>

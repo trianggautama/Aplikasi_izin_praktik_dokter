@@ -14,16 +14,41 @@ class PermohonanBidanController extends Controller
     }
 
     public function filter()
-    {
+    {   
         return view('admin.permohonan_bidan.filter');
     }
 
     public function admin_index()
     {
-        if(Auth::user()->role == 4){
-            return view('kabid.permohonan_bidan.index');
-        }elseif(Auth::user()->role == 2){
-            return view('petugas.permohonan_bidan.index');
+        switch (Auth::user()->role) {
+            case 1:
+                $data = collect([]) ;
+                return view('admin.permohonan_bidan.index', compact('data'));
+                break;
+            case 2:
+                $data = collect([]) ;
+                return view('petugas.permohonan_bidan.index', compact('data'));
+                break;
+            case 3:
+                $data = collect([]) ;
+                return view('kasi_pju.permohonan_bidan.index', compact('data'));
+                break;
+            case 4:
+                $data = collect([]) ;
+                return view('kabid.permohonan_bidan.index', compact('data'));
+                break;
+            case 5:
+                $data = collect([]) ;
+                return view('sekretaris.permohonan_bidan.index', compact('data'));
+                break;
+            case 6:
+                $data = collect([]) ;
+                return view('kadis.permohonan_bidan.index', compact('data'));
+                break;
+            case 7:
+                $data = collect([]) ;
+                return view('pemohon.permohonan_bidan.index', compact('data'));
+                break;
         }
 
     }
@@ -58,12 +83,29 @@ class PermohonanBidanController extends Controller
 
     public function detail($id)
     {
-        if(Auth::user()->role == '7'){
-            return view('pemohon.permohonan_bidan.detail');
-        }elseif(Auth::user()->role == '2'){
-            return view('petugas.permohonan_bidan.detail');
-        }elseif(Auth::user()->role == '4'){
-            return view('kabid.permohonan_bidan.detail');
+        $data = collect([]);
+        switch (Auth::user()->role) {
+            case 1:
+                return view('admin.permohonan_bidan.detail', compact('data'));
+                break;
+            case 2:
+                return view('petugas.permohonan_bidan.detail', compact('data'));
+                break;
+            case 3:
+                return view('kasi_pju.permohonan_bidan.detail', compact('data'));
+                break;
+            case 4:
+                return view('kabid.permohonan_bidan.detail', compact('data'));
+                break;
+            case 5:
+                return view('sekretaris.permohonan_bidan.detail', compact('data'));
+                break;
+            case 6:
+                return view('kadis.permohonan_bidan.detail', compact('data'));
+                break;
+            case 7:
+                return view('pemohon.permohonan_bidan.detail', compact('data'));
+                break;
         }
     }
 

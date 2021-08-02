@@ -4,11 +4,11 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Permohonan</h4>
+                <h4 class="page-title">Permohonan Bidan</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
                         <li><a href="#">Pemohon</a></li>
-                        <li><a href="#">Permohonan</a></li>
+                        <li><a href="#">Permohonan Bidan</a></li>
                         <li><a href="#">Detail</a></li>
                     </ul>
                 </div>
@@ -16,13 +16,61 @@
         </div>
     </div>
     <div class="row">
+    <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md">Data Diri</div>
+                        <div class="col-md text-right">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped" id="">
+                        <tr>
+                            <td width="20%">NIP</td>
+                            <td width="2%">:</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Nama</td>
+                            <td width="2%">:</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Tempat, Tanggal Lahir</td>
+                            <td width="2%">:</td>
+                            <td>-
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Jenis Kelamin</td>
+                            <td width="2%">:</td>
+                            <td>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Alamat</td>
+                            <td width="2%">:</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Detail Pelatihan</div>
+                        <div class="col-md-4">Detail Permohonan</div>
                         <div class="col-md text-right">
-                    
+                            <a href="{{Route('admin.permohonan.verifikasi',1)}}" class="btn btn-primary"><i
+                                    class="mdi mdi-check"></i> Verifikasi Permohonan</a>
+                            <a href="{{Route('report.surat_izin_farmasi',1)}}" class="btn btn-primary"
+                                target="_blank"><i class="mdi mdi-printer"></i> Cetak Surat Izin Praktek</a>
+                            <a href="{{Route('report.riwayat_dokumen_farmasi',1)}}" class="btn btn-primary"
+                                target="_blank"><i class="mdi mdi-printer"></i> Riwayat Dokumen</a>
                         </div>
                     </div>
                 </div>
@@ -35,7 +83,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td width="20%">Nomor STRA</td>
+                            <td width="20%">Nomor STRB</td>
                             <td width="2%">: -</td>
                             <td></td>
                         </tr>
@@ -105,42 +153,42 @@
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Surat Penytanaan Pelaporan Psikotropika dan Narkotika & Pertisipasi (APJ)</td>
+                                <td>Surat Keterangan Kesehatan Badan</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>Kartu Anggota Apoteker indonesia</td>
+                                <td>Surat Rekomendasi Ikatan Bidan Indonesia</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>6</td>
-                                <td>Surat Tanda Registrasi Apoteker (STRA)</td>
+                                <td>Kartu Anggota Ikatan Bidan Indonesia</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>7</td>
-                                <td>NIB</td>
+                                <td>Surat Tanda Registrasi Bidan (STRB)</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>8</td>
-                                <td>Izin Oprasional Komersial</td>
+                                <td>Surat Pernyataan Permohonan</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>9</td>
-                                <td>Surat Keterangan Kesehatan</td>
+                                <td>Surat Izin Atasan Langsung</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
@@ -154,32 +202,25 @@
                             </tr>
                             <tr>
                                 <td>11</td>
-                                <td>STRA (Legalisir)</td>
+                                <td>KTP</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>12</td>
-                                <td>KTP</td>
+                                <td>NPWP</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr> 
                             <tr>
                                 <td>13</td>
-                                <td>NPWP</td>
+                                <td>Foto</td>
                                 <td class="text-center">
                                     <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>14</td>
-                                <td>Pas Foto</td>
-                                <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
-                                </td>
-                            </tr>
+                            </tr>   
                         </tbody>
                     </table>
                 </div>

@@ -7,7 +7,7 @@
                 <h4 class="page-title">Pemohon Bidan</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
-                        <li><a href="#">Admin CS</a></li>
+                        <li><a href="#">Kasi PJU</a></li>
                         <li><a href="#">Permohonan Bidan</a></li>
                         <li><a href="#">Data</a></li>
                     </ul>
@@ -21,9 +21,6 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md">Data Permohonan</div>
-                        <div class="col-md text-right">
-                        <a href="{{Route('admin.permohonan_bidan.filter')}}" class="btn btn-primary"><i class="mdi mdi-printer"></i>Cetak Data</a>
-                        </div>
                     </div>
                 </div>
                 <div class="card-body">
@@ -51,7 +48,7 @@
                                       -
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('admin.permohonan_bidan.detail', '1')}}"
+                                        <a href="{{Route('kasi_pju.permohonan_bidan.detail', '1')}}"
                                             class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-information-outline"></i></a>
                                     </td>
                                 </tr>
