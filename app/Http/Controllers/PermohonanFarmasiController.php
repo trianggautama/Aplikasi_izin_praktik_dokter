@@ -99,7 +99,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_rekomendasi_dinkes)) {
             $file = $req->file('surat_rekomendasi_dinkes');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_rekomendasi_dinkes = $file_name;
@@ -108,7 +108,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_rekomendasi_pafi)) {
             $file = $req->file('surat_rekomendasi_pafi');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_rekomendasi_pafi = $file_name;
@@ -117,7 +117,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->str)) {
             $file = $req->file('str');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->str = $file_name;
@@ -125,7 +125,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_izin_tempat_kerja)) {
             $file = $req->file('surat_izin_tempat_kerja');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_izin_tempat_kerja = $file_name;
@@ -133,7 +133,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->izin_operasional)) {
             $file = $req->file('izin_operasional');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->izin_operasional = $file_name;
@@ -141,7 +141,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->npwp)) {
             $file = $req->file('npwp');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->npwp = $file_name;
@@ -149,7 +149,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->foto)) {
             $file = $req->file('foto');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->foto = $file_name;
@@ -157,7 +157,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_keterangan_sehat)) {
             $file = $req->file('surat_keterangan_sehat');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_keterangan_sehat = $file_name;
@@ -165,7 +165,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->ijazah)) {
             $file = $req->file('ijazah');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->ijazah = $file_name;
@@ -174,7 +174,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_pernyataan_permohonan)) {
             $file = $req->file('surat_pernyataan_permohonan');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_pernyataan_permohonan = $file_name;
@@ -183,7 +183,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_pernyataan_mengikuti_uud)) {
             $file = $req->file('surat_pernyataan_mengikuti_uud');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_pernyataan_mengikuti_uud = $file_name;
@@ -192,7 +192,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->nib)) {
             $file = $req->file('nib');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->nib = $file_name;
@@ -201,7 +201,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->ktp)) {
             $file = $req->file('ktp');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->ktp = $file_name;
@@ -228,7 +228,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_rekomendasi_dinkes)) {
             $file = $req->file('surat_rekomendasi_dinkes');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_rekomendasi_dinkes = $file_name;
@@ -237,7 +237,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_rekomendasi_pafi)) {
             $file = $req->file('surat_rekomendasi_pafi');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_rekomendasi_pafi = $file_name;
@@ -246,7 +246,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->str)) {
             $file = $req->file('str');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->str = $file_name;
@@ -254,7 +254,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_izin_tempat_kerja)) {
             $file = $req->file('surat_izin_tempat_kerja');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_izin_tempat_kerja = $file_name;
@@ -262,7 +262,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->izin_operasional)) {
             $file = $req->file('izin_operasional');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->izin_operasional = $file_name;
@@ -270,7 +270,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->npwp)) {
             $file = $req->file('npwp');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->npwp = $file_name;
@@ -278,7 +278,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->foto)) {
             $file = $req->file('foto');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->foto = $file_name;
@@ -286,7 +286,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_keterangan_sehat)) {
             $file = $req->file('surat_keterangan_sehat');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_keterangan_sehat = $file_name;
@@ -294,7 +294,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->ijazah)) {
             $file = $req->file('ijazah');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->ijazah = $file_name;
@@ -303,7 +303,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_pernyataan_permohonan)) {
             $file = $req->file('surat_pernyataan_permohonan');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_pernyataan_permohonan = $file_name;
@@ -312,7 +312,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->surat_pernyataan_mengikuti_uud)) {
             $file = $req->file('surat_pernyataan_mengikuti_uud');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->surat_pernyataan_mengikuti_uud = $file_name;
@@ -321,7 +321,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->nib)) {
             $file = $req->file('nib');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->nib = $file_name;
@@ -330,7 +330,7 @@ class PermohonanFarmasiController extends Controller
         if (isset($req->ktp)) {
             $file = $req->file('ktp');
 
-            $file_name = rand(3) . "_" . $file->getClientOriginalName();
+            $file_name = rand(100, 1000) . "_" . $file->getClientOriginalName();
 
             $file->move('lampiran', $file_name);
             $lampiran->ktp = $file_name;
