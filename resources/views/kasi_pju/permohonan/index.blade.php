@@ -30,7 +30,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>tanggal Permohonan</th>
-                                    <th>NIP/NIK</th>
+                                    <th>NIP / No.KTP</th>
                                     <th>Nama</th>
                                     <th>Nomor Str</th>
                                     <th>Nomor Rekomendasi</th>

@@ -32,7 +32,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>NIK</th>
+                                    <th>NIP / No.KTP</th>
                                     <th>Tahun Lulus</th>
                                     <th>Nomor STRA</th>
                                     <th>Nomor Rekomendasi</th>

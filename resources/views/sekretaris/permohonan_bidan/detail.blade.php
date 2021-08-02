@@ -28,7 +28,7 @@
                 <div class="card-body">
                     <table class="table table-striped" id="">
                         <tr>
-                            <td width="20%">NIP</td>
+                            <td width="20%">NIP / No.KTP</td>
                             <td width="2%">:</td>
                             <td>-</td>
                         </tr>

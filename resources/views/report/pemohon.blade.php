@@ -94,7 +94,7 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>NIK</th>
+                        <th>NIP / No.KTP</th>
                         <th>Nama</th>
                         <th>Tempat, Tanggal Lahir</th>
                         <th>Jenis Kelamin</th>

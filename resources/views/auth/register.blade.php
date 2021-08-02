@@ -38,7 +38,7 @@
                 <br>
                 <input type="hidden" name="role" value="7" id="">
                 <div class="form-group">
-                  <label for="">NIP/NIK</label>
+                  <label for="">NIP/No KTP</label>
                   <div class="input-group">
                     <input type="text" name="NIP" class="form-control" placeholder="NIP">
                     <div class="input-group-append">

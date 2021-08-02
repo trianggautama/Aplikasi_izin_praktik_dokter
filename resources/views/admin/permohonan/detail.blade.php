@@ -28,7 +28,7 @@
                 <div class="card-body">
                     <table class="table table-striped">
                         <tr>
-                            <td width="20%">NIP</td>
+                            <td width="20%">NIP / No.KTP</td>
                             <td width="2%">:</td>
                             <td>{{$data->biodata_diri->NIP}}</td>
                         </tr>
