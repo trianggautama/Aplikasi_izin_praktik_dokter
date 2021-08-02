@@ -8,7 +8,7 @@
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
                         <li><a href="#">Admin</a></li>
-                        <li><a href="#">Permohonan</a></li>
+                        <li><a href="#">Permohonan Farmasi</a></li>
                         <li><a href="#">Filter Cetak</a></li>
                     </ul>
                 </div>
@@ -19,7 +19,7 @@
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{Route('report.permohonan')}}" method="post" target="_blank">
+                    <form action="{{Route('report.permohonan_farmasi')}}" method="post" target="_blank">
                         @csrf
                         <div class="form-group">
                             <label for="">Proses Permohonan</label>
@@ -34,7 +34,7 @@
                             </select>
                         </div>
                         <div class="text-right">
-                            <a href="{{Route('admin.permohonan.index')}}" class="btn btn-secondary" data-dismiss="modal">Batal</a>
+                            <a href="{{Route('admin.permohonan_farmasi.index')}}" class="btn btn-secondary" data-dismiss="modal">Batal</a>
                             <button type="submit" class="btn btn-primary">Cetak Data</button>
                         </div>
                     </form>

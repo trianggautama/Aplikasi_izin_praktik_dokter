@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col-md">Data User</div>
                         <div class="col-md text-right">
-                            <a href="{{Route('admin.permohonan.filter')}}" class="btn btn-primary" target="_blank"><i
+                            <a href="{{Route('admin.permohonan_farmasi.filter')}}" class="btn btn-primary" target="_blank"><i
                                     class="mdi mdi-printer"></i>Cetak Data</a>
                         </div>
                     </div>

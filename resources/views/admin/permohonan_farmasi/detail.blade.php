@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped">
+                    <table class="table table-striped" id="">
                         <tr>
                             <td width="20%">NIP</td>
                             <td width="2%">:</td>
@@ -68,28 +68,16 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Detail Pelatihan</div>
-                        <div class="col-md text-right">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="card-header">
-                    <div class="row">
                         <div class="col-md-2">Detail Permohonan</div>
                         <div class="col-md text-right">
-                            @if($data->status == 0)
-                            <a href="{{Route('admin.permohonan_farmasi.verifikasi',$data->id)}}"
-                                class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a>
+                        @if($data->status == 0)
+                            <a href="{{Route('admin.permohonan.verifikasi',$data->id)}}" class="btn btn-primary"><i
+                                    class="mdi mdi-check"></i> Verifikasi Permohonan</a>
                             @endif
-                            @if($data->status == 6)
-                            <a href="{{Route('report.surat_izin',$data->id)}}" class="btn btn-primary"
+                            <a href="{{Route('report.surat_izin_farmasi',$data->id)}}" class="btn btn-primary"
                                 target="_blank"><i class="mdi mdi-printer"></i> Cetak Surat Izin Praktek</a>
-                            <a href="{{Route('report.riwayat_dokumen',$data->id)}}" class="btn btn-primary"
+                            <a href="{{Route('report.riwayat_dokumen_farmasi',$data->id)}}" class="btn btn-primary"
                                 target="_blank"><i class="mdi mdi-printer"></i> Riwayat Dokumen</a>
-                            @endif
-                            {{-- <a href="{{Route('report.sip',['id'=>$data->id])}}" class="btn btn-primary"
-                            target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a> --}}
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,8 @@
                     <div class="row">
                         <div class="col-md">Detail Pelatihan</div>
                         <div class="col-md text-right">
-
+                                <a href="{{Route('report.tanda_terima_farmasi',['id'=>$data->id])}}" class="btn btn-primary"
+                                target="_blank"><i class="mdi mdi-printer"></i>Cetak Tanda Terima</a>
                         </div>
                     </div>
                 </div>

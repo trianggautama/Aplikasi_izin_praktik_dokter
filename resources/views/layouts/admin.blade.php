@@ -267,38 +267,25 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+      <a class="nav-link" data-toggle="collapse" href="#permohonan_kasi" aria-expanded="false"
+        aria-controls="ui-basic">
         <i class="menu-icon typcn typcn-coffee"></i>
         <span class="menu-title">Permohonan</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse" id="permohonan">
+      <div class="collapse" id="permohonan_kasi">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kasi_pju.permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('kasi_pju.permohonan.index')}}">Praktik Dokter</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
-        <i class="menu-icon typcn typcn-coffee"></i>
-        <span class="menu-title">Permohonan Izin Farmasi</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="permohonan">
-        <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kasi_pju.permohonan_farmasi.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('kasi_pju.permohonan_farmasi.index')}}">Praktik farmasi</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
-        </ul>
-      </div>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik Bidan</a>
+          </li>
+      </ul>
+    </div>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#kasi_pju_riwayat_permohonan" aria-expanded="false"
@@ -310,7 +297,13 @@
       <div class="collapse" id="kasi_pju_riwayat_permohonan">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kasi_pju.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('kasi_pju.riwayat_permohonan.index')}}">Izin Praktik Dokter </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kasi_pju.riwayat_permohonan.farmasi ')}}">Izin Praktik Farmasi </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kasi_pju.riwayat_permohonan.index')}}">Izin Praktik Bidan </a>
           </li>
           {{-- <li class="nav-item">
             <a class="nav-link" href="#">Perpanjangan Izin</a>
@@ -387,28 +380,14 @@
       <div class="collapse" id="permohonan">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('sekretaris.permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('sekretaris.permohonan.index')}}">Izin Dokter</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
-        <i class="menu-icon typcn typcn-coffee"></i>
-        <span class="menu-title">Permohonan Izin Farmasi</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="permohonan">
-        <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('sekretaris.permohonan_farmasi.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('sekretaris.permohonan_farmasi.index')}}">Izin Farmasi</a>
           </li>
-          {{-- <li class="nav-item">
-                <a class="nav-link" href="#">Perpanjangan Izin</a>
-              </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('sekretaris.permohonan_farmasi.index')}}">Izin Bidan</a>
+          </li>
         </ul>
       </div>
     </li>
@@ -422,7 +401,13 @@
       <div class="collapse" id="kadis_riwayat_permohonan">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('sekretaris.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('sekretaris.riwayat_permohonan.index')}}">Izin Dokter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('sekretaris.riwayat_permohonan.index')}}">Izin Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('sekretaris.riwayat_permohonan.index')}}">Izin Bidan</a>
           </li>
           {{-- <li class="nav-item">
             <a class="nav-link" href="#">Perpanjangan Izin</a>
@@ -440,36 +425,22 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
+      <a class="nav-link" data-toggle="collapse" href="#permohonan_kadis" aria-expanded="false" aria-controls="ui-basic">
         <i class="menu-icon typcn typcn-coffee"></i>
         <span class="menu-title">Permohonan</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse" id="permohonan">
+      <div class="collapse" id="permohonan_kadis">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kadis.permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('kadis.permohonan.index')}}">Izin Dokter</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
-        <i class="menu-icon typcn typcn-coffee"></i>
-        <span class="menu-title">Permohonan Izin Farmasi</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="permohonan">
-        <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kadis.permohonan_farmasi.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('kadis.permohonan_farmasi.index')}}">Izin Farmasi</a>
           </li>
-          {{-- <li class="nav-item">
-                <a class="nav-link" href="#">Perpanjangan Izin</a>
-              </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kadis.permohonan.index')}}">Izin Bidan</a>
+          </li>
         </ul>
       </div>
     </li>
@@ -483,11 +454,14 @@
       <div class="collapse" id="kadis_riwayat_permohonan">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kadis.riwayat_permohonan.index')}}">Pembuatan Baru</a>
+            <a class="nav-link" href="{{Route('kadis.riwayat_permohonan.index')}}">Izin Dokter</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Perpanjangan Izin</a>
-          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kadis.riwayat_permohonan.farmasi')}}">Izin Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kadis.riwayat_permohonan.bidan')}}">Izin Bidan</a>
+          </li>
         </ul>
       </div>
     </li>
