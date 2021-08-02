@@ -356,6 +356,7 @@ Route::middleware(['kasi'])->group(function () {
 
 Route::prefix('report')->name('report.')->group(function () {
     Route::get('/riwayat', [ReportController::class, 'riwayat_permohonan'])->name('riwayat_permohonan');
+    Route::get('/pegawai', [ReportController::class, 'pegawai'])->name('pegawai');
     Route::get('/', [ReportController::class, 'pemohon'])->name('pemohon');
     Route::post('/', [ReportController::class, 'permohonan'])->name('permohonan');
     Route::get('/sip/{id}', [ReportController::class, 'sip'])->name('sip');

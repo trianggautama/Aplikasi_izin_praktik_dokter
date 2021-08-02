@@ -75,7 +75,7 @@
               <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="p-4 pr-5 border-bottom bg-light d-flex justify-content-between">
-                    <h4 class="card-title mb-0">Scatter chart</h4>
+                    <h4 class="card-title mb-0">Grafik Permohonan</h4>
                     <id id="scatter-chart-legend"></id>
                   </div>
                   <div class="card-body">

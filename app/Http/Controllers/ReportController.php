@@ -31,6 +31,15 @@ class ReportController extends Controller
         return $pdf->stream('Laporan Pemohon.pdf');
     }
 
+    public function pegawai()
+    {
+        $data = User::where('role','!=',7)->latest()->get();
+
+        $pdf =PDF::loadView('report.pegawai', ['data'=>$data]);
+        $pdf->setPaper('a4', 'landscape');
+        return $pdf->stream('Laporan Pegawai.pdf');
+    }
+
     public function permohonan(Request $req)
     {
         if($req-> proses== 9){
