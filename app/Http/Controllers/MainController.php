@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Permohonan_SIP;
+use App\Models\PermohonanFarmasi;
 use Carbon\Carbon;
 
 class MainController extends Controller
 {
     public function adminBeranda()
     {
-        $data = Permohonan_SIP::where('status',0)->whereDate('created_at', Carbon::today())->get();
-        return view('admin.index',compact('data'));
+        $data       = Permohonan_SIP::where('status',0)->whereDate('created_at', Carbon::today())->get();
+        $dokter     = Permohonan_SIP::count();
+        $farmasi    = PermohonanFarmasi::count();
+        $bidan      = 7;
+        return view('admin.index',compact('data','dokter','farmasi','bidan'));
     }
 
     public function pemohonBeranda()

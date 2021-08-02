@@ -499,6 +499,8 @@
   <script src="{{asset('admin/vendors/js/vendor.bundle.addons.js')}}"></script>
   <script src="{{asset('admin/js/shared/off-canvas.js')}}"></script>
   <script src="{{asset('admin/js/shared/misc.js')}}"></script>
+      <!-- Custom js for this page-->
+  <script src="{{asset('admin/js/shared/chart.js')}}"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>

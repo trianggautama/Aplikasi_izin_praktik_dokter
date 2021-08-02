@@ -15,14 +15,77 @@
         </div>
         </div>
         <div class="row">
-            <div class="col-12 grid-margin">
-            <div class="card">
-                <div class="card-body">
-                <h1>Selamat Datang Admin</h1>  
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci cupiditate inventore architecto. Repellat laudantium ea sunt ut quas ratione deleniti ullam nostrum unde magni voluptates vitae rem dolore, atque rerum.</p>
+            <div class="col-md grid-margin stretch-card average-price-card">
+                <div class="card text-white">
+                    <div class="card-body">
+                    <div class="d-flex justify-content-between pb-2 align-items-center">
+                        <h2 class="font-weight-semibold mb-0">{{$dokter}}</h2>
+                        <div class="icon-holder">
+                        <i class="mdi mdi-briefcase-outline"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="text-white mb-0">Permohonan Izin Praktik Dokter</p>
+                    </div>
+                    </div>
                 </div>
             </div>
-            <br>
+            <div class="col-md grid-margin stretch-card average-price-card">
+                <div class="card text-white">
+                    <div class="card-body">
+                    <div class="d-flex justify-content-between pb-2 align-items-center">
+                        <h2 class="font-weight-semibold mb-0">{{$farmasi}}</h2>
+                        <div class="icon-holder">
+                        <i class="mdi mdi-briefcase-outline"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="text-white mb-0">Permohonan Izin Praktik Farmasi</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md grid-margin stretch-card average-price-card">
+                <div class="card text-white">
+                    <div class="card-body">
+                    <div class="d-flex justify-content-between pb-2 align-items-center">
+                        <h2 class="font-weight-semibold mb-0">{{$bidan}}</h2>
+                        <div class="icon-holder">
+                        <i class="mdi mdi-briefcase-outline"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="text-white mb-0">Permohonan Izin Praktik Bidan</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+             <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body ">
+                    <h1>Selamat Datang Admin</h1>  
+                    <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci cupiditate inventore architecto. Repellat laudantium ea sunt ut quas ratione deleniti ullam nostrum unde magni voluptates vitae rem dolore, atque rerum.</p>
+                    <br>
+                    <img src="{{asset('ilustrasi.png')}}" alt="" width="150px">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="p-4 pr-5 border-bottom bg-light d-flex justify-content-between">
+                    <h4 class="card-title mb-0">Scatter chart</h4>
+                    <id id="scatter-chart-legend"></id>
+                  </div>
+                  <div class="card-body">
+                  <canvas class="my-auto" id="pieChart" height="130"></canvas>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
             <div class="card">
                 <div class="card-header">
                     Permohonan Izin Baru {{Carbon\carbon::now()->format('d F Y')}}
@@ -99,3 +162,58 @@
         </div>
     </div>
 @endsection
+@section('script')
+<script>
+      if ($("#pieChart").length) {
+    var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
+    var pieChart = new Chart(pieChartCanvas, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [{!! $dokter !!}, {!! $farmasi !!}, {!! $bidan !!}],
+          backgroundColor: [
+            ChartColor[0],
+            ChartColor[1],
+            ChartColor[2]
+          ],
+          borderColor: [
+            ChartColor[0],
+            ChartColor[1],
+            ChartColor[2]
+          ],
+        }],
+        labels: [
+          'Izin Dokter',
+          'Izin Farmasi',
+          'Izin Bidan',
+        ]
+      }, 
+      options: {
+        responsive: true,
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        },
+        legend: {
+          display: false
+        },
+        legendCallback: function (chart) {
+          var text = [];
+          text.push('<div class="chartjs-legend"><ul>');
+          for (var i = 0; i < chart.data.datasets[0].data.length; i++) {
+            text.push('<li><span style="background-color:' + chart.data.datasets[0].backgroundColor[i] + '">');
+            text.push('</span>');
+            if (chart.data.labels[i]) {
+              text.push(chart.data.labels[i]);
+            }
+            text.push('</li>');
+          }
+          text.push('</div></ul>');
+          return text.join("");
+        }
+      }
+    });
+    document.getElementById('pie-chart-legend').innerHTML = pieChart.generateLegend();
+  }
+  </script>
+@endsection 
