@@ -88,7 +88,7 @@
     <div class="container">
     <hr style="margin-top:1px;">
         <div class="isi"> 
-            <h2 style="text-align:center;">DATA PERMOHONAN FARMASI</h2>
+            <h2 style="text-align:center;">DATA RIWAYAT PERMOHONAN FARMASI</h2>
             <br>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>

@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-md">Data Permohonan</div>
                         <div class="col-md text-right">
-                            <a href="{{Route('report.riwayat_permohonan')}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i>Cetak Data</a>
+                            <a href="{{Route('report.riwayat_permohonan_farmasi')}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i>Cetak Data</a>
                         </div>
                     </div>
                 </div>

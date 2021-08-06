@@ -4,11 +4,11 @@
     <div class="row page-title-header">
         <div class="col-12">
             <div class="page-header">
-                <h4 class="page-title">Pemohon Bidan</h4>
+                <h4 class="page-title">Riwayat Pemohon Bidan</h4>
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
                         <li><a href="#">Admin CS</a></li>
-                        <li><a href="#">Permohonan Bidan</a></li>
+                        <li><a href="#">Riwayat Permohonan Bidan</a></li>
                         <li><a href="#">Data</a></li>
                     </ul>
                 </div>
@@ -20,9 +20,9 @@
             <div class="card"> 
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Data Permohonan</div>
+                        <div class="col-md">Data Riwayat Permohonan</div>
                         <div class="col-md text-right">
-                        <a href="{{Route('admin.permohonan_bidan.filter')}}" class="btn btn-primary"><i class="mdi mdi-printer"></i>Cetak Data</a>
+                        <a href="{{Route('report.riwayat_permohonan_bidan')}}" class="btn btn-primary"><i class="mdi mdi-printer"></i>Cetak Data</a>
                         </div>
                     </div>
                 </div>
