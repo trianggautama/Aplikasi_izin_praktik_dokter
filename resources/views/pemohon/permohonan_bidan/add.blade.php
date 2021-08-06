@@ -27,7 +27,8 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{Route('pemohon.permohonan_bidan.store')}}" enctype="multipart/form-data" method="post">
+                    <form action="{{Route('pemohon.permohonan_bidan.store')}}" enctype="multipart/form-data"
+                        method="post">
                         @csrf
                         <div class="form-group">
                             <label for="">Tahun Kelulusan</label>
@@ -37,29 +38,29 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Nomor STR</label>
-                                    <input type="text" name="nomor_str" class="form-control" required>
+                                    <input type="text" name="no_str" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Nomor Rekomendasi (Dinkes)</label>
-                                    <input type="text" name="nomor_rekomendasi" class="form-control" required>
+                                    <input type="text" name="no_rekomendasi" class="form-control" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Nama Sarana</label>
-                            <input type="text" name="nama_sarana" class="form-control" required>
+                            <input type="text" name="tempat_praktik" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="">Alamat Sarana</label>
-                            <textarea name="alamat_sarana" id="" class="form-control" required></textarea>
+                            <textarea name="alamat_praktik" id="" class="form-control" required></textarea>
                         </div>
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">No Tlp Praktik</label>
-                                    <input type="text" name="no_hp" class="form-control" required>
+                                    <input type="text" name="telepon_praktik" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
@@ -86,7 +87,7 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Keterangan Bekerja</label>
-                                    <input type="file" name="surat_rekomendasi_organisasi" class="form-control" required>
+                                    <input type="file" name="surat_keterangan_bekerja" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -94,13 +95,14 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Pernyataan Mengikuti Peraturan Perundang-undangan (APJ)</label>
-                                    <input type="file" name="surat_persetujuan_pimpinan" class="form-control" required>
+                                    <input type="file" name="surat_pernyataan_mengikuti_uud" class="form-control"
+                                        required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Keterangan Kesehatan Badan</label>
-                                    <input type="file" name="izin_operasional" class="form-control" required>
+                                    <input type="file" name="surat_keterangan_sehat" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -108,13 +110,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Rekomendasi Ikatan Bidan Indonesia</label>
-                                    <input type="file" name="-" class="form-control" required>
+                                    <input type="file" name="surat_rekomendasi_IBI" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Kartu Anggota Ikatan Bidan Indonesia</label>
-                                    <input type="file" name="ijazah" class="form-control" required>
+                                    <input type="file" name="kartu_anggota" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -122,13 +124,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Tanda Registrasi Bidan (STRB)</label>
-                                    <input type="file" name="-" class="form-control" required>
+                                    <input type="file" name="str" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Pernyataan Permohonan</label>
-                                    <input type="file" name="ijazah" class="form-control" required>
+                                    <input type="file" name="surat_pernyataan_permohonan" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +138,7 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Izin Atasan Langsung</label>
-                                    <input type="file" name="-" class="form-control" required>
+                                    <input type="file" name="surat_izin_atasan_langsung" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">

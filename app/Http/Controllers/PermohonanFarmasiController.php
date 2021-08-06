@@ -63,12 +63,31 @@ class PermohonanFarmasiController extends Controller
 
     public function riwayat()
     {
-        if (Auth::user()->role == 7) {
-            return view('pemohon.permohonan_farmasi.riwayat');
-        } elseif (Auth::user()->role == 2) {
-            return view('petugas.permohonan_farmasi.riwayat');
-        } elseif (Auth::user()->role == 4) {
-            return view('kabid.permohonan_farmasi.riwayat');
+        $data = PermohonanFarmasi::where('status', 6)->latest()->get();
+
+        switch (Auth::user()->role) {
+            case 1:
+                return view('admin.permohonan_farmasi.riwayat', compact('data'));
+                break;
+            case 2:
+                return view('petugas.permohonan_farmasi.riwayat', compact('data'));
+                break;
+            case 3:
+                return view('kasi_pju.permohonan_farmasi.riwayat', compact('data'));
+                break;
+            case 4:
+                return view('kabid.permohonan_farmasi.riwayat', compact('data'));
+                break;
+            case 5:
+                return view('sekretaris.permohonan_farmasi.riwayat', compact('data'));
+                break;
+            case 6:
+                return view('kadis.permohonan_farmasi.riwayat', compact('data'));
+                break;
+            case 7:
+                $riwayat = PermohonanFarmasi::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status', 6)->latest()->get();
+                return view('pemohon.permohonan_farmasi.riwayat', compact('riwayat'));
+                break;
         }
     }
 

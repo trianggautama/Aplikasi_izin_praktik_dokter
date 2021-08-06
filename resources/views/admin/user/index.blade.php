@@ -22,7 +22,8 @@
                     <div class="row">
                         <div class="col-md">Data User</div>
                         <div class="col-md text-right">
-                            <a class="btn btn-primary" href="{{Route('report.pegawai')}}" target="_blank"><i class="mdi mdi-printer"></i>cetak data pegawai</a>
+                            <a class="btn btn-primary" href="{{Route('report.pegawai')}}" target="_blank"><i
+                                    class="mdi mdi-printer"></i>cetak data pegawai</a>
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModal">+ tambah data</button>
                         </div>

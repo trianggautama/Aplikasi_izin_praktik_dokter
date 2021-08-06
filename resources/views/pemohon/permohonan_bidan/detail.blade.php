@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col-md">Detail Pelatihan</div>
                         <div class="col-md text-right">
-                    
+
                         </div>
                     </div>
                 </div>
@@ -30,34 +30,29 @@
                     <table class="table table-striped">
                         <tr>
                             <td width="20%">Tahun Kelulusan</td>
-                            <td width="2%">: -
+                            <td width="2%">:
                             </td>
-                            <td></td>
+                            <td>{{$data->tahun_kelulusan}}</td>
                         </tr>
                         <tr>
                             <td width="20%">Nomor STRB</td>
-                            <td width="2%">: -</td>
-                            <td></td>
+                            <td width="2%">:</td>
+                            <td>{{$data->no_str}}</td>
                         </tr>
                         <tr>
                             <td width="20%">Nomor Rekomendasi</td>
-                            <td width="2%">: -</td>
-                            <td></td>
+                            <td width="2%">:</td>
+                            <td>{{$data->no_rekomendasi}}</td>
                         </tr>
                         <tr>
                             <td width="20%">Tempat Praktik</td>
                             <td width="2%">: </td>
-                            <td></td>
+                            <td>{{$data->tempat_praktik}}</td>
                         </tr>
                         <tr>
                             <td width="20%">Alamat Tujuan</td>
                             <td width="2%">: </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td width="20%">Tempat Ttd</td>
-                            <td width="2%">: </td>
-                            <td></td>
+                            <td>{{$data->alamat_praktik}}</td>
                         </tr>
                     </table>
                 </div>
@@ -86,93 +81,127 @@
                                 <td>1</td>
                                 <td>Surat Rekomendasi Dinkes</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_bidan->surat_rekomendasi_dinkes)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Surat Keterangan Bekerja (SK)</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_bidan->surat_keterangan_bekerja)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Surat Pernyataan Mengikuti Peraturan Perundang-undangan (APJ)</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_bidan->surat_pernyataan_mengikuti_uud)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>Surat Keterangan Kesehatan Badan</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_bidan->surat_keterangan_sehat)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>Surat Rekomendasi Ikatan Bidan Indonesia</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_bidan->surat_rekomendasi_IBI)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>6</td>
                                 <td>Kartu Anggota Ikatan Bidan Indonesia</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_bidan->kartu_anggota)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>7</td>
                                 <td>Surat Tanda Registrasi Bidan (STRB)</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_bidan->str)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>8</td>
                                 <td>Surat Pernyataan Permohonan</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_bidan->surat_pernyataan_permohonan)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>9</td>
                                 <td>Surat Izin Atasan Langsung</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank"
+                                        href="{{asset('lampiran/'.$data->lampiran_bidan->surat_izin_atasan_langsung)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>10</td>
                                 <td>Ijazah (Legalisir)</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_bidan->ijazah)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>11</td>
                                 <td>KTP</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_bidan->ktp)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>12</td>
                                 <td>NPWP</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_bidan->npwp)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
-                            </tr> 
+                            </tr>
                             <tr>
                                 <td>13</td>
                                 <td>Foto</td>
                                 <td class="text-center">
-                                    <a target="_blank" href="#" class="btn btn-icons btn-rounded btn-primary"><i  class="mdi mdi-cloud-download"></i></a>
+                                    <a target="_blank" href="{{asset('lampiran/'.$data->lampiran_bidan->foto)}}"
+                                        class="btn btn-icons btn-rounded btn-primary"><i
+                                            class="mdi mdi-cloud-download"></i></a>
                                 </td>
-                            </tr>   
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -202,8 +231,7 @@
                                 <td>1</td>
                                 <td>Surat Permohonan Rekomendasi</td>
                                 <td class="text-center">
-                                    <a href="#"
-                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                    <a href="#" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
                                             class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>

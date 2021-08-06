@@ -17,7 +17,7 @@
     </div>
     <div class="row">
         <div class="col-12 grid-margin">
-            <div class="card"> 
+            <div class="card">
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md">Data Permohonan</div>
@@ -81,13 +81,14 @@
                                     </td>
                                     <td class="text-center">
                                         <a href="{{Route('pemohon.permohonan.detail', $d->id)}}"
-                                            class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-information-outline"></i></a>
+                                            class="btn btn-icons btn-rounded btn-info"><i
+                                                class="mdi mdi-information-outline"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                    </div>\
+                    </div>
                 </div>
             </div>
         </div>
