@@ -12,6 +12,8 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SuratKuasaController;
 use App\Http\Controllers\SuratRekomendasiController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PangkatController;
+use App\Http\Controllers\PegawaiController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->name('auth.')->group(function () {
@@ -27,15 +29,42 @@ Route::middleware(['adminCS'])->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/beranda', [MainController::class, 'adminBeranda'])->name('beranda');
 
+        // Route::prefix('pendidikan')->name('pendidikan.')->group(function () {
+        //     Route::get('/', [PendidikanController::class, 'index'])->name('index');
+        //     Route::post('/', [PendidikanController::class, 'store'])->name('store');
+        //     Route::get('/edit/{id}', [PendidikanController::class, 'edit'])->name('edit');
+        //     Route::put('/edit/{id}', [PendidikanController::class, 'update'])->name('update');
+        //     Route::get('/delete/{id}', [PendidikanController::class, 'destroy'])->name('delete');
+        // });
+        
+
+        Route::prefix('pegawai')->name('pegawai.')->group(function () {
+            Route::get('/', [PegawaiController::class, 'index'])->name('index');
+            Route::post('/', [PegawaiController::class, 'store'])->name('store');
+            Route::get('/show/{id}', [PegawaiController::class, 'show'])->name('show');
+            Route::get('/edit/{id}', [PegawaiController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [PegawaiController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [PegawaiController::class, 'destroy'])->name('delete');
+        });
+
+        Route::prefix('pangkat')->name('pangkat.')->group(function () {
+            Route::get('/', [PangkatController::class, 'index'])->name('index');
+            Route::post('/', [PangkatController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [PangkatController::class, 'edit'])->name('edit');
+            Route::put('/edit/{id}', [PangkatController::class, 'update'])->name('update');
+            Route::get('/delete/{id}', [PangkatController::class, 'destroy'])->name('delete');
+        });
+
         Route::prefix('user')->name('user.')->group(function () {
             Route::get('/', [UserController::class, 'index'])->name('index');
             Route::post('/', [UserController::class, 'store'])->name('store');
+            Route::get('/show/{id}', [UserController::class, 'show'])->name('show');
             Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
             Route::put('/edit/{id}', [UserController::class, 'update'])->name('update');
             Route::get('/delete/{id}', [UserController::class, 'destroy'])->name('delete');
         });
 
-        Route::prefix('pemohon')->name('pemohon.')->group(function () {
+        Route::prefix('pemohon')->name('pemohon.')->group(function () { 
             Route::get('/', [PemohonController::class, 'index'])->name('index');
             Route::post('/', [PemohonController::class, 'store'])->name('store');
             Route::get('/edit/{id}', [PemohonController::class, 'edit'])->name('edit');
