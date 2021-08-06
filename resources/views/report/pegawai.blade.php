@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+    p{
+        font-size: 12px;
+    }
     h4,h2{
         font-family:serif;
     }
@@ -91,49 +94,54 @@
             <h2 style="text-align:center;">DATA PEGAWAI</h2>
             <br>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>NIP/NIK</th>
-                                <th>Nama</th>
-                                <th>Tempat, Tanggal Lahir</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Status User</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($data as $d)
-                            <tr>
-                                <td>{{$loop->iteration}}</td>
-                                <td>{{$d->biodata_diri->NIP}}</td>
-                                <td>{{$d->nama}}</td>
-                                <td>
-                                    @if ($d->biodata_diri->jenis_kelamin == 1)
-                                    Laki-laki
-                                    @else
-                                    Perempuan
-                                    @endif
-                                </td>
-                                <td>{{$d->biodata_diri->tempat_lahir}}, {{$d->biodata_diri->tanggal_lahir}}</td>
-                                <td>
-                                    @if ($d->role == 1)
-                                    Admin CS
-                                    @elseif ($d->role == 2)
-                                    Petugas Proses
-                                    @elseif ($d->role == 3)
-                                    Kasi PJU
-                                    @elseif ($d->role == 4)
-                                    Kabid
-                                    @elseif ($d->role == 5)
-                                    Sekretaris
-                                    @else
-                                    Kepala Dinas
-                                    @endif
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>NIP/NIK</th>
+                        <th>Nama</th>
+                        <th>Tempat, Tanggal Lahir</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Pangkat / Golongan</th>
+                        <th>Pendidikan terakhir</th>
+                        <th>No Hp</th>
+                        <th>Jabatan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($data as $d)
+                    <tr>
+                        <td>{{$loop->iteration}}</td>
+                        <td>{{$d->biodata_diri->NIP}}</td>
+                        <td>{{$d->nama}}</td>
+                        <td>{{$d->biodata_diri->tempat_lahir}}, {{$d->biodata_diri->tanggal_lahir}}</td>
+                        <td>
+                            @if ($d->biodata_diri->jenis_kelamin == 1)
+                            Laki-laki
+                            @else
+                            Perempuan
+                            @endif
+                        </td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>
+                            @if ($d->role == 1)
+                            Admin CS
+                            @elseif ($d->role == 2)
+                            Petugas Proses
+                            @elseif ($d->role == 3)
+                            Kasi PJU
+                            @elseif ($d->role == 4)
+                            Kabid
+                            @elseif ($d->role == 5)
+                            Sekretaris
+                            @else
+                            Kepala Dinas
+                            @endif
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
                 <br>
                 <br>
                 <div class="ttd">

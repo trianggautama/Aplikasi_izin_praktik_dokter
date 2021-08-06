@@ -23,6 +23,13 @@ class UserController extends Controller
         return back()->withSuccess('Data berhasil disimpan');
     }
 
+    public function show($id)
+    {
+        $data = User::findOrFail($id);
+
+        return view('admin.user.show', compact('data'));
+    }
+
     public function edit($id)
     {
         $data = User::findOrFail($id);

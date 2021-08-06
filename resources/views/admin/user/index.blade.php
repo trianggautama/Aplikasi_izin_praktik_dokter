@@ -8,7 +8,7 @@
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links ml-auto">
                         <li><a href="#">Admin</a></li>
-                        <li><a href="#">user</a></li>
+                        <li><a href="#">user Pegawai</a></li>
                         <li><a href="#">data</a></li>
                     </ul>
                 </div>
@@ -20,67 +20,60 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Data User</div>
+                        <div class="col-md">Data User Pegawai</div>
                         <div class="col-md text-right">
-                            <a class="btn btn-primary" href="{{Route('report.pegawai')}}" target="_blank"><i class="mdi mdi-printer"></i>cetak data pegawai</a>
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModal">+ tambah data</button>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <table id="example" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>NIP/NIK</th>
-                                <th>Nama</th>
-                                <th>Tempat, Tanggal Lahir</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Status User</th>
-                                <th class="text-center">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($data as $d)
-                            <tr>
-                                <td>{{$loop->iteration}}</td>
-                                <td>{{$d->biodata_diri->NIP}}</td>
-                                <td>{{$d->nama}}</td>
-                                <td>
-                                    @if ($d->biodata_diri->jenis_kelamin == 1)
-                                    Laki-laki
-                                    @else
-                                    Perempuan
-                                    @endif
-                                </td>
-                                <td>{{$d->biodata_diri->tempat_lahir}}, {{$d->biodata_diri->tanggal_lahir}}</td>
-                                <td>
-                                    @if ($d->role == 1)
-                                    Admin CS
-                                    @elseif ($d->role == 2)
-                                    Petugas Proses
-                                    @elseif ($d->role == 3)
-                                    Kasi PJU
-                                    @elseif ($d->role == 4)
-                                    Kabid
-                                    @elseif ($d->role == 5)
-                                    Sekretaris
-                                    @else
-                                    Kepala Dinas
-                                    @endif
-                                </td>
-                                <td class="text-center">
-                                    <a href="{{Route('admin.user.edit', $d->id)}}"
-                                        class="btn btn-icons btn-rounded btn-warning"><i class="mdi mdi-pencil"></i></a>
-                                    <a href="{{Route('admin.user.delete',['id'=>$d->id])}}"
-                                        class="btn btn-icons btn-rounded btn-danger delete"><i
-                                            class="mdi mdi-delete"></i></a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>NIP/NIK</th>
+                                    <th>Nama</th>
+                                    <th>Status User</th>
+                                    <th>Usernames</th>
+                                    <th class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($data as $d)
+                                <tr>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$d->biodata_diri->NIP}}</td>
+                                    <td>{{$d->nama}}</td>
+                                    <td>
+                                        @if ($d->role == 1)
+                                        Admin CS
+                                        @elseif ($d->role == 2)
+                                        Petugas Proses
+                                        @elseif ($d->role == 3)
+                                        Kasi PJU
+                                        @elseif ($d->role == 4)
+                                        Kabid
+                                        @elseif ($d->role == 5)
+                                        Sekretaris
+                                        @else
+                                        Kepala Dinas
+                                        @endif
+                                    </td>
+                                    <td>{{$d->username}}</td>
+                                    <td class="text-center">
+                                        <a href="{{Route('admin.user.edit', $d->id)}}"
+                                            class="btn btn-icons btn-rounded btn-warning"><i class="mdi mdi-pencil"></i></a>
+                                        <a href="{{Route('admin.user.delete',['id'=>$d->id])}}"
+                                            class="btn btn-icons btn-rounded btn-danger delete"><i
+                                                class="mdi mdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -153,6 +146,41 @@
                             <option value="5">Sekertaris</option>
                             <option value="6">Kepala Dinas</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Pangkat Golongan</label>
+                        <select name="role" id="" class="form-control">
+                            <option value="">- pilih pangkat golongan -</option>
+                            <option value="II/A">II/A</option>
+                            <option value="II/B">II/B</option>
+                            <option value="II/C">II/C</option>
+                            <option value="III/A">III/A</option>
+                            <option value="III/B">III/B</option>
+                            <option value="III/C">III/C</option>
+                            <option value="IV/A">IV/A</option>
+                            <option value="IV/B">IV/B</option>
+                            <option value="IV/C">IV/C</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Pendidikan Terakhir</label>
+                        <select name="role" id="" class="form-control">
+                            <option value="">- pilih pendidikan terakhir -</option>
+                            <option value="S3">S3</option>
+                            <option value="S2">S2</option>
+                            <option value="S1">S1</option>
+                            <option value="D4">D4</option>
+                            <option value="D3">D3</option>
+                            <option value="D2">D2</option>
+                            <option value="D1">D1</option>
+                            <option value="SMA/SMK/SEDERAJAT">SMA/SMK/SEDERAJAT</option>
+                            <option value="SMP/SEDERAJAT">SMP/SEDERAJAT</option>
+                            <option value="SD/SEDERAJAT">SD/SEDERAJAT</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">No Telepon</label>
+                        <input type="text" name="no_hp" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Username</label>
