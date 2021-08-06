@@ -49,6 +49,7 @@
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$d->biodata_diri->NIP}}</td>
                                     <td>{{$d->nama}}</td>
+                                    <td>{{$d->biodata_diri->tempat_lahir}}, {{$d->biodata_diri->tanggal_lahir}}</td>
                                     <td>
                                         @if ($d->biodata_diri->jenis_kelamin == 1)
                                         Laki-laki
@@ -56,10 +57,9 @@
                                         Perempuan
                                         @endif
                                     </td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>{{$d->biodata_diri->tempat_lahir}}, {{$d->biodata_diri->tanggal_lahir}}</td>
+                                    <td>{{$d->pangkat}}</td>
+                                    <td>{{$d->pendidikan}}</td> 
+                                    <td>{{$data->no_hp}}</td>
                                     <td>
                                         @if ($d->role == 1)
                                         Admin CS

@@ -152,7 +152,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Pangkat Golongan</label>
-                        <select name="role" id="" class="form-control">
+                        <select name="pangkat" id="" class="form-control">
                             <option value="">- pilih pangkat golongan -</option>
                             <option value="II/A">II/A</option>
                             <option value="II/B">II/B</option>
@@ -167,7 +167,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Pendidikan Terakhir</label>
-                        <select name="role" id="" class="form-control">
+                        <select name="pendidikan" id="" class="form-control">
                             <option value="">- pilih pendidikan terakhir -</option>
                             <option value="S3">S3</option>
                             <option value="S2">S2</option>
