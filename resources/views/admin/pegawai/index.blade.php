@@ -59,7 +59,7 @@
                                     </td>
                                     <td>{{$d->pangkat}}</td>
                                     <td>{{$d->pendidikan}}</td> 
-                                    <td>{{$data->no_hp}}</td>
+                                    <td>-</td>
                                     <td>
                                         @if ($d->role == 1)
                                         Admin CS
