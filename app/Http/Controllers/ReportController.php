@@ -171,6 +171,15 @@ class ReportController extends Controller
         return $pdf->stream('Laporan Surat Izin.pdf');
     }
 
+    public function sip_farmasi($id)
+    {
+        $data = PermohonanFarmasi::findOrFail($id);
+
+        $pdf =PDF::loadView('report.sip_farmasi', ['data'=>$data]);
+        $pdf->setPaper('a4', 'potrait');
+        return $pdf->stream('Laporan Surat Izin Praktik.pdf');
+    }
+
     //report bidan 
     public function permohonan_bidan(Request $req)
     {
@@ -226,5 +235,14 @@ class ReportController extends Controller
         $pdf    = PDF::loadView('report.surat_izin_bidan', ['data'=>$data,'kadis'=>$kadis]);
         $pdf->setPaper('a4', 'portrait');
         return $pdf->stream('Laporan Surat Izin.pdf');
+    }
+
+    public function sip_bidan($id)
+    {
+        $data = PermohonanBidan::findOrFail($id);
+
+        $pdf =PDF::loadView('report.sip_bidan', ['data'=>$data]);
+        $pdf->setPaper('a4', 'potrait');
+        return $pdf->stream('Laporan Surat Izin Praktik.pdf');
     }
 }

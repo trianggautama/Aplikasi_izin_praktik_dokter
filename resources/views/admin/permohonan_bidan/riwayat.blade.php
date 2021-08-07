@@ -48,8 +48,8 @@
                                     <td>{{$d->created_at}}</td>
                                     <td>{{$d->biodata_diri->NIP}}</td>
                                     <td>{{$d->biodata_diri->user->nama}}</td>
-                                    <td>{{$d->nomor_str}}</td>
-                                    <td>{{$d->nomor_rekomendasi}}</td>
+                                    <td>{{$d->no_str}}</td>
+                                    <td>{{$d->no_rekomendasi}}</td>
                                     <td>{{$d->tempat_praktik}}</td>
                                     <td>
                                         @switch($d->status)

@@ -78,8 +78,10 @@
                                 target="_blank"><i class="mdi mdi-printer"></i> Cetak Surat Izin Praktek</a>
                             <a href="{{Route('report.riwayat_dokumen_farmasi',$data->id)}}" class="btn btn-primary"
                                 target="_blank"><i class="mdi mdi-printer"></i> Riwayat Dokumen</a>
+                            <a href="{{Route('report.sip_farmasi',['id'=>$data->id])}}" class="btn btn-primary"
+                                target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a>
                         </div>
-                    </div>
+                    </div> 
                 </div>
                 <div class="card-body">
                     <table class="table table-striped">

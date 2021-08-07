@@ -47,8 +47,8 @@
                                     <td>{{$d->created_at}}</td>
                                     <td>{{$d->biodata_diri->NIP}}</td>
                                     <td>{{$d->biodata_diri->user->nama}}</td>
-                                    <td>{{$d->nomor_str}}</td>
-                                    <td>{{$d->nomor_rekomendasi}}</td>
+                                    <td>{{$d->no_str}}</td>
+                                    <td>{{$d->no_rekomendasi}}</td>
                                     <td>{{$d->tempat_praktik}}</td>
                                     <td>
                                         @switch($d->status)
@@ -82,7 +82,7 @@
                                         @endswitch
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{Route('admin.permohonan.detail', $d->id)}}"
+                                        <a href="{{Route('admin.permohonan_farmasi.detail', $d->id)}}"
                                             class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-file"></i></a>
                                     </td>
                                 </tr>

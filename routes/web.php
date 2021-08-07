@@ -400,12 +400,15 @@ Route::prefix('report')->name('report.')->group(function () {
     Route::get('/tanda_terima_farmasi/{id}', [ReportController::class, 'tanda_terima_farmasi'])->name('tanda_terima_farmasi');
     Route::get('/riwayat_dokumen_farmasi/{id}', [ReportController::class, 'riwayat_dokumen_farmasi'])->name('riwayat_dokumen_farmasi');
     Route::get('/surat_izin_farmasi/{id}', [ReportController::class, 'surat_izin_farmasi'])->name('surat_izin_farmasi');
+    Route::get('/sip_farmasi/{id}', [ReportController::class, 'sip_farmasi'])->name('sip_farmasi');
+
 
     Route::post('/permohonan_bidan', [ReportController::class, 'permohonan_bidan'])->name('permohonan_bidan');
     Route::get('/riwayat_permohonan_bidan', [ReportController::class, 'riwayat_permohonan_bidan'])->name('riwayat_permohonan_bidan');
     Route::get('/tanda_terima_bidan/{id}', [ReportController::class, 'tanda_terima_bidan'])->name('tanda_terima_bidan');
     Route::get('/riwayat_dokumen_bidan/{id}', [ReportController::class, 'riwayat_dokumen_bidan'])->name('riwayat_dokumen_bidan');
     Route::get('/surat_izin_bidan/{id}', [ReportController::class, 'surat_izin_bidan'])->name('surat_izin_bidan');
+    Route::get('/sip_bidan/{id}', [ReportController::class, 'sip_bidan'])->name('sip_bidan');
 
 });
 

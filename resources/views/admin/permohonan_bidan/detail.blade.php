@@ -47,7 +47,11 @@
                         <tr>
                             <td width="20%">Jenis Kelamin</td>
                             <td width="2%">:</td>
-                            <td>{{$data->biodata_diri->jenis_kelamin}}</td>
+                            <td> @if($data->biodata_diri->jenis_kelamin == 1)
+                                <p>Laki - laki</p>
+                                @else
+                                <p>Perempuan</p>
+                                @endif</td>
                         </tr>
                         <tr>
                             <td width="20%">Alamat</td>
@@ -72,6 +76,8 @@
                                 target="_blank"><i class="mdi mdi-printer"></i> Cetak Surat Izin Praktek</a>
                             <a href="{{Route('report.riwayat_dokumen_bidan',$data->id)}}" class="btn btn-primary"
                                 target="_blank"><i class="mdi mdi-printer"></i> Riwayat Dokumen</a>
+                                <a href="{{Route('report.sip_bidan',['id'=>$data->id])}}" class="btn btn-primary"
+                                target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a>
                         </div>
                     </div>
                 </div>
