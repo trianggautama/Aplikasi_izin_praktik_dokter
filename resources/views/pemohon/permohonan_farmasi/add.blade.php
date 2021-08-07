@@ -43,7 +43,7 @@
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
-                                    <label for="">Nomor Rekomendasi (Dinkes)</label>
+                                    <label for="">Nomor Rekomendasi</label>
                                     <input type="text" name="no_rekomendasi" class="form-control" required>
                                 </div>
                             </div>
