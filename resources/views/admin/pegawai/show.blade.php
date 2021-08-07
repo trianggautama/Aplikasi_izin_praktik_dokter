@@ -63,17 +63,17 @@
                         <tr>
                             <td width="20%">Pendidikan Terakhir</td>
                             <td width="2%">:</td>
-                            <td>-</td>
+                            <td>{{$data->pendidikan}}</td>
                         </tr>
                         <tr>
                             <td width="20%">Pangkat Golongans</td>
                             <td width="2%">:</td>
-                            <td>-</td>
+                            <td>{{$data->pangkat}}</td>
                         </tr>
                         <tr>
                             <td width="20%">No Hp</td>
                             <td width="2%">:</td>
-                            <td>-</td>
+                            <td>{{$data->no_hp}}</td>
                         </tr>
                     </table>
                 </div>
