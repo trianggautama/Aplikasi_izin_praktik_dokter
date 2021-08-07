@@ -40,8 +40,8 @@
                         <tr>
                             <td width="20%">Tempat, Tanggal Lahir</td>
                             <td width="2%">:</td>
-                            <td>{{$data->tempat_lahir}},
-                                {{Carbon\carbon::parse($data->tanggal_lahir)->translatedFormat('d F Y')}}
+                            <td>{{$data->biodata_diri->tempat_lahir}},
+                                {{Carbon\carbon::parse($data->biodata_diri->tanggal_lahir)->translatedFormat('d F Y')}}
                             </td>
                         </tr>
                         <tr>
@@ -63,17 +63,17 @@
                         <tr>
                             <td width="20%">Pendidikan Terakhir</td>
                             <td width="2%">:</td>
-                            <td>-</td>
+                            <td>{{$data->pendidikan}}</td>
                         </tr>
                         <tr>
                             <td width="20%">Pangkat Golongans</td>
                             <td width="2%">:</td>
-                            <td>-</td>
+                            <td>{{$data->pangkat}}</td>
                         </tr>
                         <tr>
                             <td width="20%">No Hp</td>
                             <td width="2%">:</td>
-                            <td>-</td>
+                            <td>{{$data->no_hp}}</td>
                         </tr>
                     </table>
                 </div>

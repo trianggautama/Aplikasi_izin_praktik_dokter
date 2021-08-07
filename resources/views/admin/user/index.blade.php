@@ -20,10 +20,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md">Data User Pegawai</div>
+                        <div class="col-md">Data User </div>
                         <div class="col-md text-right">
-                            <a class="btn btn-primary" href="{{Route('report.pegawai')}}" target="_blank"><i
-                                    class="mdi mdi-printer"></i>cetak data pegawai</a>
+                            <a class="btn btn-primary" href="{{Route('report.user')}}" target="_blank"><i
+                                    class="mdi mdi-printer"></i>cetak data User</a>
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModal">+ tambah data</button>
                         </div>
@@ -152,18 +152,21 @@
                     </div>
                     <div class="form-group">
                         <label for="">Pangkat Golongan</label>
-                        <select name="pangkat" id="" class="form-control" required>
-                            <option value="">- pilih pangkat golongan -</option>
-                            <option value="II/A">II/A</option>
-                            <option value="II/B">II/B</option>
-                            <option value="II/C">II/C</option>
-                            <option value="III/A">III/A</option>
-                            <option value="III/B">III/B</option>
-                            <option value="III/C">III/C</option>
-                            <option value="IV/A">IV/A</option>
-                            <option value="IV/B">IV/B</option>
-                            <option value="IV/C">IV/C</option>
-                        </select>
+                        <<<<<<< HEAD <select name="pangkat" id="" class="form-control" required>
+                            =======
+                            <select name="pangkat" id="" class="form-control">
+                                >>>>>>> c4714a1d7336cd60a274b12e2509769d75742ada
+                                <option value="">- pilih pangkat golongan -</option>
+                                <option value="II/A">II/A</option>
+                                <option value="II/B">II/B</option>
+                                <option value="II/C">II/C</option>
+                                <option value="III/A">III/A</option>
+                                <option value="III/B">III/B</option>
+                                <option value="III/C">III/C</option>
+                                <option value="IV/A">IV/A</option>
+                                <option value="IV/B">IV/B</option>
+                                <option value="IV/C">IV/C</option>
+                            </select>
                     </div>
                     <div class="form-group">
                         <label for="">Pendidikan Terakhir</label>

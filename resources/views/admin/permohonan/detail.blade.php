@@ -216,7 +216,7 @@
             </div>
         </div>
 
-        <div class="col-12 grid-margin">
+        <!-- <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-header">
                     <div class="row">
@@ -250,7 +250,7 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 @endsection

@@ -117,11 +117,41 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                {{-- <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="{{Route('admin.pangkat.index')}}">Pangkat Golongan</a>
-          </li> --}}
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('admin.user.index')}}">User</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('admin.pegawai.index')}}">Pegawai</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('admin.pemohon.index')}}">Pemohon</a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('admin.user.index')}}">User</a>
+            <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false"
+              aria-controls="ui-basic">
+              <i class="menu-icon typcn typcn-coffee"></i>
+              <span class="menu-title">Permohonan</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="permohonan">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('admin.permohonan.index')}}">Praktik Dokter</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('admin.permohonan_farmasi.index')}}">Praktik farmasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('admin.permohonan_bidan.index')}}">Praktik bidan</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{Route('admin.pegawai.index')}}">Pegawai</a>

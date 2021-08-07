@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Middleware\Pemohon;
 use App\Models\Pemohonan_surat_rekomendasi;
 use App\Models\Permohonan_SIP;
+use App\Models\PermohonanBidan;
 use App\Models\PermohonanFarmasi;
 use App\Models\Surat_kuasa;
 use App\Models\User;
@@ -31,6 +32,15 @@ class ReportController extends Controller
         return $pdf->stream('Laporan Pemohon.pdf');
     }
 
+    public function user()
+    {
+        $data = User::where('role','!=',7)->latest()->get();
+
+        $pdf =PDF::loadView('report.user', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+        return $pdf->stream('Laporan user.pdf');
+    }
+    
     public function pegawai()
     {
         $data = User::where('role','!=',7)->latest()->get();
@@ -117,6 +127,16 @@ class ReportController extends Controller
         return $pdf->stream('Laporan permohonan Farmasi.pdf');
     }
 
+    public function riwayat_permohonan_farmasi(Request $req)
+    {
+            $data = PermohonanFarmasi::where('status',6)->latest()->get();
+      
+
+        $pdf =PDF::loadView('report.riwayat_permohonan_farmasi', ['data'=>$data]);
+        $pdf->setPaper('a4', 'landscape');
+        return $pdf->stream('Laporan permohonan Farmasi.pdf');
+    }
+
     public function tanda_terima_farmasi($id)
     {
         $data   = PermohonanFarmasi::findOrFail($id);
@@ -155,9 +175,9 @@ class ReportController extends Controller
     public function permohonan_bidan(Request $req)
     {
         if($req-> proses== 9){
-            $data = PermohonanFarmasi::whereNotIn('status',[6])->latest()->get();
+            $data = PermohonanBidan::whereNotIn('status',[6])->latest()->get();
         }else{
-            $data = PermohonanFarmasi::where('status',$req->proses)->latest()->get();
+            $data = PermohonanBidan::where('status',$req->proses)->latest()->get();
         }
 
         $pdf =PDF::loadView('report.permohonan_bidan', ['data'=>$data]);
@@ -165,9 +185,18 @@ class ReportController extends Controller
         return $pdf->stream('Laporan permohonan Farmasi.pdf');
     }
 
+    public function riwayat_permohonan_bidan()
+    {
+            $data = PermohonanBidan::where('status',6)->latest()->get();
+
+        $pdf =PDF::loadView('report.riwayat_permohonan_bidan', ['data'=>$data]);
+        $pdf->setPaper('a4', 'landscape');
+        return $pdf->stream('Laporan riwayat permohonan Farmasi.pdf');
+    }
+
     public function tanda_terima_bidan($id)
     {
-        $data   = PermohonanFarmasi::findOrFail($id);
+        $data   = PermohonanBidan::findOrFail($id);
         $pdf    = PDF::loadView('report.tanda_terima', ['data'=>$data]);
         $pdf->setPaper('a4', 'potrait');
         return $pdf->stream('Laporan Tanda Terima.pdf');
@@ -175,7 +204,7 @@ class ReportController extends Controller
 
     public function riwayat_dokumen_bidan($id)
     {
-        $data           = PermohonanFarmasi::findOrFail($id);
+        $data           = PermohonanBidan::findOrFail($id);
         $kabid          = User::whereRole(4)->first();
         $kasi           = User::whereRole(3)->first();
         $petugas        = User::whereRole(2)->first();
@@ -190,7 +219,7 @@ class ReportController extends Controller
 
     public function surat_izin_bidan($id)
     {
-        $data           = PermohonanFarmasi::findOrFail($id);
+        $data           = PermohonanBidan::findOrFail($id);
         $kadis          = User::whereRole(6)->first();
 
 

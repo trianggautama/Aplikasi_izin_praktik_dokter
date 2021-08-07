@@ -85,7 +85,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Pangkat Golongan</label>
-                        <select name="pangkat" id="" class="form-control" required>
+                        <<<<<<< HEAD <select name="pangkat" id="" class="form-control" required>
                             <option value="">- pilih pangkat golongan -</option>
                             <option value="II/A" {{$data->biodata_diri->pangkat == 'II/A' ? 'selected' : ''}}>II/A
                             </option>
@@ -105,37 +105,39 @@
                             </option>
                             <option value="IV/C" {{$data->biodata_diri->pangkat == 'IV/C' ? 'selected' : ''}}>IV/C
                             </option>
-                        </select>
+                            =======
+                            <select name="pangkat" id="" class="form-control">
+                                <option value="">- pilih pangkat golongan -</option>
+                                <option value="II/A" {{$data->pangkat == 'II/A' ? 'selected' : ''}}>II/A</option>
+                                <option value="II/B" {{$data->pangkat == 'II/B' ? 'selected' : ''}}>II/B</option>
+                                <option value="II/C" {{$data->pangkat == 'II/C' ? 'selected' : ''}}>II/C</option>
+                                <option value="III/A" {{$data->pangkat == 'III/A' ? 'selected' : ''}}>III/A</option>
+                                <option value="III/B" {{$data->pangkat == 'III/B' ? 'selected' : ''}}>III/B</option>
+                                <option value="III/C" {{$data->pangkat == 'III/C' ? 'selected' : ''}}>III/C</option>
+                                <option value="IV/A" {{$data->pangkat == 'IV/A' ? 'selected' : ''}}>IV/A</option>
+                                <option value="IV/B" {{$data->pangkat == 'IV/B' ? 'selected' : ''}}>IV/B</option>
+                                <option value="IV/C" {{$data->pangkat == 'IV/C' ? 'selected' : ''}}>IV/C</option>
+                                >>>>>>> c4714a1d7336cd60a274b12e2509769d75742ada
+                            </select>
                     </div>
                     <div class="form-group">
                         <label for="">Pendidikan Terakhir</label>
-                        <select name="pendidikan_terakhir" id="" class="form-control" required>
+                        <select name="pendidikan_terakhir" id="" class="form-control">
                             <option value="">- pilih pendidikan terakhir -</option>
-                            <option value="S3" {{$data->biodata_diri->pendidikan_terakhir == 'S3' ? 'selected' : ''}}>S3
-                            </option>
-                            <option value="S2" {{$data->biodata_diri->pendidikan_terakhir == 'S2' ? 'selected' : ''}}>S2
-                            </option>
-                            <option value="S1" {{$data->biodata_diri->pendidikan_terakhir == 'S1' ? 'selected' : ''}}>S1
-                            </option>
-                            <option value="D4" {{$data->biodata_diri->pendidikan_terakhir == 'D4' ? 'selected' : ''}}>D4
-                            </option>
-                            <option value="D3" {{$data->biodata_diri->pendidikan_terakhir == 'D3' ? 'selected' : ''}}>D3
-                            </option>
-                            <option value="D2" {{$data->biodata_diri->pendidikan_terakhir == 'D2' ? 'selected' : ''}}>D2
-                            </option>
-                            <option value="D1" {{$data->biodata_diri->pendidikan_terakhir == 'D1' ? 'selected' : ''}}>D1
-                            </option>
+                            <option value="S3" {{$data->pendidikan == 'S3' ? 'selected' : ''}}>S3</option>
+                            <option value="S2" {{$data->pendidikan == 'S2' ? 'selected' : ''}}>S2</option>
+                            <option value="S1" {{$data->pendidikan == 'S1' ? 'selected' : ''}}>S1</option>
+                            <option value="D4" {{$data->pendidikan == 'D4' ? 'selected' : ''}}>D4</option>
+                            <option value="D3" {{$data->pendidikan == 'D3' ? 'selected' : ''}}>D3</option>
+                            <option value="D2" {{$data->pendidikan == 'D2' ? 'selected' : ''}}>D2</option>
+                            <option value="D1" {{$data->pendidikan == 'D1' ? 'selected' : ''}}>D1</option>
                             <option value="SMA/SMK/SEDERAJAT"
-                                {{$data->biodata_diri->pendidikan_terakhir == 'SMA/SMK/SEDERAJAT' ? 'selected' : ''}}>
-                                SMA/SMK/SEDERAJAT</option>
-                            <option value="SMP/SEDERAJAT"
-                                {{$data->biodata_diri->pendidikan_terakhir == 'SMP/SEDERAJAT' ? 'selected' : ''}}>
-                                SMP/SEDERAJAT
+                                {{$data->pendidikan == 'SMA/SMK/SEDERAJAT' ? 'selected' : ''}}>SMA/SMK/SEDERAJAT
                             </option>
-                            <option value="SD/SEDERAJAT"
-                                {{$data->biodata_diri->pendidikan_terakhir == 'SD/SEDERAJAT' ? 'selected' : ''}}>
-                                SD/SEDERAJAT
-                            </option>
+                            <option value="SMP/SEDERAJAT" {{$data->pendidikan == 'SMP/SEDERAJAT' ? 'selected' : ''}}>
+                                SMP/SEDERAJAT</option>
+                            <option value="SD/SEDERAJAT" {{$data->pendidikan == 'SD/SEDERAJAT' ? 'selected' : ''}}>
+                                SD/SEDERAJAT</option>
                         </select>
                     </div>
                     <div class="form-group">

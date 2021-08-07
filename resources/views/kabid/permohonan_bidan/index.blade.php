@@ -22,8 +22,6 @@
                     <div class="row">
                         <div class="col-md">Data Permohonan</div>
                         <div class="col-md text-right">
-                            <a href="{{Route('admin.permohonan_bidan.filter')}}" class="btn btn-primary"><i
-                                    class="mdi mdi-printer"></i>Cetak Data</a>
                         </div>
                     </div>
                 </div>

@@ -385,6 +385,7 @@ Route::middleware(['kasi'])->group(function () {
 
 Route::prefix('report')->name('report.')->group(function () {
     Route::get('/riwayat', [ReportController::class, 'riwayat_permohonan'])->name('riwayat_permohonan');
+    Route::get('/user', [ReportController::class, 'user'])->name('user');
     Route::get('/pegawai', [ReportController::class, 'pegawai'])->name('pegawai');
     Route::get('/', [ReportController::class, 'pemohon'])->name('pemohon');
     Route::post('/', [ReportController::class, 'permohonan'])->name('permohonan');
@@ -395,11 +396,13 @@ Route::prefix('report')->name('report.')->group(function () {
     Route::get('/surat_izin/{id}', [ReportController::class, 'surat_izin'])->name('surat_izin');
 
     Route::post('/permohonan_farmasi', [ReportController::class, 'permohonan_farmasi'])->name('permohonan_farmasi');
+    Route::get('/riwayat_permohonan_farmasi', [ReportController::class, 'riwayat_permohonan_farmasi'])->name('riwayat_permohonan_farmasi');
     Route::get('/tanda_terima_farmasi/{id}', [ReportController::class, 'tanda_terima_farmasi'])->name('tanda_terima_farmasi');
     Route::get('/riwayat_dokumen_farmasi/{id}', [ReportController::class, 'riwayat_dokumen_farmasi'])->name('riwayat_dokumen_farmasi');
     Route::get('/surat_izin_farmasi/{id}', [ReportController::class, 'surat_izin_farmasi'])->name('surat_izin_farmasi');
 
     Route::post('/permohonan_bidan', [ReportController::class, 'permohonan_bidan'])->name('permohonan_bidan');
+    Route::get('/riwayat_permohonan_bidan', [ReportController::class, 'riwayat_permohonan_bidan'])->name('riwayat_permohonan_bidan');
     Route::get('/tanda_terima_bidan/{id}', [ReportController::class, 'tanda_terima_bidan'])->name('tanda_terima_bidan');
     Route::get('/riwayat_dokumen_bidan/{id}', [ReportController::class, 'riwayat_dokumen_bidan'])->name('riwayat_dokumen_bidan');
     Route::get('/surat_izin_bidan/{id}', [ReportController::class, 'surat_izin_bidan'])->name('surat_izin_bidan');
