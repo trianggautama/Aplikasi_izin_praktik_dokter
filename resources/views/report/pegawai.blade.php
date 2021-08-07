@@ -121,9 +121,9 @@
                             Perempuan
                             @endif
                         </td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>{{$d->pangkat}}</td>
+                        <td>{{$d->pendidikan_terakhir}}</td>
+                        <td>{{$d->no_hp}}</td>
                         <td>
                             @if ($d->role == 1)
                             Admin CS
