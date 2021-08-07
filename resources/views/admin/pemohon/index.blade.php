@@ -22,7 +22,8 @@
                     <div class="row">
                         <div class="col-md">Data Pemohon</div>
                         <div class="col-md text-right">
-                        <a href="{{Route('report.pemohon')}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i>Cetak Data</a>
+                            <a href="{{Route('report.pemohon')}}" class="btn btn-primary" target="_blank"><i
+                                    class="mdi mdi-printer"></i>Cetak Data</a>
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModal">+ tambah data</button>
                         </div>
@@ -59,8 +60,10 @@
                                     <td>{{$d->biodata_diri->alamat}}</td>
                                     <td class="text-center">
                                         <a href="{{Route('admin.pemohon.edit', $d->id)}}"
-                                            class="btn btn-icons btn-rounded btn-warning"><i class="mdi mdi-pencil"></i></a>
-                                        <a href="{{Route('admin.pemohon.index',['id'=>$d->id])}}" class="btn btn-icons btn-rounded btn-danger"><i
+                                            class="btn btn-icons btn-rounded btn-warning"><i
+                                                class="mdi mdi-pencil"></i></a>
+                                        <a href="{{Route('admin.pemohon.index',['id'=>$d->id])}}"
+                                            class="btn btn-icons btn-rounded btn-danger"><i
                                                 class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>

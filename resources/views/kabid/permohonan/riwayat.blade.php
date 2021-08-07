@@ -5,11 +5,11 @@
         <div class="col-12">
             <div class="page-header">
                 <h4 class="page-title">Kepala Bidang</h4>
-                    <ul class="quick-links ml-auto">
-                        <li><a href="#">Kepala Bidang</a></li>
-                        <li><a href="#">Riwayat Permohonan</a></li>
-                        <li><a href="#">data</a></li>
-                    </ul>
+                <ul class="quick-links ml-auto">
+                    <li><a href="#">Kepala Bidang</a></li>
+                    <li><a href="#">Riwayat Permohonan</a></li>
+                    <li><a href="#">data</a></li>
+                </ul>
             </div>
         </div>
     </div>
