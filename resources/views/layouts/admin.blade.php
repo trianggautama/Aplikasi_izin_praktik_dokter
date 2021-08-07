@@ -117,9 +117,9 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="{{Route('admin.pangkat.index')}}">Pangkat Golongan</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" href="{{Route('admin.user.index')}}">User</a>
                 </li>
