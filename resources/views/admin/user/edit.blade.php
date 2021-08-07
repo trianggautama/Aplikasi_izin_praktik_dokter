@@ -98,7 +98,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Pendidikan Terakhir</label>
-                        <select name="pendidikan" id="" class="form-control">
+                        <select name="pendidikan_terakhir" id="" class="form-control">
                             <option value="">- pilih pendidikan terakhir -</option>
                             <option value="S3" {{$data->pendidikan == 'S3' ? 'selected' : ''}}>S3</option>
                             <option value="S2" {{$data->pendidikan == 'S2' ? 'selected' : ''}}>S2</option>
