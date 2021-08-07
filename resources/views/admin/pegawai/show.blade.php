@@ -40,8 +40,8 @@
                         <tr>
                             <td width="20%">Tempat, Tanggal Lahir</td>
                             <td width="2%">:</td>
-                            <td>{{$data->tempat_lahir}},
-                                {{Carbon\carbon::parse($data->tanggal_lahir)->translatedFormat('d F Y')}}
+                            <td>{{$data->biodata_diri->tempat_lahir}},
+                                {{Carbon\carbon::parse($data->biodata_diri->tanggal_lahir)->translatedFormat('d F Y')}}
                             </td>
                         </tr>
                         <tr>
