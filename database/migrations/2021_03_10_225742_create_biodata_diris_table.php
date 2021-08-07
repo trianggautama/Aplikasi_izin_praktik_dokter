@@ -19,6 +19,9 @@ class CreateBiodataDirisTable extends Migration
             $table->string('NIP', 100);
             $table->text('alamat');
             $table->string('tempat_lahir', 100);
+            $table->string('pangkat', 100);
+            $table->string('pendidikan_terakhir', 100);
+            $table->string('no_hp', 100);
             $table->date('tanggal_lahir');
             $table->tinyInteger('jenis_kelamin');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

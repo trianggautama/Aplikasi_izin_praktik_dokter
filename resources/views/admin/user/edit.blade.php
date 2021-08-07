@@ -23,7 +23,8 @@
                     @csrf
                     <div class="form-group">
                         <label for="">NIP</label>
-                        <input type="text" name="NIP" value="{{$data->biodata_diri->NIP}}" class="form-control" required>
+                        <input type="text" name="NIP" value="{{$data->biodata_diri->NIP}}" class="form-control"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="">Nama</label>
@@ -52,7 +53,7 @@
                                 <label class="form-check-label">
                                     <input type="radio" class="form-check-input" name="jenis_kelamin" required
                                         id="membershipRadios1" value="1"
-                                        {{$data->biodata_diri->jenis_kelamin == 1 ? 'checked' : ''}}> Laki - laki 
+                                        {{$data->biodata_diri->jenis_kelamin == 1 ? 'checked' : ''}}> Laki - laki
                                 </label>
                             </div>
                         </div>
@@ -68,7 +69,8 @@
                     </div>
                     <div class="form-group">
                         <label for="">Alamat</label>
-                        <textarea name="alamat" id="" class="form-control" required>{{$data->biodata_diri->alamat}}</textarea>
+                        <textarea name="alamat" id="" class="form-control"
+                            required>{{$data->biodata_diri->alamat}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="">User Role</label>
@@ -80,6 +82,65 @@
                             <option value="5" {{$data->role == 5 ? 'selected' : ''}}>Sekertaris</option>
                             <option value="6" {{$data->role == 6 ? 'selected' : ''}}>Kepala Dinas</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Pangkat Golongan</label>
+                        <select name="pangkat" id="" class="form-control" required>
+                            <option value="">- pilih pangkat golongan -</option>
+                            <option value="II/A" {{$data->biodata_diri->pangkat == 'II/A' ? 'selected' : ''}}>II/A
+                            </option>
+                            <option value="II/B" {{$data->biodata_diri->pangkat == 'II/B' ? 'selected' : ''}}>II/B
+                            </option>
+                            <option value="II/C" {{$data->biodata_diri->pangkat == 'II/C' ? 'selected' : ''}}>II/C
+                            </option>
+                            <option value="III/A" {{$data->biodata_diri->pangkat == 'III/A' ? 'selected' : ''}}>III/A
+                            </option>
+                            <option value="III/B" {{$data->biodata_diri->pangkat == 'III/B' ? 'selected' : ''}}>III/B
+                            </option>
+                            <option value="III/C" {{$data->biodata_diri->pangkat == 'III/C' ? 'selected' : ''}}>III/C
+                            </option>
+                            <option value="IV/A" {{$data->biodata_diri->pangkat == 'IV/A' ? 'selected' : ''}}>IV/A
+                            </option>
+                            <option value="IV/B" {{$data->biodata_diri->pangkat == 'IV/B' ? 'selected' : ''}}>IV/B
+                            </option>
+                            <option value="IV/C" {{$data->biodata_diri->pangkat == 'IV/C' ? 'selected' : ''}}>IV/C
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Pendidikan Terakhir</label>
+                        <select name="pendidikan_terakhir" id="" class="form-control" required>
+                            <option value="">- pilih pendidikan terakhir -</option>
+                            <option value="S3" {{$data->biodata_diri->pendidikan_terakhir == 'S3' ? 'selected' : ''}}>S3
+                            </option>
+                            <option value="S2" {{$data->biodata_diri->pendidikan_terakhir == 'S2' ? 'selected' : ''}}>S2
+                            </option>
+                            <option value="S1" {{$data->biodata_diri->pendidikan_terakhir == 'S1' ? 'selected' : ''}}>S1
+                            </option>
+                            <option value="D4" {{$data->biodata_diri->pendidikan_terakhir == 'D4' ? 'selected' : ''}}>D4
+                            </option>
+                            <option value="D3" {{$data->biodata_diri->pendidikan_terakhir == 'D3' ? 'selected' : ''}}>D3
+                            </option>
+                            <option value="D2" {{$data->biodata_diri->pendidikan_terakhir == 'D2' ? 'selected' : ''}}>D2
+                            </option>
+                            <option value="D1" {{$data->biodata_diri->pendidikan_terakhir == 'D1' ? 'selected' : ''}}>D1
+                            </option>
+                            <option value="SMA/SMK/SEDERAJAT"
+                                {{$data->biodata_diri->pendidikan_terakhir == 'SMA/SMK/SEDERAJAT' ? 'selected' : ''}}>
+                                SMA/SMK/SEDERAJAT</option>
+                            <option value="SMP/SEDERAJAT"
+                                {{$data->biodata_diri->pendidikan_terakhir == 'SMP/SEDERAJAT' ? 'selected' : ''}}>
+                                SMP/SEDERAJAT
+                            </option>
+                            <option value="SD/SEDERAJAT"
+                                {{$data->biodata_diri->pendidikan_terakhir == 'SD/SEDERAJAT' ? 'selected' : ''}}>
+                                SD/SEDERAJAT
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">No Telepon</label>
+                        <input type="text" name="no_hp" value="{{$data->no_hp}}" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Username</label>
