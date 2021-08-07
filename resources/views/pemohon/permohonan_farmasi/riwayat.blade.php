@@ -40,7 +40,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($data as $d)
+                                @foreach($riwayat as $d)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$d->created_at}}</td>

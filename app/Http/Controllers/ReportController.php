@@ -140,9 +140,9 @@ class ReportController extends Controller
     public function tanda_terima_farmasi($id)
     {
         $data   = PermohonanFarmasi::findOrFail($id);
-        $pdf    = PDF::loadView('report.tanda_terima', ['data'=>$data]);
+        $pdf    = PDF::loadView('report.tanda_terima_farmasi', ['data'=>$data]);
         $pdf->setPaper('a4', 'potrait');
-        return $pdf->stream('Laporan Tanda Terima.pdf');
+        return $pdf->stream('Laporan Tanda Terima Farmasi.pdf');
     }
 
     public function riwayat_dokumen_farmasi($id)
@@ -197,9 +197,9 @@ class ReportController extends Controller
     public function tanda_terima_bidan($id)
     {
         $data   = PermohonanBidan::findOrFail($id);
-        $pdf    = PDF::loadView('report.tanda_terima', ['data'=>$data]);
+        $pdf    = PDF::loadView('report.tanda_terima_bidan', ['data'=>$data]);
         $pdf->setPaper('a4', 'potrait');
-        return $pdf->stream('Laporan Tanda Terima.pdf');
+        return $pdf->stream('Laporan Tanda Terima Bidan .pdf');
     }
 
     public function riwayat_dokumen_bidan($id)

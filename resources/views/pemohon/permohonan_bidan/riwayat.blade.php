@@ -40,7 +40,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($data as $d)
+                                @foreach($riwayat as $d)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$d->tahun_kelulusan}}</td>

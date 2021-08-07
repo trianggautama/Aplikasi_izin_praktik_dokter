@@ -70,7 +70,7 @@
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
-                                    <label for="">Surat Rekomendasi</label>
+                                    <label for="">Surat Rekomendasi Dinkes</label>
                                     <input type="file" name="surat_rekomendasi_dinkes" class="form-control" required>
                                 </div>
                             </div>
