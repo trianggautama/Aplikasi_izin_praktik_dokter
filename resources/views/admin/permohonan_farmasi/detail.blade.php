@@ -74,10 +74,12 @@
                             <a href="{{Route('admin.permohonan_farmasi.verifikasi',$data->id)}}"
                                 class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a>
                             @endif
+                            @if($data->status == 6)
                             <a href="{{Route('report.surat_izin_farmasi',$data->id)}}" class="btn btn-primary"
                                 target="_blank"><i class="mdi mdi-printer"></i> Cetak Surat Izin Praktek</a>
                             <a href="{{Route('report.riwayat_dokumen_farmasi',$data->id)}}" class="btn btn-primary"
                                 target="_blank"><i class="mdi mdi-printer"></i> Riwayat Dokumen</a>
+                            @endif
                             <a href="{{Route('report.sip_farmasi',['id'=>$data->id])}}" class="btn btn-primary"
                                 target="_blank"><i class="mdi mdi-printer"></i> Permohonan Surat Izin Praktik (SIP)</a>
                         </div>

@@ -49,7 +49,7 @@
                             <td width="2%">:</td>
                             <td>
                                 @if($data->biodata_diri->jenis_kelamin == 1)
-                                <p>Laki - laki</p>
+                                <p>Laki - laki</p> 
                                 @else
                                 <p>Perempuan</p>
                                 @endif
