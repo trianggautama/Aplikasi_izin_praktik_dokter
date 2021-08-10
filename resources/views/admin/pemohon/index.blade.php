@@ -49,6 +49,7 @@
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$d->biodata_diri->NIP}}</td>
                                     <td>{{$d->nama}}</td>
+                                    <td>{{$d->biodata_diri->tempat_lahir}}, {{$d->biodata_diri->tanggal_lahir}}</td>
                                     <td>
                                         @if ($d->biodata_diri->jenis_kelamin == 1)
                                         Laki-laki
@@ -56,7 +57,6 @@
                                         Perempuan
                                         @endif
                                     </td>
-                                    <td>{{$d->biodata_diri->tempat_lahir}}, {{$d->biodata_diri->tanggal_lahir}}</td>
                                     <td>{{$d->biodata_diri->alamat}}</td>
                                     <td class="text-center">
                                         <a href="{{Route('admin.pemohon.edit', $d->id)}}"
