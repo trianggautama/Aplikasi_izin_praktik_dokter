@@ -106,11 +106,6 @@
                             <td width="2%">: {{$data->alamat_praktik}}</td>
                             <td></td>
                         </tr>
-                        <tr>
-                            <td width="20%">Tempat Ttd</td>
-                            <td width="2%">: </td>
-                            <td></td>
-                        </tr>
                     </table>
                 </div>
             </div>

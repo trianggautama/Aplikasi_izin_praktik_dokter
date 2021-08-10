@@ -57,11 +57,6 @@
                             <td width="2%">: {{$data->alamat_tujuan}}</td>
                             <td></td>
                         </tr>
-                        <tr>
-                            <td width="20%">Tempat Ttd</td>
-                            <td width="2%">: {{$data->tempat_ttd}}</td>
-                            <td></td>
-                        </tr>
                     </table>
                 </div>
             </div>

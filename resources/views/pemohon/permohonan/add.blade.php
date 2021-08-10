@@ -55,10 +55,10 @@
                             <label for="">Alamat Praktik</label>
                             <textarea name="alamat_tujuan" id="" class="form-control" required></textarea>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="">Tempat Ttd</label>
                             <input type="text" name="tempat_ttd" class="form-control" required>
-                        </div>
+                        </div> -->
                         <br>
                         <h5>lampiran</h5>
                         <hr>

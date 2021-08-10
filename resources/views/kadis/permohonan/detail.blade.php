@@ -107,11 +107,6 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td width="20%">Tempat Ttd</td>
-                            <td width="2%">: {{$data->tempat_ttd}}</td>
-                            <td></td>
-                        </tr>
-                        <tr>
                             <td width="20%">Status Verifikasi</td>
                             <td width="2%">:
                                 @switch($data->status)
