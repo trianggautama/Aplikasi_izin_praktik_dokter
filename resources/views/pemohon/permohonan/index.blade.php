@@ -80,6 +80,9 @@
                                         @endswitch
                                     </td>
                                     <td class="text-center">
+                                        <a href="{{Route('pemohon.permohonan.edit', $d->id)}}"
+                                            class="btn btn-icons btn-rounded btn-primary"><i
+                                                class="mdi mdi-pencil"></i></a>
                                         <a href="{{Route('pemohon.permohonan.detail', $d->id)}}"
                                             class="btn btn-icons btn-rounded btn-info"><i
                                                 class="mdi mdi-information-outline"></i></a>
@@ -91,7 +94,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 </div>
 @endsection
