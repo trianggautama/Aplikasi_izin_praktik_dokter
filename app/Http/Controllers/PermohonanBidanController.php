@@ -12,7 +12,8 @@ class PermohonanBidanController extends Controller
 {
     public function pemohon_index()
     {
-        $data = PermohonanBidan::all();
+        $data = PermohonanBidan::where('biodata_diri_id', Auth::user()->biodata_diri->id)->where('status', '!=', 6)->latest()->get();
+
         return view('pemohon.permohonan_bidan.index', compact('data'));
     }
 
