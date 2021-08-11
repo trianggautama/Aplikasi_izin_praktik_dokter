@@ -33,6 +33,8 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Nama</th>
+                                    <th>NIK</th>
                                     <th>Tahun Lulus</th>
                                     <th>Nomor STRB</th>
                                     <th>Nomor Rekomendasi</th>
@@ -45,6 +47,8 @@
                                 @foreach ($data as $d)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
+                                    <td>{{$d->biodata_diri->user->nama}}</td>
+                                    <td>{{$d->biodata_diri->NIP}}</td>
                                     <td>{{$d->tahun_kelulusan}}</td>
                                     <td>{{$d->no_str}}</td>
                                     <td>{{$d->no_rekomendasi}}</td>

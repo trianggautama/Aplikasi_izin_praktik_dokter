@@ -22,7 +22,8 @@
                     <div class="row">
                         <div class="col-md">Data User</div>
                         <div class="col-md text-right">
-                            <a href="{{Route('admin.permohonan.filter')}}" class="btn btn-primary" target="_blank"><i class="mdi mdi-printer"></i>Cetak Data</a>
+                            <a href="{{Route('admin.permohonan.filter')}}" class="btn btn-primary" target="_blank"><i
+                                    class="mdi mdi-printer"></i>Cetak Data</a>
                         </div>
                     </div>
                 </div>
@@ -32,13 +33,13 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>tanggal Permohonan</th>
-                                    <th>NIP/No. KTP</th>
                                     <th>Nama</th>
+                                    <th>NIP/No. KTP</th>
+                                    <th>Tahun Lulus</th>
                                     <th>Nomor Str</th>
                                     <th>Nomor Rekomendasi</th>
                                     <th>Tempat Praktik</th>
-                                    <th>Progress Permohonan</th>
+                                    <th>Status Permohonan</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -46,9 +47,9 @@
                                 @foreach($data as $d)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
-                                    <td>{{$d->created_at}}</td>
-                                    <td>{{$d->biodata_diri->NIP}}</td>
                                     <td>{{$d->biodata_diri->user->nama}}</td>
+                                    <td>{{$d->biodata_diri->NIP}}</td>
+                                    <td>{{$d->tahun_kelulusan}}</td>
                                     <td>{{$d->nomor_str}}</td>
                                     <td>{{$d->nomor_rekomendasi}}</td>
                                     <td>{{$d->tempat_praktik}}</td>
@@ -85,7 +86,8 @@
                                     </td>
                                     <td class="text-center">
                                         <a href="{{Route('admin.permohonan.detail', $d->id)}}"
-                                            class="btn btn-icons btn-rounded btn-info"><i class="mdi mdi-information-outline"></i></a>
+                                            class="btn btn-icons btn-rounded btn-info"><i
+                                                class="mdi mdi-information-outline"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
