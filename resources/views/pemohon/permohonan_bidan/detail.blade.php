@@ -232,7 +232,8 @@
                                 <td>1</td>
                                 <td>Surat Permohonan Rekomendasi</td>
                                 <td class="text-center">
-                                    <a href="#" class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
+                                    <a href="{{asset('lampiran/'.$data->lampiran_bidan->surat_rekomendasi_dinkes)}}"
+                                        class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
                                             class="mdi mdi-cloud-download"></i></a>
                                 </td>
                             </tr>
