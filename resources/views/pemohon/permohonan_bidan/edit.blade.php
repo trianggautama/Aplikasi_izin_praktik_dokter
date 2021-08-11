@@ -27,52 +27,61 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{Route('pemohon.permohonan.store')}}" enctype="multipart/form-data" method="post">
+                    <form action="{{Route('pemohon.permohonan_bidan.update',$data->id)}}" enctype="multipart/form-data"
+                        method="post">
+                        @method('put')
                         @csrf
                         <div class="form-group">
                             <label for="">Tahun Kelulusan</label>
-                            <input type="date" name="tahun_kelulusan" class="form-control" required>
+                            <input type="date" name="tahun_kelulusan" value="{{$data->tahun_kelulusan}}"
+                                class="form-control" required>
                         </div>
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Nomor STR</label>
-                                    <input type="text" name="nomor_str" class="form-control" required>
+                                    <input type="text" name="no_str" value="{{$data->no_str}}" class="form-control"
+                                        required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
-                                    <label for="">Nomor Rekomendasi (Dinkes)</label>
-                                    <input type="text" name="nomor_rekomendasi" class="form-control" required>
+                                    <label for="">Nomor Rekomendasi</label>
+                                    <input type="text" name="no_rekomendasi" value="{{$data->no_rekomendasi}}"
+                                        class="form-control" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Nama Sarana</label>
-                            <input type="text" name="nama_sarana" class="form-control" required>
+                            <input type="text" name="tempat_praktik" class="form-control"
+                                value="{{$data->tempat_praktik}}" required>
                         </div>
                         <div class="form-group">
                             <label for="">Alamat Sarana</label>
-                            <textarea name="alamat_sarana" id="" class="form-control" required></textarea>
+                            <textarea name="alamat_praktik" id="" class="form-control"
+                                required>{{$data->alamat_praktik}}</textarea>
                         </div>
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">No Tlp Praktik</label>
-                                    <input type="text" name="no_hp" class="form-control" required>
+                                    <input type="text" name="telepon_praktik" value="{{$data->telepon_praktik}}"
+                                        class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Jam Praktik</label>
-                                    <input type="text" name="jam_praktik" class="form-control" required>
+                                    <input type="text" name="jam_praktik" value="{{$data->jam_praktik}}"
+                                        class="form-control" required>
                                 </div>
                             </div>
                         </div>
                         <!-- <div class="form-group">
-                            <label for="">Tempat Ttd</label>
-                            <input type="text" name="tempat_ttd" class="form-control" required>
-                        </div> -->
+                                                <label for="">Tempat Ttd</label>
+                                                <input type="text" name="tempat_ttd" class="form-control" required>
+                                            </div> -->
                         <br>
                         <h5>lampiran</h5>
                         <hr>
@@ -80,13 +89,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Rekomendasi Dinkes</label>
-                                    <input type="file" name="surat_rekomendasi_dinkes" class="form-control" required>
+                                    <input type="file" name="surat_rekomendasi_dinkes" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Keterangan Bekerja</label>
-                                    <input type="file" name="surat_rekomendasi_organisasi" class="form-control" required>
+                                    <input type="file" name="surat_keterangan_bekerja" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -94,13 +103,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Pernyataan Mengikuti Peraturan Perundang-undangan (APJ)</label>
-                                    <input type="file" name="surat_persetujuan_pimpinan" class="form-control" required>
+                                    <input type="file" name="surat_pernyataan_mengikuti_uud" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Keterangan Kesehatan Badan</label>
-                                    <input type="file" name="izin_operasional" class="form-control" required>
+                                    <input type="file" name="surat_keterangan_sehat" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -108,13 +117,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Rekomendasi Ikatan Bidan Indonesia</label>
-                                    <input type="file" name="-" class="form-control" required>
+                                    <input type="file" name="surat_rekomendasi_IBI" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Kartu Anggota Ikatan Bidan Indonesia</label>
-                                    <input type="file" name="ijazah" class="form-control" required>
+                                    <input type="file" name="kartu_anggota" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -122,13 +131,13 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Tanda Registrasi Bidan (STRB)</label>
-                                    <input type="file" name="-" class="form-control" required>
+                                    <input type="file" name="str" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Pernyataan Permohonan</label>
-                                    <input type="file" name="ijazah" class="form-control" required>
+                                    <input type="file" name="surat_pernyataan_permohonan" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -136,27 +145,27 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Surat Izin Atasan Langsung</label>
-                                    <input type="file" name="-" class="form-control" required>
+                                    <input type="file" name="surat_izin_atasan_langsung" class="form-control">
                                 </div>
-                            </div>   
+                            </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Ijazah (Legalisir)</label>
-                                    <input type="file" name="ijazah" class="form-control" required>
+                                    <input type="file" name="ijazah" class="form-control">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
-                                    <label for="">KTP</label> 
-                                    <input type="file" name="ktp" class="form-control" required>
+                                    <label for="">KTP</label>
+                                    <input type="file" name="ktp" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">NPWP</label>
-                                    <input type="file" name="npwp" class="form-control" required>
+                                    <input type="file" name="npwp" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -164,14 +173,14 @@
                             <div class="col-md">
                                 <div class="form-group">
                                     <label for="">Foto</label>
-                                    <input type="file" name="foto" class="form-control" required>
+                                    <input type="file" name="foto" class="form-control">
                                 </div>
                             </div>
                         </div>
                         <div class="text-right">
                             <a href="{{Route('pemohon.permohonan_bidan.index')}}" class="btn btn-secondary"
                                 data-dismiss="modal">Batal</a>
-                            <button type="submit" class="btn btn-primary">Ubah Permohonan</button>
+                            <button type="submit" class="btn btn-primary">Simpan Permohonan</button>
                         </div>
                     </form>
                 </div>

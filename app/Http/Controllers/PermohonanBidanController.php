@@ -93,10 +93,11 @@ class PermohonanBidanController extends Controller
         return view('pemohon.permohonan_bidan.add');
     }
 
-    public function edit()
+    public function edit($id)
     {
 
-        return view('pemohon.permohonan_bidan.edit');
+        $data = PermohonanBidan::findOrFail($id);
+        return view('pemohon.permohonan_bidan.edit', compact('data'));
     }
 
     public function store(Request $req)
@@ -233,9 +234,7 @@ class PermohonanBidanController extends Controller
 
         $data->update($input);
 
-        $lampiran = LampiranBidan::wherePermohonanFarmasiId($data->id)->first();
-
-        $lampiran->permohonan_bidan_id = $data->id;
+        $lampiran = LampiranBidan::where('permohonan_bidan_id', $id)->first();
 
         if (isset($req->surat_rekomendasi_dinkes)) {
             $file = $req->file('surat_rekomendasi_dinkes');
