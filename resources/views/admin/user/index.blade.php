@@ -152,21 +152,18 @@
                     </div>
                     <div class="form-group">
                         <label for="">Pangkat Golongan</label>
-                        <<<<<<< HEAD <select name="pangkat" id="" class="form-control" required>
-                            =======
-                            <select name="pangkat" id="" class="form-control">
-                                >>>>>>> c4714a1d7336cd60a274b12e2509769d75742ada
-                                <option value="">- pilih pangkat golongan -</option>
-                                <option value="II/A">II/A</option>
-                                <option value="II/B">II/B</option>
-                                <option value="II/C">II/C</option>
-                                <option value="III/A">III/A</option>
-                                <option value="III/B">III/B</option>
-                                <option value="III/C">III/C</option>
-                                <option value="IV/A">IV/A</option>
-                                <option value="IV/B">IV/B</option>
-                                <option value="IV/C">IV/C</option>
-                            </select>
+                        <select name="pangkat" id="" class="form-control" required>
+                            <option value="">- pilih pangkat golongan -</option>
+                            <option value="II/A">II/A</option>
+                            <option value="II/B">II/B</option>
+                            <option value="II/C">II/C</option>
+                            <option value="III/A">III/A</option>
+                            <option value="III/B">III/B</option>
+                            <option value="III/C">III/C</option>
+                            <option value="IV/A">IV/A</option>
+                            <option value="IV/B">IV/B</option>
+                            <option value="IV/C">IV/C</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="">Pendidikan Terakhir</label>
