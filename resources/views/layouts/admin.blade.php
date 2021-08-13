@@ -201,7 +201,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#petugas_riwayat_permohonan" aria-expanded="false"
               aria-controls="ui-basic">
               <i class="menu-icon typcn typcn-coffee"></i>
@@ -221,7 +221,7 @@
                 </li>
               </ul>
             </div>
-          </li>
+          </li> -->
           @endif
           @if(Auth::user()->role == 3)
           <li class="nav-item nav-category">Menu Kasi PJU</li>
