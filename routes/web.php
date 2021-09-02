@@ -14,6 +14,7 @@ use App\Http\Controllers\SuratRekomendasiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PangkatController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\NotifikasiController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->name('auth.')->group(function () {
@@ -381,6 +382,10 @@ Route::middleware(['kasi'])->group(function () {
         });
     });
 
+});
+
+Route::prefix('notifikasi')->name('notifikasi.')->group(function () {
+    Route::get('/', [NotifikasiController::class, 'index'])->name('index');
 });
 
 Route::prefix('report')->name('report.')->group(function () {

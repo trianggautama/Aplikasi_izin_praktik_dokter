@@ -29,6 +29,12 @@
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+              <a class="nav-link count-indicator"  href="{{Route('notifikasi.index')}}">
+                <i class="mdi mdi-bell"></i>
+                <span class="count bg-success">3</span>
+              </a>
+            </li>
           <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <img class="img-xs rounded-circle" src="{{asset('admin/images/faces/face8.jpg')}}" alt="Profile image">
@@ -201,27 +207,6 @@
               </ul>
             </div>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#petugas_riwayat_permohonan" aria-expanded="false"
-              aria-controls="ui-basic">
-              <i class="menu-icon typcn typcn-coffee"></i>
-              <span class="menu-title">Riwayat Permohonan</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="petugas_riwayat_permohonan">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="{{Route('petugas_proses.riwayat_permohonan.index')}}">praktik Dokter</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{Route('petugas_proses.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{Route('petugas_proses.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
-                </li>
-              </ul>
-            </div>
-          </li> -->
           @endif
           @if(Auth::user()->role == 3)
           <li class="nav-item nav-category">Menu Kasi PJU</li>
@@ -252,27 +237,6 @@
               </ul>
             </div>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#kasi_pju_riwayat_permohonan" aria-expanded="false"
-              aria-controls="ui-basic">
-              <i class="menu-icon typcn typcn-coffee"></i>
-              <span class="menu-title">Riwayat Permohonan</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="kasi_pju_riwayat_permohonan">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="{{Route('kasi_pju.riwayat_permohonan.index')}}">Izin Praktik Dokter </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{Route('kasi_pju.permohonan_farmasi.riwayat')}}">Izin Praktik Farmasi </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{Route('kasi_pju.permohonan_bidan.riwayat')}}">Izin Praktik Bidan </a>
-          </li>
-        </ul>
-    </div>
-    </li> --}}
     @endif
     @if(Auth::user()->role == 4)
     <li class="nav-item nav-category">Menu Kabid</li>
@@ -303,27 +267,6 @@
         </ul>
       </div>
     </li>
-    {{-- <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#kabid_riwayat_permohonan" aria-expanded="false"
-        aria-controls="ui-basic">
-        <i class="menu-icon typcn typcn-coffee"></i>
-        <span class="menu-title">Riwayat Permohonan</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="kabid_riwayat_permohonan">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
-            <a class="nav-link" href="{{Route('kabid.riwayat_permohonan.index')}}">Praktik Dokter</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{Route('kabid.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{Route('kabid.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
-    </li>
-    </ul>
-  </div>
-  </li> --}}
   @endif
   @if(Auth::user()->role == 5)
   <li class="nav-item nav-category">Menu Sekretaris</li>
@@ -353,27 +296,6 @@
       </ul>
     </div>
   </li>
-  {{-- <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#kadis_riwayat_permohonan" aria-expanded="false"
-      aria-controls="ui-basic">
-      <i class="menu-icon typcn typcn-coffee"></i>
-      <span class="menu-title">Riwayat Permohonan</span>
-      <i class="menu-arrow"></i>
-    </a>
-    <div class="collapse" id="kadis_riwayat_permohonan">
-      <ul class="nav flex-column sub-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('sekretaris.riwayat_permohonan.index')}}">Izin Dokter</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{Route('sekretaris.permohonan_farmasi.riwayat')}}">Izin Farmasi</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{Route('sekretaris.permohonan_bidan.riwayat')}}">Izin Bidan</a>
-  </li>
-  </ul>
-  </div>
-  </li> --}}
   @endif
   @if(Auth::user()->role == 6)
   <li class="nav-item nav-category">Menu Kepala Dinas</li>

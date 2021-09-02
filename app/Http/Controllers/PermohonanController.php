@@ -104,7 +104,7 @@ class PermohonanController extends Controller
         $input = $req->all();
 
         $input['biodata_diri_id'] = Auth::user()->biodata_diri->id;
-
+ 
         $data = Permohonan_SIP::create($input);
 
         $lampiran = new Lampiran;
