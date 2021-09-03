@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('content')
+@section('content') 
 <div class="content-wrapper">
     <div class="row page-title-header">
         <div class="col-12">

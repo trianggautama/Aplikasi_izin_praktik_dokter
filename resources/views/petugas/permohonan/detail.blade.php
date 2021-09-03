@@ -77,7 +77,7 @@
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="mdi mdi-check"></i> verifikasi permohonan</button>
                             @endif
                         </div>
-                    </div>
+                    </div> 
                 </div>
                 <div class="card-body">
                     <table class="table table-striped">
@@ -279,7 +279,7 @@
                     </table>
                 </div>
             </div>
-        </div> -->
+        </div> --> 
     </div>
 </div>
 
