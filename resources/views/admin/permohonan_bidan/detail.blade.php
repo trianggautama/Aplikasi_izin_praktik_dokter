@@ -69,8 +69,9 @@
                         <div class="col-md-4">Detail Permohonan</div>
                         <div class="col-md text-right">
                             @if($data->status == 0)
-                            <a href="{{Route('admin.permohonan_bidan.verifikasi',$data->id)}}"
-                                class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a>
+                            <!-- <a href="{{Route('admin.permohonan_bidan.verifikasi',$data->id)}}"
+                                class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a> -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="mdi mdi-check"></i> verifikasi permohonan</button>
                             @endif
                             @if($data->status == 6)
                             <a href="{{Route('report.surat_izin_bidan',$data->id)}}" class="btn btn-primary"
@@ -331,4 +332,41 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Verifikasi Permohonan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> 
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{Route('admin.pangkat.store')}}" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label for="">Status Verifikasi</label>
+                                <select name="status_verifkasi" id="" class="form-control">
+                                    <option value="">Berkas Sedang di cek</option>
+                                    <option value="">Selesai Pengecekan</option>
+                                    <option value="">Diperbaiki / dikembalikan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Catatan</label>
+                                <textarea name="catatan" id="" class="form-control"></textarea>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
 @endsection

@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-12 grid-margin">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header"> 
                     <div class="row">
                         <div class="col-md">Data Diri</div>
                         <div class="col-md text-right">
@@ -280,7 +280,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 </div>
 
 
