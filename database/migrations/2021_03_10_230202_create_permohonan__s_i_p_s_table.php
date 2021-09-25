@@ -24,11 +24,17 @@ class CreatePermohonanSIPSTable extends Migration
             $table->string('tempat_ttd', 100);
             $table->tinyInteger('status')->default(0);
             $table->date('verif_admin')->nullable();
+            $table->tinyInteger('status_verif_admin')->nullable();
             $table->date('verif_petugas_proses')->nullable();
+            $table->tinyInteger('status_verif_petugas_proses')->nullable();
             $table->date('verif_kasi')->nullable();
+            $table->tinyInteger('status_verif_kasi')->nullable();
             $table->date('verif_kabid')->nullable();
+            $table->tinyInteger('status_verif_kabid')->nullable();
             $table->date('verif_sekretaris')->nullable();
+            $table->tinyInteger('status_verif_sekretaris')->nullable();
             $table->date('verif_kepala_dinas')->nullable();
+            $table->tinyInteger('status_verif_kepala_dinas')->nullable();
             $table->foreign('biodata_diri_id')->references('id')->on('biodata_diris')->onDelete('cascade');
             $table->timestamps();
         });

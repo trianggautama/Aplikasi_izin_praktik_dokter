@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inbox;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -34,10 +35,44 @@ class NotifikasiController extends Controller
                 return view('kadis.notifikasi');
                 break;
             case 7:
-                return view('pemohon.notifikasi');
+                $inbox = Inbox::whereBiodataDiriId(Auth::user()->biodata_diri->id)->latest()->get();
+                $inbox->map(function ($item) {
+                    switch ($item->user->role) {
+                        case 1:
+                            $role = 'Admin';
+                            break;
+                        case 2:
+                            $role = 'Petugas';
+                            break;
+                        case 3:
+                            $role = 'Kasi';
+                            break;
+                        case 4:
+                            $role = 'Kabid';
+                            break;
+                        case 5:
+                            $role = 'Sekretaris';
+                            break;
+                        case 6:
+                            $role = 'Kepala Dinas';
+                            break;
+                        default:
+                            break;
+                    }
+                    if ($item->status == 1) {
+                        $item['title'] = 'Permohonan anda diverifikasi oleh ' . $role;
+                    } else if ($item->status == 2) {
+                        $item['title'] = 'Permohonan anda dikembalikan atau diperbaiki oleh ' . $role;
+                    } else {
+                        $item['title'] = 'Permohonan anda sedang diperiksa oleh ' . $role;
+                    }
+
+                    return $item;
+                });
+                return view('pemohon.notifikasi', compact('inbox'));
                 break;
         }
-    } 
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -102,6 +137,8 @@ class NotifikasiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $inbox = Inbox::FindOrFail($id)->delete();
+
+        return back()->withSuccess('Notifikasi berhasil dihapus');
     }
 }

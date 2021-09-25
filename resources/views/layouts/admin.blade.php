@@ -29,12 +29,12 @@
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-              <a class="nav-link count-indicator"  href="{{Route('notifikasi.index')}}">
-                <i class="mdi mdi-bell"></i>
-                <span class="count bg-success">3</span>
-              </a>
-            </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator" href="{{Route('notifikasi.index')}}">
+              <i class="mdi mdi-bell"></i>
+              <span class="count bg-success">{{$inboxCount}}</span>
+            </a>
+          </li>
           <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <img class="img-xs rounded-circle" src="{{asset('admin/images/faces/face8.jpg')}}" alt="Profile image">
@@ -237,95 +237,97 @@
               </ul>
             </div>
           </li>
-    @endif
-    @if(Auth::user()->role == 4)
-    <li class="nav-item nav-category">Menu Kabid</li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{Route('kabid.beranda')}}">
-        <i class="menu-icon typcn typcn-document-text"></i>
-        <span class="menu-title">Beranda</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#kabid_permohonan" aria-expanded="false"
-        aria-controls="ui-basic">
-        <i class="menu-icon typcn typcn-coffee"></i>
-        <span class="menu-title">Permohonan</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="kabid_permohonan">
-        <ul class="nav flex-column sub-menu">
+          @endif
+          @if(Auth::user()->role == 4)
+          <li class="nav-item nav-category">Menu Kabid</li>
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kabid.permohonan.index')}}">Praktik Dokter</a>
+            <a class="nav-link" href="{{Route('kabid.beranda')}}">
+              <i class="menu-icon typcn typcn-document-text"></i>
+              <span class="menu-title">Beranda</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kabid.permohonan_farmasi.index')}}">Praktik Farmasi</a>
+            <a class="nav-link" data-toggle="collapse" href="#kabid_permohonan" aria-expanded="false"
+              aria-controls="ui-basic">
+              <i class="menu-icon typcn typcn-coffee"></i>
+              <span class="menu-title">Permohonan</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="kabid_permohonan">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('kabid.permohonan.index')}}">Praktik Dokter</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('kabid.permohonan_farmasi.index')}}">Praktik Farmasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('kabid.permohonan_bidan.index')}}">Praktik Bidan</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          @endif
+          @if(Auth::user()->role == 5)
+          <li class="nav-item nav-category">Menu Sekretaris</li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('sekretaris.beranda')}}">
+              <i class="menu-icon typcn typcn-document-text"></i>
+              <span class="menu-title">Beranda</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{Route('kabid.permohonan_bidan.index')}}">Praktik Bidan</a>
+            <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false"
+              aria-controls="ui-basic">
+              <i class="menu-icon typcn typcn-coffee"></i>
+              <span class="menu-title">Permohonan</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="permohonan">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('sekretaris.permohonan.index')}}">Izin Dokter</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('sekretaris.permohonan_farmasi.index')}}">Izin Farmasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('sekretaris.permohonan_bidan.index')}}">Izin Bidan</a>
+                </li>
+              </ul>
+            </div>
           </li>
-        </ul>
-      </div>
-    </li>
-  @endif
-  @if(Auth::user()->role == 5)
-  <li class="nav-item nav-category">Menu Sekretaris</li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{Route('sekretaris.beranda')}}">
-      <i class="menu-icon typcn typcn-document-text"></i>
-      <span class="menu-title">Beranda</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#permohonan" aria-expanded="false" aria-controls="ui-basic">
-      <i class="menu-icon typcn typcn-coffee"></i>
-      <span class="menu-title">Permohonan</span>
-      <i class="menu-arrow"></i>
-    </a>
-    <div class="collapse" id="permohonan">
-      <ul class="nav flex-column sub-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('sekretaris.permohonan.index')}}">Izin Dokter</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('sekretaris.permohonan_farmasi.index')}}">Izin Farmasi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('sekretaris.permohonan_bidan.index')}}">Izin Bidan</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  @endif
-  @if(Auth::user()->role == 6)
-  <li class="nav-item nav-category">Menu Kepala Dinas</li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{Route('kadis.beranda')}}">
-      <i class="menu-icon typcn typcn-document-text"></i>
-      <span class="menu-title">Beranda</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#permohonan_kadis" aria-expanded="false" aria-controls="ui-basic">
-      <i class="menu-icon typcn typcn-coffee"></i>
-      <span class="menu-title">Permohonan</span>
-      <i class="menu-arrow"></i>
-    </a>
-    <div class="collapse" id="permohonan_kadis">
-      <ul class="nav flex-column sub-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('kadis.permohonan.index')}}">Izin Dokter</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('kadis.permohonan_farmasi.index')}}">Izin Farmasi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('kadis.permohonan_bidan.index')}}">Izin Bidan</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  {{-- <li class="nav-item">
+          @endif
+          @if(Auth::user()->role == 6)
+          <li class="nav-item nav-category">Menu Kepala Dinas</li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kadis.beranda')}}">
+              <i class="menu-icon typcn typcn-document-text"></i>
+              <span class="menu-title">Beranda</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#permohonan_kadis" aria-expanded="false"
+              aria-controls="ui-basic">
+              <i class="menu-icon typcn typcn-coffee"></i>
+              <span class="menu-title">Permohonan</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="permohonan_kadis">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('kadis.permohonan.index')}}">Izin Dokter</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('kadis.permohonan_farmasi.index')}}">Izin Farmasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{Route('kadis.permohonan_bidan.index')}}">Izin Bidan</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          {{-- <li class="nav-item">
     <a class="nav-link" data-toggle="collapse" href="#kadis_riwayat_permohonan" aria-expanded="false"
       aria-controls="ui-basic">
       <i class="menu-icon typcn typcn-coffee"></i>
@@ -336,88 +338,88 @@
       <ul class="nav flex-column sub-menu">
         <li class="nav-item">
           <a class="nav-link" href="{{Route('kadis.riwayat_permohonan.index')}}">Izin Dokter</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{Route('kadis.permohonan_farmasi.riwayat')}}">Izin Farmasi</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{Route('kadis.permohonan_bidan.riwayat')}}">Izin Bidan</a>
-  </li>
-  </ul>
-  </div>
-  </li> --}}
-  @endif
-  @if(Auth::user()->role == 7)
-  <li class="nav-item nav-category">Menu User </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{Route('admin.beranda')}}">
-      <i class="menu-icon typcn typcn-document-text"></i>
-      <span class="menu-title">Beranda</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#permohonan_pemohon" aria-expanded="false"
-      aria-controls="ui-basic">
-      <i class="menu-icon typcn typcn-coffee"></i>
-      <span class="menu-title">Permohonan</span>
-      <i class="menu-arrow"></i>
-    </a>
-    <div class="collapse" id="permohonan_pemohon">
-      <ul class="nav flex-column sub-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.permohonan.index')}}">Praktik Dokter</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.index')}}">Praktik Farmasi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.permohonan_bidan.index')}}">Praktik Bidan</a>
-        </li>
-
-      </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kadis.permohonan_farmasi.riwayat')}}">Izin Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('kadis.permohonan_bidan.riwayat')}}">Izin Bidan</a>
+          </li>
+        </ul>
     </div>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#riwayat_permohonan_pemohon" aria-expanded="false"
-      aria-controls="ui-basic">
-      <i class="menu-icon typcn typcn-coffee"></i>
-      <span class="menu-title">Riwayat Permohonan</span>
-      <i class="menu-arrow"></i>
-    </a>
-    <div class="collapse" id="riwayat_permohonan_pemohon">
-      <ul class="nav flex-column sub-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.riwayat_permohonan.index')}}">Praktik Dokter</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{Route('pemohon.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
-        </li>
+    </li> --}}
+    @endif
+    @if(Auth::user()->role == 7)
+    <li class="nav-item nav-category">Menu User </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{Route('admin.beranda')}}">
+        <i class="menu-icon typcn typcn-document-text"></i>
+        <span class="menu-title">Beranda</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#permohonan_pemohon" aria-expanded="false"
+        aria-controls="ui-basic">
+        <i class="menu-icon typcn typcn-coffee"></i>
+        <span class="menu-title">Permohonan</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="permohonan_pemohon">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan.index')}}">Praktik Dokter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.index')}}">Praktik Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan_bidan.index')}}">Praktik Bidan</a>
+          </li>
 
-      </ul>
-    </div>
-  </li>
-  @endif
-  </ul>
-  </nav>
-  <!-- partial -->
-  <div class="main-panel">
-    @yield('content')
-    <!-- content-wrapper ends -->
-    <footer class="footer">
-      <div class="container-fluid clearfix">
-        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com
-          2020</span>
-        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a
-            href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin
-            templates</a> from Bootstrapdash.com</span>
+        </ul>
       </div>
-    </footer>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#riwayat_permohonan_pemohon" aria-expanded="false"
+        aria-controls="ui-basic">
+        <i class="menu-icon typcn typcn-coffee"></i>
+        <span class="menu-title">Riwayat Permohonan</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="riwayat_permohonan_pemohon">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.riwayat_permohonan.index')}}">Praktik Dokter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan_farmasi.riwayat')}}">Praktik Farmasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{Route('pemohon.permohonan_bidan.riwayat')}}">Praktik Bidan</a>
+          </li>
+
+        </ul>
+      </div>
+    </li>
+    @endif
+    </ul>
+    </nav>
     <!-- partial -->
-  </div>
-  <!-- main-panel ends -->
+    <div class="main-panel">
+      @yield('content')
+      <!-- content-wrapper ends -->
+      <footer class="footer">
+        <div class="container-fluid clearfix">
+          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com
+            2020</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a
+              href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin
+              templates</a> from Bootstrapdash.com</span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
   </div>
   <!-- page-body-wrapper ends -->
   </div>

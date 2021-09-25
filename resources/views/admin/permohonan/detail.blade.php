@@ -49,7 +49,7 @@
                             <td width="2%">:</td>
                             <td>
                                 @if($data->biodata_diri->jenis_kelamin == 1)
-                                <p>Laki - laki</p> 
+                                <p>Laki - laki</p>
                                 @else
                                 <p>Perempuan</p>
                                 @endif
@@ -73,7 +73,8 @@
                             @if($data->status == 0)
                             <!-- <a href="{{Route('admin.permohonan.verifikasi',$data->id)}}" class="btn btn-primary"><i
                                     class="mdi mdi-check"></i> Verifikasi Permohonan</a>  -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="mdi mdi-check"></i> verifikasi permohonan</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal"><i class="mdi mdi-check"></i> verifikasi permohonan</button>
                             @endif
                             @if($data->status == 6)
                             <a href="{{Route('report.surat_izin',$data->id)}}" class="btn btn-primary"
@@ -132,7 +133,7 @@
 
                                 @case(4)
                                 <span class="badge badge-success">Proses Validasi SK - Sekretaris</span>
-                                @break 
+                                @break
 
                                 @case(5)
                                 <span class="badge badge-success">Proses Penandatanganan SK - Kepala
@@ -206,7 +207,7 @@
                                     class="btn btn-icons btn-rounded btn-primary" target="_blank"><i
                                         class="mdi mdi-cloud-download"></i></a></td>
                         </tr>
-                        </tbody> 
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -246,7 +247,7 @@
                     </table>
                 </div>
             </div>
-        </div> --> 
+        </div> -->
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -256,17 +257,18 @@
                         <h5 class="modal-title" id="exampleModalLabel">Verifikasi Permohonan</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
-                        </button> 
-                    </div> 
+                        </button>
+                    </div>
                     <div class="modal-body">
-                        <form action="{{Route('admin.pangkat.store')}}" method="post">
+                        <form action="{{Route('permohonanAll.verifikasi',$data->id)}}" method="post">
                             @csrf
+                            @method('put')
                             <div class="form-group">
                                 <label for="">Status Verifikasi</label>
-                                <select name="status_verifkasi" id="" class="form-control">
-                                    <option value="">Berkas Sedang di cek</option>
-                                    <option value="">Selesai Pengecekan</option>
-                                    <option value="">Diperbaiki / dikembalikan</option>
+                                <select name="status_verif_admin" id="" class="form-control">
+                                    <option value="0">Berkas Sedang di cek</option>
+                                    <option value="1">Selesai Pengecekan</option>
+                                    <option value="2">Diperbaiki / dikembalikan</option>
                                 </select>
                             </div>
                             <div class="form-group">

@@ -67,7 +67,8 @@
                             @if($data->status == 1)
                             <!-- <a href="{{Route('kabid.permohonan_bidan.verifikasi',$data->id)}}"
                                 class="btn btn-primary"><i class="mdi mdi-check"></i> Verifikasi Permohonan</a> -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="mdi mdi-check"></i> verifikasi permohonan</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal"><i class="mdi mdi-check"></i> verifikasi permohonan</button>
                             @endif
                         </div>
                     </div>
@@ -320,7 +321,7 @@
         </div>
     </div>
 </div>
- 
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -332,13 +333,15 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{Route('admin.pangkat.store')}}" method="post">
+                <form action="{{Route('permohonanAll.verifikasiBidan',$data->id)}}" method="post">
                     @csrf
+                    @method('put')
                     <div class="form-group">
                         <label for="">Status Verifikasi</label>
-                        <select name="status_verifkasi" id="" class="form-control">
-                            <option value="">Verifikasi diterima</option>
-                            <option value="">Verifikasi di tolak</option>
+                        <select name="status_verif_kabid" id="" class="form-control">
+                            <option value="0">Berkas Sedang di cek</option>
+                            <option value="1">Selesai Pengecekan</option>
+                            <option value="2">Diperbaiki / dikembalikan</option>
                         </select>
                     </div>
                     <div class="form-group">

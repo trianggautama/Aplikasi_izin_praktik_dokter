@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inbox;
 use App\Models\LampiranBidan;
 use App\Models\PermohonanBidan;
 use Carbon\Carbon;
@@ -350,9 +351,17 @@ class PermohonanBidanController extends Controller
 
     }
 
-    public function detail($id)
+    public function detail($id, $inbox_id = null)
     {
         $data = PermohonanBidan::findOrFail($id);
+
+        if ($inbox_id) {
+            $inbox = Inbox::findOrFail($inbox_id);
+
+            $inbox->is_read = 1;
+            $inbox->update();
+        }
+
         switch (Auth::user()->role) {
             case 1:
                 return view('admin.permohonan_bidan.detail', compact('data'));
@@ -379,38 +388,145 @@ class PermohonanBidanController extends Controller
 
     }
 
-    public function verifikasi($id)
+    public function verifikasi(Request $req, $id)
     {
         $data = PermohonanBidan::findOrFail($id);
 
         $now = Carbon::now();
 
+        $inbox = new Inbox;
+        $user = Auth::user();
         switch (Auth::user()->role) {
             case 1:
-                $data->status = 1;
-                $data->verif_admin = $now;
+                if ($req->status_verif_admin == 1) {
+                    $data->status = 1;
+                    $data->status_verif_admin = $req->status_verif_admin;
+                    $data->verif_admin = $now;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_admin;
+
+                } else {
+                    $data->status_verif_admin = $req->status_verif_admin;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_admin;
+                }
                 break;
             case 2:
-                $data->status = 4;
-                $data->verif_petugas_proses = $now;
+                if ($req->status_verif_petugas_proses == 1) {
+                    $data->status = 4;
+                    $data->verif_petugas_proses = $now;
+                    $data->status_verif_petugas_proses = $req->status_verif_petugas_proses;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_petugas_proses;
+
+                } else {
+                    $data->status_verif_petugas_proses = $req->status_verif_petugas_proses;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_petugas_proses;
+
+                }
+
                 break;
             case 3:
-                $data->status = 3;
-                $data->verif_kasi = $now;
+                if ($req->status_verif_kasi == 1) {
+                    $data->status = 3;
+                    $data->verif_kasi = $now;
+                    $data->status_verif_kasi = $req->status_verif_kasi;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_kasi;
+                } else {
+                    $data->status_verif_kasi = $req->status_verif_kasi;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_kasi;
+
+                }
+
                 break;
             case 4:
-                $data->status = 2;
-                $data->verif_kabid = $now;
+                if ($req->status_verif_kabid == 1) {
+                    $data->status = 2;
+                    $data->verif_kabid = $now;
+                    $data->status_verif_kabid = $req->status_verif_kabid;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_kabid;
+                } else {
+                    $data->status_verif_kabid = $req->status_verif_kabid;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_kabid;
+
+                }
+
                 break;
             case 5:
-                $data->status = 5;
-                $data->verif_sekretaris = $now;
+                if ($req->status_verif_sekretaris == 1) {
+                    $data->status = 5;
+                    $data->verif_sekretaris = $now;
+                    $data->status_verif_sekretaris = $req->status_verif_sekretaris;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_sekretaris;
+
+                } else {
+                    $data->status_verif_sekretaris = $req->status_verif_sekretaris;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_sekretaris;
+
+                }
+
                 break;
             case 6:
-                $data->status = 6;
-                $data->verif_kepala_dinas = $now;
+                if ($req->status_verif_kepala_dinas == 1) {
+                    $data->status = 6;
+                    $data->verif_kepala_dinas = $now;
+                    $data->status_verif_kepala_dinas = $req->status_verif_kepala_dinas;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_kepala_dinas;
+
+                } else {
+                    $data->status_verif_kepala_dinas = $req->status_verif_kepala_dinas;
+                    $inbox->catatan = $req->catatan;
+                    $inbox->permohonan_bidan_id = $id;
+                    $inbox->biodata_diri_id = $data->biodata_diri_id;
+                    $inbox->user_id = $user->id;
+                    $inbox->status = $req->status_verif_kepala_dinas;
+
+                }
+
                 break;
         }
+        $inbox->save();
 
         $data->update();
 
